@@ -1,0 +1,2 @@
+c:\users\raul.melo\documents\visual studio 2015\Projects\AgendaMedica\AgendaMedica\bin\Debug\AgendaMedica.exe.config
+C:\Users\raul.melo\Documents\Visual Studio 2015\Projects\AgendaMedica\src\AgendaMedica\bin\Debug\AgendaMedica.exe.config
