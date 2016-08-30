@@ -1,2 +1,12 @@
 c:\users\raul.melo\documents\visual studio 2015\Projects\AgendaMedica\AgendaMedica\bin\Debug\AgendaMedica.exe.config
 C:\Users\raul.melo\Documents\Visual Studio 2015\Projects\AgendaMedica\src\AgendaMedica\bin\Debug\AgendaMedica.exe.config
+F:\#git\topicos-avancados-II\src\AgendaMedica\bin\Debug\AgendaMedica.exe.config
+F:\#git\topicos-avancados-II\src\AgendaMedica\bin\Debug\AgendaMedica.exe
+F:\#git\topicos-avancados-II\src\AgendaMedica\bin\Debug\AgendaMedica.pdb
+F:\#git\topicos-avancados-II\src\AgendaMedica\obj\Debug\AgendaMedica.csprojResolveAssemblyReference.cache
+F:\#git\topicos-avancados-II\src\AgendaMedica\obj\Debug\AgendaMedica.Properties.Resources.resources
+F:\#git\topicos-avancados-II\src\AgendaMedica\obj\Debug\AgendaMedica.csproj.GenerateResource.Cache
+F:\#git\topicos-avancados-II\src\AgendaMedica\obj\Debug\AgendaMedica.exe
+F:\#git\topicos-avancados-II\src\AgendaMedica\obj\Debug\AgendaMedica.pdb
+F:\#git\topicos-avancados-II\src\AgendaMedica\obj\Debug\AgendaMedica.Login.resources
+F:\#git\topicos-avancados-II\src\AgendaMedica\obj\Debug\AgendaMedica.Principal.resources
