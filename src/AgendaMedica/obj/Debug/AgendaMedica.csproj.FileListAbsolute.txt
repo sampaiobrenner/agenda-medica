@@ -9,3 +9,12 @@ C:\Carolina\FACULDADE\2-SEMESTRE\Topicos-Projeto\src\AgendaMedica\obj\Debug\Agen
 C:\Carolina\FACULDADE\2-SEMESTRE\Topicos-Projeto\src\AgendaMedica\obj\Debug\AgendaMedica.Form1.resources
 C:\Carolina\FACULDADE\2-SEMESTRE\Topicos-Projeto\src\AgendaMedica\obj\Debug\AgendaMedica.Properties.Resources.resources
 C:\Carolina\FACULDADE\2-SEMESTRE\Topicos-Projeto\src\AgendaMedica\obj\Debug\AgendaMedica.csproj.GenerateResource.Cache
+C:\Users\Raul\Desktop\Nova pasta\agenda-medica\src\AgendaMedica\bin\Debug\AgendaMedica.exe.config
+C:\Users\Raul\Desktop\Nova pasta\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.exe
+C:\Users\Raul\Desktop\Nova pasta\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.pdb
+C:\Users\Raul\Desktop\Nova pasta\agenda-medica\src\AgendaMedica\bin\Debug\AgendaMedica.exe
+C:\Users\Raul\Desktop\Nova pasta\agenda-medica\src\AgendaMedica\bin\Debug\AgendaMedica.pdb
+C:\Users\Raul\Desktop\Nova pasta\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.csprojResolveAssemblyReference.cache
+C:\Users\Raul\Desktop\Nova pasta\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.Properties.Resources.resources
+C:\Users\Raul\Desktop\Nova pasta\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.csproj.GenerateResource.Cache
+C:\Users\Raul\Desktop\Nova pasta\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.Main.resources
