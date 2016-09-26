@@ -31,3 +31,5 @@ C:\Carolina\FACULDADE\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.Main
 C:\Carolina\FACULDADE\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.MDI_AM.resources
 C:\Carolina\FACULDADE\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.Properties.Resources.resources
 C:\Carolina\FACULDADE\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.csproj.GenerateResource.Cache
+C:\Carolina\FACULDADE\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.Sobre.resources
+C:\Carolina\FACULDADE\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.Pesquisar.resources

@@ -27,7 +27,7 @@ namespace AgendaMedica
             //childForm.Show();
             Main frmChild = new Main();
             frmChild.MdiParent = this;
-            frmChild.Text = "Cadastrar " + childFormNumber++;
+            frmChild.Text = "Cadastrar" + childFormNumber++;
             frmChild.Show();
         }
 
@@ -110,7 +110,25 @@ namespace AgendaMedica
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            Pesquisar frmpChild = new Pesquisar();
+            frmpChild.MdiParent = this;
+            frmpChild.Text = "Pesquisar" + childFormNumber++;
+            frmpChild.Show();
+        }
 
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sobre frmsChild = new Sobre();
+            frmsChild.MdiParent = this;
+            frmsChild.Show();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Pesquisar frmpChild = new Pesquisar();
+            frmpChild.MdiParent = this;
+            frmpChild.Text = "Pesquisar" + childFormNumber++;
+            frmpChild.Show();
         }
     }
 }

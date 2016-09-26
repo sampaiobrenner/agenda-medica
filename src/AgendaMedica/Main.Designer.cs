@@ -204,6 +204,7 @@
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(40, 40);
             this.btnExit.Text = "Sair";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // statusStrip1
             // 

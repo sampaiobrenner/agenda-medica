@@ -22,7 +22,7 @@ namespace AgendaMedica {
         private void timer1_Tick(object sender, EventArgs e)
         {
             DateTime dataHora = DateTime.Now;
-            lbDateTime.Text = "Data: " + dataHora.ToShortDateString() + " Hora: " + dataHora.ToLongTimeString();
+            lbDateTime.Text = "Data: " + dataHora.ToShortDateString() + " | Hora: " + dataHora.ToLongTimeString();
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -54,5 +54,12 @@ namespace AgendaMedica {
         {
 
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+       
     }
 }
