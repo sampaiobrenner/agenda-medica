@@ -56,11 +56,11 @@
     <Compile Include="Pesquisar.Designer.cs">
       <DependentUpon>Pesquisar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="Cadastro.Designer.cs">
+      <DependentUpon>Cadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\pessoas\Pessoa.cs" />
     <Compile Include="MDI-AM.cs">
@@ -80,8 +80,8 @@
     <EmbeddedResource Include="Pesquisar.resx">
       <DependentUpon>Pesquisar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="Cadastro.resx">
+      <DependentUpon>Cadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDI-AM.resx">
       <DependentUpon>MDI-AM.cs</DependentUpon>

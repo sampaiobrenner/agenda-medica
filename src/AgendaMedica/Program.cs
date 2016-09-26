@@ -14,6 +14,7 @@ namespace AgendaMedica {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MDI_AM());
+            
         }
     }
 }

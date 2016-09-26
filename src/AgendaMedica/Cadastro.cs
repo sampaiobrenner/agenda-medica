@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AgendaMedica {
-    public partial class Main : Form {
-        public Main() {
+    public partial class Cadastro : Form {
+        public Cadastro() {
             InitializeComponent();
         }
 

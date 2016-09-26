@@ -1,4 +1,6 @@
-﻿namespace AgendaMedica
+﻿using System.Windows.Forms;
+
+namespace AgendaMedica
 {
     partial class MDI_AM
     {
@@ -360,6 +362,7 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+            this.WindowState = FormWindowState.Maximized;
         }
         #endregion
 
@@ -396,6 +399,8 @@
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
     }
+
+    
 }
 
 

@@ -33,5 +33,9 @@ namespace AgendaMedica
         {
             timer1_Tick(e, e);
         }
+
+        private void label1_Click(object sender, EventArgs e) {
+
+        }
     }
 }

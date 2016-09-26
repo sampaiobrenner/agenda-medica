@@ -21,14 +21,11 @@ namespace AgendaMedica
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            //Form childForm = new Form();
-            //childForm.MdiParent = this;
-            //childForm.Text = "Window " + childFormNumber++;
-            //childForm.Show();
-            Main frmChild = new Main();
-            frmChild.MdiParent = this;
-            frmChild.Text = "Cadastrar" + childFormNumber++;
+                        
+            Cadastro frmChild = new Cadastro();
+            frmChild.MdiParent = this;            
             frmChild.Show();
+            frmChild.WindowState = FormWindowState.Maximized;
         }
 
         private void OpenFile(object sender, EventArgs e)
@@ -126,9 +123,9 @@ namespace AgendaMedica
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             Pesquisar frmpChild = new Pesquisar();
-            frmpChild.MdiParent = this;
-            frmpChild.Text = "Pesquisar" + childFormNumber++;
+            frmpChild.MdiParent = this;            
             frmpChild.Show();
+            frmpChild.WindowState = FormWindowState.Maximized;
         }
     }
 }

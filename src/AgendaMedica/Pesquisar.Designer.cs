@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pesquisar));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btnAdd = new System.Windows.Forms.ToolStripButton();
             this.btnSaerch = new System.Windows.Forms.ToolStripButton();
@@ -41,15 +38,23 @@
             this.btnDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnExit = new System.Windows.Forms.ToolStripButton();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblTimerTicker = new System.Windows.Forms.ToolStripStatusLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabPesquisar = new System.Windows.Forms.TabControl();
             this.tabConsultas = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txtNomePesquisa = new System.Windows.Forms.TextBox();
+            this.lblNomePesquisa = new System.Windows.Forms.Label();
+            this.dtgListaConsultas = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
             this.tabPesquisar.SuspendLayout();
+            this.tabConsultas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgListaConsultas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,29 +66,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(626, 73);
             this.panel1.TabIndex = 0;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblTimerTicker});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 51);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(626, 22);
-            this.statusStrip1.TabIndex = 0;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.tabPesquisar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(626, 293);
-            this.panel2.TabIndex = 1;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // toolStrip2
             // 
@@ -168,14 +150,36 @@
             this.btnExit.Text = "Sair";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblTimerTicker});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 51);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(626, 22);
+            this.statusStrip1.TabIndex = 0;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
             // lblTimerTicker
             // 
             this.lblTimerTicker.Name = "lblTimerTicker";
             this.lblTimerTicker.Size = new System.Drawing.Size(83, 17);
             this.lblTimerTicker.Text = "lblTimerTicker";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.tabPesquisar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(626, 293);
+            this.panel2.TabIndex = 1;
+            // 
             // tabPesquisar
             // 
+            this.tabPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabPesquisar.Controls.Add(this.tabConsultas);
             this.tabPesquisar.Controls.Add(this.tabPage2);
             this.tabPesquisar.Location = new System.Drawing.Point(0, 0);
@@ -186,6 +190,9 @@
             // 
             // tabConsultas
             // 
+            this.tabConsultas.Controls.Add(this.dtgListaConsultas);
+            this.tabConsultas.Controls.Add(this.lblNomePesquisa);
+            this.tabConsultas.Controls.Add(this.txtNomePesquisa);
             this.tabConsultas.Location = new System.Drawing.Point(4, 22);
             this.tabConsultas.Name = "tabConsultas";
             this.tabConsultas.Padding = new System.Windows.Forms.Padding(3);
@@ -199,10 +206,41 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
+            this.tabPage2.Size = new System.Drawing.Size(618, 267);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // txtNomePesquisa
+            // 
+            this.txtNomePesquisa.Location = new System.Drawing.Point(69, 12);
+            this.txtNomePesquisa.Name = "txtNomePesquisa";
+            this.txtNomePesquisa.Size = new System.Drawing.Size(263, 20);
+            this.txtNomePesquisa.TabIndex = 0;
+            // 
+            // lblNomePesquisa
+            // 
+            this.lblNomePesquisa.AutoSize = true;
+            this.lblNomePesquisa.Location = new System.Drawing.Point(17, 15);
+            this.lblNomePesquisa.Name = "lblNomePesquisa";
+            this.lblNomePesquisa.Size = new System.Drawing.Size(35, 13);
+            this.lblNomePesquisa.TabIndex = 1;
+            this.lblNomePesquisa.Text = "Nome";
+            this.lblNomePesquisa.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // dtgListaConsultas
+            // 
+            this.dtgListaConsultas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgListaConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgListaConsultas.Location = new System.Drawing.Point(20, 48);
+            this.dtgListaConsultas.Name = "dtgListaConsultas";
+            this.dtgListaConsultas.Size = new System.Drawing.Size(577, 193);
+            this.dtgListaConsultas.TabIndex = 2;
             // 
             // Pesquisar
             // 
@@ -211,17 +249,21 @@
             this.ClientSize = new System.Drawing.Size(626, 366);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Pesquisar";
             this.Text = "Pesquisar";
             this.Load += new System.EventHandler(this.Pesquisar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
             this.tabPesquisar.ResumeLayout(false);
+            this.tabConsultas.ResumeLayout(false);
+            this.tabConsultas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgListaConsultas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -243,5 +285,8 @@
         private System.Windows.Forms.TabControl tabPesquisar;
         private System.Windows.Forms.TabPage tabConsultas;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label lblNomePesquisa;
+        private System.Windows.Forms.TextBox txtNomePesquisa;
+        private System.Windows.Forms.DataGridView dtgListaConsultas;
     }
 }
