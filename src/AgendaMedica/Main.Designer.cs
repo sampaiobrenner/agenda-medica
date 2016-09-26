@@ -25,12 +25,6 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnAdd = new System.Windows.Forms.ToolStripButton();
@@ -42,108 +36,80 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lbDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salvarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabCadastrar = new System.Windows.Forms.TabControl();
+            this.tabAgendamento = new System.Windows.Forms.TabPage();
+            this.lblPlanoMedAgen = new System.Windows.Forms.Label();
+            this.cbxPlanoMedAgen = new System.Windows.Forms.ComboBox();
+            this.txtPacienteAgen = new System.Windows.Forms.TextBox();
+            this.cbxEspecialidadeAgen = new System.Windows.Forms.ComboBox();
+            this.lblEspecialidadeAgen = new System.Windows.Forms.Label();
+            this.lblPacienteAgen = new System.Windows.Forms.Label();
+            this.cbxMedicoAgen = new System.Windows.Forms.ComboBox();
+            this.lblMedicoAgen = new System.Windows.Forms.Label();
+            this.lblDataAgen = new System.Windows.Forms.Label();
+            this.dtpDataAgen = new System.Windows.Forms.DateTimePicker();
+            this.tabPacientes = new System.Windows.Forms.TabPage();
+            this.lblEmailPaciente = new System.Windows.Forms.Label();
+            this.txtEmailPaciente = new System.Windows.Forms.TextBox();
+            this.lblCelularPaciente = new System.Windows.Forms.Label();
+            this.txtCelularPaciente = new System.Windows.Forms.TextBox();
+            this.lblTelefonePaciente = new System.Windows.Forms.Label();
+            this.txtTelefonePaciente = new System.Windows.Forms.TextBox();
+            this.lblCidadePaciente = new System.Windows.Forms.Label();
+            this.lblUFPaciente = new System.Windows.Forms.Label();
+            this.lblCepPaciente = new System.Windows.Forms.Label();
+            this.txtCepPaciente = new System.Windows.Forms.TextBox();
+            this.cbxCidadePaciente = new System.Windows.Forms.ComboBox();
+            this.cbxUFPaciente = new System.Windows.Forms.ComboBox();
+            this.txtBairroPaciente = new System.Windows.Forms.TextBox();
+            this.lblBairroPaciente = new System.Windows.Forms.Label();
+            this.lblNumPaciente = new System.Windows.Forms.Label();
+            this.txtNumPaciente = new System.Windows.Forms.TextBox();
+            this.txtEndPaciente = new System.Windows.Forms.TextBox();
+            this.lblEndPaciente = new System.Windows.Forms.Label();
+            this.txtNascPaciente = new System.Windows.Forms.TextBox();
+            this.lblNascPaciente = new System.Windows.Forms.Label();
+            this.lblNomePaciente = new System.Windows.Forms.Label();
+            this.txtNomePaciente = new System.Windows.Forms.TextBox();
+            this.tabMedicos = new System.Windows.Forms.TabPage();
+            this.rbNao = new System.Windows.Forms.RadioButton();
+            this.rbSim = new System.Windows.Forms.RadioButton();
+            this.lblPlantonista = new System.Windows.Forms.Label();
+            this.lblEspecialidadeMed = new System.Windows.Forms.Label();
+            this.cbxEspecialidadeMed = new System.Windows.Forms.ComboBox();
+            this.lblCRM = new System.Windows.Forms.Label();
+            this.txtCRM = new System.Windows.Forms.TextBox();
+            this.lblEmailMed = new System.Windows.Forms.Label();
+            this.txtEmailMed = new System.Windows.Forms.TextBox();
+            this.lblCelularMed = new System.Windows.Forms.Label();
+            this.txtCelularMed = new System.Windows.Forms.TextBox();
+            this.lblTelefoneMed = new System.Windows.Forms.Label();
+            this.txtTelefoneMed = new System.Windows.Forms.TextBox();
+            this.lblCidadeMed = new System.Windows.Forms.Label();
+            this.lblUFMed = new System.Windows.Forms.Label();
+            this.lblCepMed = new System.Windows.Forms.Label();
+            this.txtCepMed = new System.Windows.Forms.TextBox();
+            this.cbxCidadeMed = new System.Windows.Forms.ComboBox();
+            this.cbxUFMed = new System.Windows.Forms.ComboBox();
+            this.txtBairroMed = new System.Windows.Forms.TextBox();
+            this.lblBairroMed = new System.Windows.Forms.Label();
+            this.lblNumMed = new System.Windows.Forms.Label();
+            this.txtNumMed = new System.Windows.Forms.TextBox();
+            this.txtEndMed = new System.Windows.Forms.TextBox();
+            this.lblEndMed = new System.Windows.Forms.Label();
+            this.txtNascMed = new System.Windows.Forms.TextBox();
+            this.lblNascMed = new System.Windows.Forms.Label();
+            this.lblNomeMed = new System.Windows.Forms.Label();
+            this.txtNomeMed = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label34 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.tabPage5.SuspendLayout();
+            this.tabCadastrar.SuspendLayout();
+            this.tabAgendamento.SuspendLayout();
+            this.tabPacientes.SuspendLayout();
+            this.tabMedicos.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -258,185 +224,623 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.tabControl1);
-            this.panel2.Controls.Add(this.menuStrip1);
+            this.panel2.Controls.Add(this.tabCadastrar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(660, 261);
             this.panel2.TabIndex = 1;
             // 
-            // tabControl1
+            // tabCadastrar
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Location = new System.Drawing.Point(0, 27);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(660, 234);
-            this.tabControl1.TabIndex = 1;
+            this.tabCadastrar.Controls.Add(this.tabAgendamento);
+            this.tabCadastrar.Controls.Add(this.tabPacientes);
+            this.tabCadastrar.Controls.Add(this.tabMedicos);
+            this.tabCadastrar.Location = new System.Drawing.Point(0, 3);
+            this.tabCadastrar.Name = "tabCadastrar";
+            this.tabCadastrar.SelectedIndex = 0;
+            this.tabCadastrar.Size = new System.Drawing.Size(660, 258);
+            this.tabCadastrar.TabIndex = 1;
             // 
-            // tabPage1
+            // tabAgendamento
             // 
-            this.tabPage1.Controls.Add(this.dataGridView2);
-            this.tabPage1.Controls.Add(this.label33);
-            this.tabPage1.Controls.Add(this.comboBox8);
-            this.tabPage1.Controls.Add(this.textBox23);
-            this.tabPage1.Controls.Add(this.comboBox7);
-            this.tabPage1.Controls.Add(this.label32);
-            this.tabPage1.Controls.Add(this.label31);
-            this.tabPage1.Controls.Add(this.comboBox6);
-            this.tabPage1.Controls.Add(this.label28);
-            this.tabPage1.Controls.Add(this.label27);
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(652, 208);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Agendamento";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            this.tabAgendamento.Controls.Add(this.lblPlanoMedAgen);
+            this.tabAgendamento.Controls.Add(this.cbxPlanoMedAgen);
+            this.tabAgendamento.Controls.Add(this.txtPacienteAgen);
+            this.tabAgendamento.Controls.Add(this.cbxEspecialidadeAgen);
+            this.tabAgendamento.Controls.Add(this.lblEspecialidadeAgen);
+            this.tabAgendamento.Controls.Add(this.lblPacienteAgen);
+            this.tabAgendamento.Controls.Add(this.cbxMedicoAgen);
+            this.tabAgendamento.Controls.Add(this.lblMedicoAgen);
+            this.tabAgendamento.Controls.Add(this.lblDataAgen);
+            this.tabAgendamento.Controls.Add(this.dtpDataAgen);
+            this.tabAgendamento.Location = new System.Drawing.Point(4, 22);
+            this.tabAgendamento.Name = "tabAgendamento";
+            this.tabAgendamento.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAgendamento.Size = new System.Drawing.Size(652, 232);
+            this.tabAgendamento.TabIndex = 0;
+            this.tabAgendamento.Text = "Agendamento";
+            this.tabAgendamento.UseVisualStyleBackColor = true;
+            this.tabAgendamento.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // tabPage2
+            // lblPlanoMedAgen
             // 
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Controls.Add(this.label26);
-            this.tabPage2.Controls.Add(this.textBox22);
-            this.tabPage2.Controls.Add(this.label25);
-            this.tabPage2.Controls.Add(this.textBox21);
-            this.tabPage2.Controls.Add(this.label24);
-            this.tabPage2.Controls.Add(this.textBox20);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(652, 208);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Consultas";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.lblPlanoMedAgen.AutoSize = true;
+            this.lblPlanoMedAgen.Location = new System.Drawing.Point(398, 52);
+            this.lblPlanoMedAgen.Name = "lblPlanoMedAgen";
+            this.lblPlanoMedAgen.Size = new System.Drawing.Size(72, 13);
+            this.lblPlanoMedAgen.TabIndex = 9;
+            this.lblPlanoMedAgen.Text = "Plano Médico";
             // 
-            // tabPage3
+            // cbxPlanoMedAgen
             // 
-            this.tabPage3.Controls.Add(this.label11);
-            this.tabPage3.Controls.Add(this.textBox9);
-            this.tabPage3.Controls.Add(this.label10);
-            this.tabPage3.Controls.Add(this.textBox8);
-            this.tabPage3.Controls.Add(this.label9);
-            this.tabPage3.Controls.Add(this.textBox7);
-            this.tabPage3.Controls.Add(this.label8);
-            this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.textBox6);
-            this.tabPage3.Controls.Add(this.comboBox2);
-            this.tabPage3.Controls.Add(this.comboBox1);
-            this.tabPage3.Controls.Add(this.textBox5);
-            this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.textBox4);
-            this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Controls.Add(this.textBox2);
-            this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Controls.Add(this.label1);
-            this.tabPage3.Controls.Add(this.textBox1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(652, 208);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Pacientes";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.cbxPlanoMedAgen.FormattingEnabled = true;
+            this.cbxPlanoMedAgen.Location = new System.Drawing.Point(401, 69);
+            this.cbxPlanoMedAgen.Name = "cbxPlanoMedAgen";
+            this.cbxPlanoMedAgen.Size = new System.Drawing.Size(241, 21);
+            this.cbxPlanoMedAgen.TabIndex = 8;
             // 
-            // tabPage4
+            // txtPacienteAgen
             // 
-            this.tabPage4.Controls.Add(this.radioButton2);
-            this.tabPage4.Controls.Add(this.radioButton1);
-            this.tabPage4.Controls.Add(this.label30);
-            this.tabPage4.Controls.Add(this.label29);
-            this.tabPage4.Controls.Add(this.comboBox5);
-            this.tabPage4.Controls.Add(this.label23);
-            this.tabPage4.Controls.Add(this.textBox19);
-            this.tabPage4.Controls.Add(this.label12);
-            this.tabPage4.Controls.Add(this.textBox10);
-            this.tabPage4.Controls.Add(this.label13);
-            this.tabPage4.Controls.Add(this.textBox11);
-            this.tabPage4.Controls.Add(this.label14);
-            this.tabPage4.Controls.Add(this.textBox12);
-            this.tabPage4.Controls.Add(this.label15);
-            this.tabPage4.Controls.Add(this.label16);
-            this.tabPage4.Controls.Add(this.label17);
-            this.tabPage4.Controls.Add(this.textBox13);
-            this.tabPage4.Controls.Add(this.comboBox3);
-            this.tabPage4.Controls.Add(this.comboBox4);
-            this.tabPage4.Controls.Add(this.textBox14);
-            this.tabPage4.Controls.Add(this.label18);
-            this.tabPage4.Controls.Add(this.label19);
-            this.tabPage4.Controls.Add(this.textBox15);
-            this.tabPage4.Controls.Add(this.textBox16);
-            this.tabPage4.Controls.Add(this.label20);
-            this.tabPage4.Controls.Add(this.textBox17);
-            this.tabPage4.Controls.Add(this.label21);
-            this.tabPage4.Controls.Add(this.label22);
-            this.tabPage4.Controls.Add(this.textBox18);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(652, 208);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Médicos";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.txtPacienteAgen.Location = new System.Drawing.Point(12, 69);
+            this.txtPacienteAgen.Name = "txtPacienteAgen";
+            this.txtPacienteAgen.Size = new System.Drawing.Size(373, 20);
+            this.txtPacienteAgen.TabIndex = 7;
             // 
-            // menuStrip1
+            // cbxEspecialidadeAgen
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.arquivoToolStripMenuItem,
-            this.ajudaToolStripMenuItem,
-            this.sobreToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(660, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.cbxEspecialidadeAgen.FormattingEnabled = true;
+            this.cbxEspecialidadeAgen.Location = new System.Drawing.Point(12, 24);
+            this.cbxEspecialidadeAgen.Name = "cbxEspecialidadeAgen";
+            this.cbxEspecialidadeAgen.Size = new System.Drawing.Size(143, 21);
+            this.cbxEspecialidadeAgen.TabIndex = 6;
             // 
-            // arquivoToolStripMenuItem
+            // lblEspecialidadeAgen
             // 
-            this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salvarToolStripMenuItem,
-            this.sairToolStripMenuItem});
-            this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
-            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.arquivoToolStripMenuItem.Text = "Arquivo";
+            this.lblEspecialidadeAgen.AutoSize = true;
+            this.lblEspecialidadeAgen.Location = new System.Drawing.Point(9, 7);
+            this.lblEspecialidadeAgen.Name = "lblEspecialidadeAgen";
+            this.lblEspecialidadeAgen.Size = new System.Drawing.Size(73, 13);
+            this.lblEspecialidadeAgen.TabIndex = 5;
+            this.lblEspecialidadeAgen.Text = "Especialidade";
             // 
-            // salvarToolStripMenuItem
+            // lblPacienteAgen
             // 
-            this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
-            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.salvarToolStripMenuItem.Text = "Salvar";
+            this.lblPacienteAgen.AutoSize = true;
+            this.lblPacienteAgen.Location = new System.Drawing.Point(9, 52);
+            this.lblPacienteAgen.Name = "lblPacienteAgen";
+            this.lblPacienteAgen.Size = new System.Drawing.Size(49, 13);
+            this.lblPacienteAgen.TabIndex = 4;
+            this.lblPacienteAgen.Text = "Paciente";
             // 
-            // sairToolStripMenuItem
+            // cbxMedicoAgen
             // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.sairToolStripMenuItem.Text = "Sair";
+            this.cbxMedicoAgen.FormattingEnabled = true;
+            this.cbxMedicoAgen.Location = new System.Drawing.Point(171, 24);
+            this.cbxMedicoAgen.Name = "cbxMedicoAgen";
+            this.cbxMedicoAgen.Size = new System.Drawing.Size(214, 21);
+            this.cbxMedicoAgen.TabIndex = 3;
             // 
-            // ajudaToolStripMenuItem
+            // lblMedicoAgen
             // 
-            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
-            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.ajudaToolStripMenuItem.Text = "Ajuda";
+            this.lblMedicoAgen.AutoSize = true;
+            this.lblMedicoAgen.Location = new System.Drawing.Point(168, 10);
+            this.lblMedicoAgen.Name = "lblMedicoAgen";
+            this.lblMedicoAgen.Size = new System.Drawing.Size(42, 13);
+            this.lblMedicoAgen.TabIndex = 2;
+            this.lblMedicoAgen.Text = "Médico";
             // 
-            // sobreToolStripMenuItem
+            // lblDataAgen
             // 
-            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.sobreToolStripMenuItem.Text = "Sobre";
+            this.lblDataAgen.AutoSize = true;
+            this.lblDataAgen.Location = new System.Drawing.Point(398, 8);
+            this.lblDataAgen.Name = "lblDataAgen";
+            this.lblDataAgen.Size = new System.Drawing.Size(30, 13);
+            this.lblDataAgen.TabIndex = 1;
+            this.lblDataAgen.Text = "Data";
+            // 
+            // dtpDataAgen
+            // 
+            this.dtpDataAgen.Location = new System.Drawing.Point(401, 24);
+            this.dtpDataAgen.Name = "dtpDataAgen";
+            this.dtpDataAgen.Size = new System.Drawing.Size(241, 20);
+            this.dtpDataAgen.TabIndex = 0;
+            // 
+            // tabPacientes
+            // 
+            this.tabPacientes.Controls.Add(this.lblEmailPaciente);
+            this.tabPacientes.Controls.Add(this.txtEmailPaciente);
+            this.tabPacientes.Controls.Add(this.lblCelularPaciente);
+            this.tabPacientes.Controls.Add(this.txtCelularPaciente);
+            this.tabPacientes.Controls.Add(this.lblTelefonePaciente);
+            this.tabPacientes.Controls.Add(this.txtTelefonePaciente);
+            this.tabPacientes.Controls.Add(this.lblCidadePaciente);
+            this.tabPacientes.Controls.Add(this.lblUFPaciente);
+            this.tabPacientes.Controls.Add(this.lblCepPaciente);
+            this.tabPacientes.Controls.Add(this.txtCepPaciente);
+            this.tabPacientes.Controls.Add(this.cbxCidadePaciente);
+            this.tabPacientes.Controls.Add(this.cbxUFPaciente);
+            this.tabPacientes.Controls.Add(this.txtBairroPaciente);
+            this.tabPacientes.Controls.Add(this.lblBairroPaciente);
+            this.tabPacientes.Controls.Add(this.lblNumPaciente);
+            this.tabPacientes.Controls.Add(this.txtNumPaciente);
+            this.tabPacientes.Controls.Add(this.txtEndPaciente);
+            this.tabPacientes.Controls.Add(this.lblEndPaciente);
+            this.tabPacientes.Controls.Add(this.txtNascPaciente);
+            this.tabPacientes.Controls.Add(this.lblNascPaciente);
+            this.tabPacientes.Controls.Add(this.lblNomePaciente);
+            this.tabPacientes.Controls.Add(this.txtNomePaciente);
+            this.tabPacientes.Location = new System.Drawing.Point(4, 22);
+            this.tabPacientes.Name = "tabPacientes";
+            this.tabPacientes.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPacientes.Size = new System.Drawing.Size(652, 232);
+            this.tabPacientes.TabIndex = 2;
+            this.tabPacientes.Text = "Pacientes";
+            this.tabPacientes.UseVisualStyleBackColor = true;
+            // 
+            // lblEmailPaciente
+            // 
+            this.lblEmailPaciente.AutoSize = true;
+            this.lblEmailPaciente.Location = new System.Drawing.Point(286, 155);
+            this.lblEmailPaciente.Name = "lblEmailPaciente";
+            this.lblEmailPaciente.Size = new System.Drawing.Size(35, 13);
+            this.lblEmailPaciente.TabIndex = 21;
+            this.lblEmailPaciente.Text = "E-mail";
+            // 
+            // txtEmailPaciente
+            // 
+            this.txtEmailPaciente.Location = new System.Drawing.Point(289, 171);
+            this.txtEmailPaciente.Name = "txtEmailPaciente";
+            this.txtEmailPaciente.Size = new System.Drawing.Size(341, 20);
+            this.txtEmailPaciente.TabIndex = 20;
+            // 
+            // lblCelularPaciente
+            // 
+            this.lblCelularPaciente.AutoSize = true;
+            this.lblCelularPaciente.Location = new System.Drawing.Point(154, 155);
+            this.lblCelularPaciente.Name = "lblCelularPaciente";
+            this.lblCelularPaciente.Size = new System.Drawing.Size(39, 13);
+            this.lblCelularPaciente.TabIndex = 19;
+            this.lblCelularPaciente.Text = "Celular";
+            // 
+            // txtCelularPaciente
+            // 
+            this.txtCelularPaciente.Location = new System.Drawing.Point(157, 171);
+            this.txtCelularPaciente.Name = "txtCelularPaciente";
+            this.txtCelularPaciente.Size = new System.Drawing.Size(115, 20);
+            this.txtCelularPaciente.TabIndex = 18;
+            // 
+            // lblTelefonePaciente
+            // 
+            this.lblTelefonePaciente.AutoSize = true;
+            this.lblTelefonePaciente.Location = new System.Drawing.Point(20, 155);
+            this.lblTelefonePaciente.Name = "lblTelefonePaciente";
+            this.lblTelefonePaciente.Size = new System.Drawing.Size(49, 13);
+            this.lblTelefonePaciente.TabIndex = 17;
+            this.lblTelefonePaciente.Text = "Telefone";
+            // 
+            // txtTelefonePaciente
+            // 
+            this.txtTelefonePaciente.Location = new System.Drawing.Point(23, 171);
+            this.txtTelefonePaciente.Name = "txtTelefonePaciente";
+            this.txtTelefonePaciente.Size = new System.Drawing.Size(118, 20);
+            this.txtTelefonePaciente.TabIndex = 16;
+            // 
+            // lblCidadePaciente
+            // 
+            this.lblCidadePaciente.AutoSize = true;
+            this.lblCidadePaciente.Location = new System.Drawing.Point(491, 106);
+            this.lblCidadePaciente.Name = "lblCidadePaciente";
+            this.lblCidadePaciente.Size = new System.Drawing.Size(40, 13);
+            this.lblCidadePaciente.TabIndex = 15;
+            this.lblCidadePaciente.Text = "Cidade";
+            // 
+            // lblUFPaciente
+            // 
+            this.lblUFPaciente.AutoSize = true;
+            this.lblUFPaciente.Location = new System.Drawing.Point(391, 106);
+            this.lblUFPaciente.Name = "lblUFPaciente";
+            this.lblUFPaciente.Size = new System.Drawing.Size(21, 13);
+            this.lblUFPaciente.TabIndex = 14;
+            this.lblUFPaciente.Text = "UF";
+            // 
+            // lblCepPaciente
+            // 
+            this.lblCepPaciente.AutoSize = true;
+            this.lblCepPaciente.Location = new System.Drawing.Point(229, 106);
+            this.lblCepPaciente.Name = "lblCepPaciente";
+            this.lblCepPaciente.Size = new System.Drawing.Size(28, 13);
+            this.lblCepPaciente.TabIndex = 13;
+            this.lblCepPaciente.Text = "CEP";
+            // 
+            // txtCepPaciente
+            // 
+            this.txtCepPaciente.Location = new System.Drawing.Point(232, 122);
+            this.txtCepPaciente.Name = "txtCepPaciente";
+            this.txtCepPaciente.Size = new System.Drawing.Size(145, 20);
+            this.txtCepPaciente.TabIndex = 12;
+            // 
+            // cbxCidadePaciente
+            // 
+            this.cbxCidadePaciente.FormattingEnabled = true;
+            this.cbxCidadePaciente.Location = new System.Drawing.Point(494, 121);
+            this.cbxCidadePaciente.Name = "cbxCidadePaciente";
+            this.cbxCidadePaciente.Size = new System.Drawing.Size(136, 21);
+            this.cbxCidadePaciente.TabIndex = 11;
+            // 
+            // cbxUFPaciente
+            // 
+            this.cbxUFPaciente.FormattingEnabled = true;
+            this.cbxUFPaciente.Location = new System.Drawing.Point(394, 121);
+            this.cbxUFPaciente.Name = "cbxUFPaciente";
+            this.cbxUFPaciente.Size = new System.Drawing.Size(83, 21);
+            this.cbxUFPaciente.TabIndex = 10;
+            // 
+            // txtBairroPaciente
+            // 
+            this.txtBairroPaciente.Location = new System.Drawing.Point(23, 122);
+            this.txtBairroPaciente.Name = "txtBairroPaciente";
+            this.txtBairroPaciente.Size = new System.Drawing.Size(192, 20);
+            this.txtBairroPaciente.TabIndex = 9;
+            // 
+            // lblBairroPaciente
+            // 
+            this.lblBairroPaciente.AutoSize = true;
+            this.lblBairroPaciente.Location = new System.Drawing.Point(20, 106);
+            this.lblBairroPaciente.Name = "lblBairroPaciente";
+            this.lblBairroPaciente.Size = new System.Drawing.Size(34, 13);
+            this.lblBairroPaciente.TabIndex = 8;
+            this.lblBairroPaciente.Text = "Bairro";
+            // 
+            // lblNumPaciente
+            // 
+            this.lblNumPaciente.AutoSize = true;
+            this.lblNumPaciente.Location = new System.Drawing.Point(549, 55);
+            this.lblNumPaciente.Name = "lblNumPaciente";
+            this.lblNumPaciente.Size = new System.Drawing.Size(44, 13);
+            this.lblNumPaciente.TabIndex = 7;
+            this.lblNumPaciente.Text = "Número";
+            // 
+            // txtNumPaciente
+            // 
+            this.txtNumPaciente.Location = new System.Drawing.Point(552, 71);
+            this.txtNumPaciente.Name = "txtNumPaciente";
+            this.txtNumPaciente.Size = new System.Drawing.Size(78, 20);
+            this.txtNumPaciente.TabIndex = 6;
+            // 
+            // txtEndPaciente
+            // 
+            this.txtEndPaciente.Location = new System.Drawing.Point(23, 71);
+            this.txtEndPaciente.Name = "txtEndPaciente";
+            this.txtEndPaciente.Size = new System.Drawing.Size(512, 20);
+            this.txtEndPaciente.TabIndex = 5;
+            // 
+            // lblEndPaciente
+            // 
+            this.lblEndPaciente.AutoSize = true;
+            this.lblEndPaciente.Location = new System.Drawing.Point(20, 55);
+            this.lblEndPaciente.Name = "lblEndPaciente";
+            this.lblEndPaciente.Size = new System.Drawing.Size(53, 13);
+            this.lblEndPaciente.TabIndex = 4;
+            this.lblEndPaciente.Text = "Endereço";
+            // 
+            // txtNascPaciente
+            // 
+            this.txtNascPaciente.Location = new System.Drawing.Point(468, 25);
+            this.txtNascPaciente.Name = "txtNascPaciente";
+            this.txtNascPaciente.Size = new System.Drawing.Size(162, 20);
+            this.txtNascPaciente.TabIndex = 3;
+            // 
+            // lblNascPaciente
+            // 
+            this.lblNascPaciente.AutoSize = true;
+            this.lblNascPaciente.Location = new System.Drawing.Point(465, 10);
+            this.lblNascPaciente.Name = "lblNascPaciente";
+            this.lblNascPaciente.Size = new System.Drawing.Size(89, 13);
+            this.lblNascPaciente.TabIndex = 2;
+            this.lblNascPaciente.Text = "Data Nascimento";
+            // 
+            // lblNomePaciente
+            // 
+            this.lblNomePaciente.AutoSize = true;
+            this.lblNomePaciente.Location = new System.Drawing.Point(20, 10);
+            this.lblNomePaciente.Name = "lblNomePaciente";
+            this.lblNomePaciente.Size = new System.Drawing.Size(82, 13);
+            this.lblNomePaciente.TabIndex = 1;
+            this.lblNomePaciente.Text = "Nome Completo";
+            this.lblNomePaciente.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtNomePaciente
+            // 
+            this.txtNomePaciente.Location = new System.Drawing.Point(23, 26);
+            this.txtNomePaciente.Name = "txtNomePaciente";
+            this.txtNomePaciente.Size = new System.Drawing.Size(426, 20);
+            this.txtNomePaciente.TabIndex = 0;
+            // 
+            // tabMedicos
+            // 
+            this.tabMedicos.Controls.Add(this.rbNao);
+            this.tabMedicos.Controls.Add(this.rbSim);
+            this.tabMedicos.Controls.Add(this.lblPlantonista);
+            this.tabMedicos.Controls.Add(this.lblEspecialidadeMed);
+            this.tabMedicos.Controls.Add(this.cbxEspecialidadeMed);
+            this.tabMedicos.Controls.Add(this.lblCRM);
+            this.tabMedicos.Controls.Add(this.txtCRM);
+            this.tabMedicos.Controls.Add(this.lblEmailMed);
+            this.tabMedicos.Controls.Add(this.txtEmailMed);
+            this.tabMedicos.Controls.Add(this.lblCelularMed);
+            this.tabMedicos.Controls.Add(this.txtCelularMed);
+            this.tabMedicos.Controls.Add(this.lblTelefoneMed);
+            this.tabMedicos.Controls.Add(this.txtTelefoneMed);
+            this.tabMedicos.Controls.Add(this.lblCidadeMed);
+            this.tabMedicos.Controls.Add(this.lblUFMed);
+            this.tabMedicos.Controls.Add(this.lblCepMed);
+            this.tabMedicos.Controls.Add(this.txtCepMed);
+            this.tabMedicos.Controls.Add(this.cbxCidadeMed);
+            this.tabMedicos.Controls.Add(this.cbxUFMed);
+            this.tabMedicos.Controls.Add(this.txtBairroMed);
+            this.tabMedicos.Controls.Add(this.lblBairroMed);
+            this.tabMedicos.Controls.Add(this.lblNumMed);
+            this.tabMedicos.Controls.Add(this.txtNumMed);
+            this.tabMedicos.Controls.Add(this.txtEndMed);
+            this.tabMedicos.Controls.Add(this.lblEndMed);
+            this.tabMedicos.Controls.Add(this.txtNascMed);
+            this.tabMedicos.Controls.Add(this.lblNascMed);
+            this.tabMedicos.Controls.Add(this.lblNomeMed);
+            this.tabMedicos.Controls.Add(this.txtNomeMed);
+            this.tabMedicos.Location = new System.Drawing.Point(4, 22);
+            this.tabMedicos.Name = "tabMedicos";
+            this.tabMedicos.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMedicos.Size = new System.Drawing.Size(652, 232);
+            this.tabMedicos.TabIndex = 3;
+            this.tabMedicos.Text = "Médicos";
+            this.tabMedicos.UseVisualStyleBackColor = true;
+            // 
+            // rbNao
+            // 
+            this.rbNao.AutoSize = true;
+            this.rbNao.Location = new System.Drawing.Point(584, 172);
+            this.rbNao.Name = "rbNao";
+            this.rbNao.Size = new System.Drawing.Size(45, 17);
+            this.rbNao.TabIndex = 50;
+            this.rbNao.TabStop = true;
+            this.rbNao.Text = "Não";
+            this.rbNao.UseVisualStyleBackColor = true;
+            // 
+            // rbSim
+            // 
+            this.rbSim.AutoSize = true;
+            this.rbSim.Location = new System.Drawing.Point(535, 172);
+            this.rbSim.Name = "rbSim";
+            this.rbSim.Size = new System.Drawing.Size(42, 17);
+            this.rbSim.TabIndex = 49;
+            this.rbSim.TabStop = true;
+            this.rbSim.Text = "Sim";
+            this.rbSim.UseVisualStyleBackColor = true;
+            // 
+            // lblPlantonista
+            // 
+            this.lblPlantonista.AutoSize = true;
+            this.lblPlantonista.Location = new System.Drawing.Point(532, 153);
+            this.lblPlantonista.Name = "lblPlantonista";
+            this.lblPlantonista.Size = new System.Drawing.Size(59, 13);
+            this.lblPlantonista.TabIndex = 48;
+            this.lblPlantonista.Text = "Plantonista";
+            // 
+            // lblEspecialidadeMed
+            // 
+            this.lblEspecialidadeMed.AutoSize = true;
+            this.lblEspecialidadeMed.Location = new System.Drawing.Point(242, 153);
+            this.lblEspecialidadeMed.Name = "lblEspecialidadeMed";
+            this.lblEspecialidadeMed.Size = new System.Drawing.Size(73, 13);
+            this.lblEspecialidadeMed.TabIndex = 47;
+            this.lblEspecialidadeMed.Text = "Especialidade";
+            // 
+            // cbxEspecialidadeMed
+            // 
+            this.cbxEspecialidadeMed.FormattingEnabled = true;
+            this.cbxEspecialidadeMed.Location = new System.Drawing.Point(245, 169);
+            this.cbxEspecialidadeMed.Name = "cbxEspecialidadeMed";
+            this.cbxEspecialidadeMed.Size = new System.Drawing.Size(177, 21);
+            this.cbxEspecialidadeMed.TabIndex = 46;
+            // 
+            // lblCRM
+            // 
+            this.lblCRM.AutoSize = true;
+            this.lblCRM.Location = new System.Drawing.Point(434, 153);
+            this.lblCRM.Name = "lblCRM";
+            this.lblCRM.Size = new System.Drawing.Size(31, 13);
+            this.lblCRM.TabIndex = 45;
+            this.lblCRM.Text = "CRM";
+            // 
+            // txtCRM
+            // 
+            this.txtCRM.Location = new System.Drawing.Point(437, 169);
+            this.txtCRM.Name = "txtCRM";
+            this.txtCRM.Size = new System.Drawing.Size(78, 20);
+            this.txtCRM.TabIndex = 44;
+            // 
+            // lblEmailMed
+            // 
+            this.lblEmailMed.AutoSize = true;
+            this.lblEmailMed.Location = new System.Drawing.Point(21, 153);
+            this.lblEmailMed.Name = "lblEmailMed";
+            this.lblEmailMed.Size = new System.Drawing.Size(35, 13);
+            this.lblEmailMed.TabIndex = 43;
+            this.lblEmailMed.Text = "E-mail";
+            // 
+            // txtEmailMed
+            // 
+            this.txtEmailMed.Location = new System.Drawing.Point(24, 169);
+            this.txtEmailMed.Name = "txtEmailMed";
+            this.txtEmailMed.Size = new System.Drawing.Size(203, 20);
+            this.txtEmailMed.TabIndex = 42;
+            // 
+            // lblCelularMed
+            // 
+            this.lblCelularMed.AutoSize = true;
+            this.lblCelularMed.Location = new System.Drawing.Point(532, 102);
+            this.lblCelularMed.Name = "lblCelularMed";
+            this.lblCelularMed.Size = new System.Drawing.Size(39, 13);
+            this.lblCelularMed.TabIndex = 41;
+            this.lblCelularMed.Text = "Celular";
+            // 
+            // txtCelularMed
+            // 
+            this.txtCelularMed.Location = new System.Drawing.Point(535, 118);
+            this.txtCelularMed.Name = "txtCelularMed";
+            this.txtCelularMed.Size = new System.Drawing.Size(96, 20);
+            this.txtCelularMed.TabIndex = 40;
+            // 
+            // lblTelefoneMed
+            // 
+            this.lblTelefoneMed.AutoSize = true;
+            this.lblTelefoneMed.Location = new System.Drawing.Point(434, 102);
+            this.lblTelefoneMed.Name = "lblTelefoneMed";
+            this.lblTelefoneMed.Size = new System.Drawing.Size(49, 13);
+            this.lblTelefoneMed.TabIndex = 39;
+            this.lblTelefoneMed.Text = "Telefone";
+            // 
+            // txtTelefoneMed
+            // 
+            this.txtTelefoneMed.Location = new System.Drawing.Point(437, 118);
+            this.txtTelefoneMed.Name = "txtTelefoneMed";
+            this.txtTelefoneMed.Size = new System.Drawing.Size(85, 20);
+            this.txtTelefoneMed.TabIndex = 38;
+            // 
+            // lblCidadeMed
+            // 
+            this.lblCidadeMed.AutoSize = true;
+            this.lblCidadeMed.Location = new System.Drawing.Point(283, 103);
+            this.lblCidadeMed.Name = "lblCidadeMed";
+            this.lblCidadeMed.Size = new System.Drawing.Size(40, 13);
+            this.lblCidadeMed.TabIndex = 37;
+            this.lblCidadeMed.Text = "Cidade";
+            // 
+            // lblUFMed
+            // 
+            this.lblUFMed.AutoSize = true;
+            this.lblUFMed.Location = new System.Drawing.Point(197, 103);
+            this.lblUFMed.Name = "lblUFMed";
+            this.lblUFMed.Size = new System.Drawing.Size(21, 13);
+            this.lblUFMed.TabIndex = 36;
+            this.lblUFMed.Text = "UF";
+            // 
+            // lblCepMed
+            // 
+            this.lblCepMed.AutoSize = true;
+            this.lblCepMed.Location = new System.Drawing.Point(532, 55);
+            this.lblCepMed.Name = "lblCepMed";
+            this.lblCepMed.Size = new System.Drawing.Size(28, 13);
+            this.lblCepMed.TabIndex = 35;
+            this.lblCepMed.Text = "CEP";
+            // 
+            // txtCepMed
+            // 
+            this.txtCepMed.Location = new System.Drawing.Point(535, 71);
+            this.txtCepMed.Name = "txtCepMed";
+            this.txtCepMed.Size = new System.Drawing.Size(96, 20);
+            this.txtCepMed.TabIndex = 34;
+            // 
+            // cbxCidadeMed
+            // 
+            this.cbxCidadeMed.FormattingEnabled = true;
+            this.cbxCidadeMed.Location = new System.Drawing.Point(286, 118);
+            this.cbxCidadeMed.Name = "cbxCidadeMed";
+            this.cbxCidadeMed.Size = new System.Drawing.Size(136, 21);
+            this.cbxCidadeMed.TabIndex = 33;
+            // 
+            // cbxUFMed
+            // 
+            this.cbxUFMed.FormattingEnabled = true;
+            this.cbxUFMed.Location = new System.Drawing.Point(200, 118);
+            this.cbxUFMed.Name = "cbxUFMed";
+            this.cbxUFMed.Size = new System.Drawing.Size(67, 21);
+            this.cbxUFMed.TabIndex = 32;
+            // 
+            // txtBairroMed
+            // 
+            this.txtBairroMed.Location = new System.Drawing.Point(24, 119);
+            this.txtBairroMed.Name = "txtBairroMed";
+            this.txtBairroMed.Size = new System.Drawing.Size(161, 20);
+            this.txtBairroMed.TabIndex = 31;
+            // 
+            // lblBairroMed
+            // 
+            this.lblBairroMed.AutoSize = true;
+            this.lblBairroMed.Location = new System.Drawing.Point(21, 103);
+            this.lblBairroMed.Name = "lblBairroMed";
+            this.lblBairroMed.Size = new System.Drawing.Size(34, 13);
+            this.lblBairroMed.TabIndex = 30;
+            this.lblBairroMed.Text = "Bairro";
+            // 
+            // lblNumMed
+            // 
+            this.lblNumMed.AutoSize = true;
+            this.lblNumMed.Location = new System.Drawing.Point(466, 55);
+            this.lblNumMed.Name = "lblNumMed";
+            this.lblNumMed.Size = new System.Drawing.Size(44, 13);
+            this.lblNumMed.TabIndex = 29;
+            this.lblNumMed.Text = "Número";
+            // 
+            // txtNumMed
+            // 
+            this.txtNumMed.Location = new System.Drawing.Point(469, 71);
+            this.txtNumMed.Name = "txtNumMed";
+            this.txtNumMed.Size = new System.Drawing.Size(60, 20);
+            this.txtNumMed.TabIndex = 28;
+            // 
+            // txtEndMed
+            // 
+            this.txtEndMed.Location = new System.Drawing.Point(24, 71);
+            this.txtEndMed.Name = "txtEndMed";
+            this.txtEndMed.Size = new System.Drawing.Size(439, 20);
+            this.txtEndMed.TabIndex = 27;
+            // 
+            // lblEndMed
+            // 
+            this.lblEndMed.AutoSize = true;
+            this.lblEndMed.Location = new System.Drawing.Point(21, 55);
+            this.lblEndMed.Name = "lblEndMed";
+            this.lblEndMed.Size = new System.Drawing.Size(53, 13);
+            this.lblEndMed.TabIndex = 26;
+            this.lblEndMed.Text = "Endereço";
+            // 
+            // txtNascMed
+            // 
+            this.txtNascMed.Location = new System.Drawing.Point(469, 25);
+            this.txtNascMed.Name = "txtNascMed";
+            this.txtNascMed.Size = new System.Drawing.Size(162, 20);
+            this.txtNascMed.TabIndex = 25;
+            // 
+            // lblNascMed
+            // 
+            this.lblNascMed.AutoSize = true;
+            this.lblNascMed.Location = new System.Drawing.Point(466, 10);
+            this.lblNascMed.Name = "lblNascMed";
+            this.lblNascMed.Size = new System.Drawing.Size(89, 13);
+            this.lblNascMed.TabIndex = 24;
+            this.lblNascMed.Text = "Data Nascimento";
+            // 
+            // lblNomeMed
+            // 
+            this.lblNomeMed.AutoSize = true;
+            this.lblNomeMed.Location = new System.Drawing.Point(21, 10);
+            this.lblNomeMed.Name = "lblNomeMed";
+            this.lblNomeMed.Size = new System.Drawing.Size(82, 13);
+            this.lblNomeMed.TabIndex = 23;
+            this.lblNomeMed.Text = "Nome Completo";
+            // 
+            // txtNomeMed
+            // 
+            this.txtNomeMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeMed.Location = new System.Drawing.Point(24, 26);
+            this.txtNomeMed.Name = "txtNomeMed";
+            this.txtNomeMed.Size = new System.Drawing.Size(439, 20);
+            this.txtNomeMed.TabIndex = 22;
             // 
             // timer1
             // 
@@ -444,706 +848,7 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(23, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(426, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nome Completo";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(465, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Data Nascimento";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Endereço";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(23, 71);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(512, 20);
-            this.textBox3.TabIndex = 5;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(552, 71);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(78, 20);
-            this.textBox4.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(549, 55);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Número";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 106);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Bairro";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(23, 122);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(192, 20);
-            this.textBox5.TabIndex = 9;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(394, 121);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(83, 21);
-            this.comboBox1.TabIndex = 10;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(494, 121);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(136, 21);
-            this.comboBox2.TabIndex = 11;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(232, 122);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(145, 20);
-            this.textBox6.TabIndex = 12;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(229, 106);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(28, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "CEP";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(391, 106);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(21, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "UF";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(491, 106);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 13);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Cidade";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(20, 155);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 13);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Telefone";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(154, 155);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 13);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Celular";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(289, 171);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(341, 20);
-            this.textBox9.TabIndex = 20;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(286, 155);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(35, 13);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "E-mail";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(21, 153);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 13);
-            this.label12.TabIndex = 43;
-            this.label12.Text = "E-mail";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(24, 169);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(203, 20);
-            this.textBox10.TabIndex = 42;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(532, 102);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(39, 13);
-            this.label13.TabIndex = 41;
-            this.label13.Text = "Celular";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(434, 102);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 13);
-            this.label14.TabIndex = 39;
-            this.label14.Text = "Telefone";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(283, 103);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(40, 13);
-            this.label15.TabIndex = 37;
-            this.label15.Text = "Cidade";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(197, 103);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(21, 13);
-            this.label16.TabIndex = 36;
-            this.label16.Text = "UF";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(532, 55);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(28, 13);
-            this.label17.TabIndex = 35;
-            this.label17.Text = "CEP";
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(535, 71);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(96, 20);
-            this.textBox13.TabIndex = 34;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(286, 118);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(136, 21);
-            this.comboBox3.TabIndex = 33;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(200, 118);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(67, 21);
-            this.comboBox4.TabIndex = 32;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(24, 119);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(161, 20);
-            this.textBox14.TabIndex = 31;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(21, 103);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(34, 13);
-            this.label18.TabIndex = 30;
-            this.label18.Text = "Bairro";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(466, 55);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(44, 13);
-            this.label19.TabIndex = 29;
-            this.label19.Text = "Número";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(469, 71);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(60, 20);
-            this.textBox15.TabIndex = 28;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(24, 71);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(439, 20);
-            this.textBox16.TabIndex = 27;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(21, 55);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(53, 13);
-            this.label20.TabIndex = 26;
-            this.label20.Text = "Endereço";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(466, 10);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(89, 13);
-            this.label21.TabIndex = 24;
-            this.label21.Text = "Data Nascimento";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(21, 10);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(82, 13);
-            this.label22.TabIndex = 23;
-            this.label22.Text = "Nome Completo";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(24, 26);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(439, 20);
-            this.textBox18.TabIndex = 22;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(437, 169);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(78, 20);
-            this.textBox19.TabIndex = 44;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(434, 153);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(31, 13);
-            this.label23.TabIndex = 45;
-            this.label23.Text = "CRM";
-            // 
-            // textBox20
-            // 
-            this.textBox20.Location = new System.Drawing.Point(9, 23);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(119, 20);
-            this.textBox20.TabIndex = 0;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 7);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(30, 13);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "Data";
-            this.label24.Click += new System.EventHandler(this.label24_Click);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(145, 7);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(42, 13);
-            this.label25.TabIndex = 3;
-            this.label25.Text = "Médico";
-            // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(148, 23);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(208, 20);
-            this.textBox21.TabIndex = 2;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(376, 7);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(49, 13);
-            this.label26.TabIndex = 5;
-            this.label26.Text = "Paciente";
-            // 
-            // textBox22
-            // 
-            this.textBox22.Location = new System.Drawing.Point(379, 23);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(265, 20);
-            this.textBox22.TabIndex = 4;
-            // 
-            // dataGridView1
-            // 
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle26;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 50);
-            this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
-            this.dataGridView1.Size = new System.Drawing.Size(635, 150);
-            this.dataGridView1.TabIndex = 6;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(401, 24);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(241, 20);
-            this.dateTimePicker1.TabIndex = 0;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(398, 8);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(30, 13);
-            this.label27.TabIndex = 1;
-            this.label27.Text = "Data";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(168, 10);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(42, 13);
-            this.label28.TabIndex = 2;
-            this.label28.Text = "Médico";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(245, 169);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(177, 21);
-            this.comboBox5.TabIndex = 46;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(242, 153);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(73, 13);
-            this.label29.TabIndex = 47;
-            this.label29.Text = "Especialidade";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(532, 153);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(59, 13);
-            this.label30.TabIndex = 48;
-            this.label30.Text = "Plantonista";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(535, 172);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(42, 17);
-            this.radioButton1.TabIndex = 49;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Sim";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(584, 172);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(45, 17);
-            this.radioButton2.TabIndex = 50;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Não";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(171, 24);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(214, 21);
-            this.comboBox6.TabIndex = 3;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(9, 52);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(49, 13);
-            this.label31.TabIndex = 4;
-            this.label31.Text = "Paciente";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(9, 7);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(73, 13);
-            this.label32.TabIndex = 5;
-            this.label32.Text = "Especialidade";
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(12, 24);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(143, 21);
-            this.comboBox7.TabIndex = 6;
-            // 
-            // textBox23
-            // 
-            this.textBox23.Location = new System.Drawing.Point(12, 69);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(373, 20);
-            this.textBox23.TabIndex = 7;
-            // 
-            // comboBox8
-            // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(401, 69);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(241, 21);
-            this.comboBox8.TabIndex = 8;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(398, 52);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(72, 13);
-            this.label33.TabIndex = 9;
-            this.label33.Text = "Plano Médico";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle29;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 99);
-            this.dataGridView2.Name = "dataGridView2";
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
-            this.dataGridView2.Size = new System.Drawing.Size(630, 103);
-            this.dataGridView2.TabIndex = 10;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.comboBox11);
-            this.tabPage5.Controls.Add(this.label36);
-            this.tabPage5.Controls.Add(this.comboBox10);
-            this.tabPage5.Controls.Add(this.label35);
-            this.tabPage5.Controls.Add(this.comboBox9);
-            this.tabPage5.Controls.Add(this.label34);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(652, 208);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Prontuário";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(6, 8);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(49, 13);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "Paciente";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(535, 118);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(96, 20);
-            this.textBox11.TabIndex = 40;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(437, 118);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(85, 20);
-            this.textBox12.TabIndex = 38;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(469, 25);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(162, 20);
-            this.textBox17.TabIndex = 25;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(157, 171);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(115, 20);
-            this.textBox8.TabIndex = 18;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(23, 171);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(118, 20);
-            this.textBox7.TabIndex = 16;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(468, 25);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 20);
-            this.textBox2.TabIndex = 3;
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(8, 24);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(262, 21);
-            this.comboBox9.TabIndex = 1;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(504, 7);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(52, 13);
-            this.label35.TabIndex = 2;
-            this.label35.Text = "Convênio";
-            // 
-            // comboBox10
-            // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(507, 24);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(137, 21);
-            this.comboBox10.TabIndex = 3;
-            // 
-            // comboBox11
-            // 
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(276, 24);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(225, 21);
-            this.comboBox11.TabIndex = 5;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(273, 7);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(42, 13);
-            this.label36.TabIndex = 4;
-            this.label36.Text = "Médico";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(652, 208);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Pesquisar";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1151,9 +856,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
-            this.Text = "Agenda Médica";
+            this.Name = "Main";
+            this.Text = "Cadastrar";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -1162,22 +866,13 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
+            this.tabCadastrar.ResumeLayout(false);
+            this.tabAgendamento.ResumeLayout(false);
+            this.tabAgendamento.PerformLayout();
+            this.tabPacientes.ResumeLayout(false);
+            this.tabPacientes.PerformLayout();
+            this.tabMedicos.ResumeLayout(false);
+            this.tabMedicos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1190,100 +885,77 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripStatusLabel lbDateTime;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salvarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabControl tabCadastrar;
+        private System.Windows.Forms.TabPage tabAgendamento;
+        private System.Windows.Forms.TabPage tabPacientes;
+        private System.Windows.Forms.TabPage tabMedicos;
         private System.Windows.Forms.ToolStripButton btnAdd;
         private System.Windows.Forms.ToolStripButton btnSaerch;
         private System.Windows.Forms.ToolStripButton btnUpdate;
         private System.Windows.Forms.ToolStripButton btnDelete;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnExit;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.ComboBox comboBox11;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Label lblNomePaciente;
+        private System.Windows.Forms.TextBox txtNomePaciente;
+        private System.Windows.Forms.Label lblNascPaciente;
+        private System.Windows.Forms.Label lblNumPaciente;
+        private System.Windows.Forms.TextBox txtNumPaciente;
+        private System.Windows.Forms.TextBox txtEndPaciente;
+        private System.Windows.Forms.Label lblEndPaciente;
+        private System.Windows.Forms.TextBox txtCepPaciente;
+        private System.Windows.Forms.ComboBox cbxCidadePaciente;
+        private System.Windows.Forms.ComboBox cbxUFPaciente;
+        private System.Windows.Forms.TextBox txtBairroPaciente;
+        private System.Windows.Forms.Label lblBairroPaciente;
+        private System.Windows.Forms.Label lblUFPaciente;
+        private System.Windows.Forms.Label lblCepPaciente;
+        private System.Windows.Forms.Label lblCidadePaciente;
+        private System.Windows.Forms.Label lblEmailPaciente;
+        private System.Windows.Forms.TextBox txtEmailPaciente;
+        private System.Windows.Forms.Label lblCelularPaciente;
+        private System.Windows.Forms.Label lblTelefonePaciente;
+        private System.Windows.Forms.Label lblCRM;
+        private System.Windows.Forms.TextBox txtCRM;
+        private System.Windows.Forms.Label lblEmailMed;
+        private System.Windows.Forms.TextBox txtEmailMed;
+        private System.Windows.Forms.Label lblCelularMed;
+        private System.Windows.Forms.Label lblTelefoneMed;
+        private System.Windows.Forms.Label lblCidadeMed;
+        private System.Windows.Forms.Label lblUFMed;
+        private System.Windows.Forms.Label lblCepMed;
+        private System.Windows.Forms.TextBox txtCepMed;
+        private System.Windows.Forms.ComboBox cbxCidadeMed;
+        private System.Windows.Forms.ComboBox cbxUFMed;
+        private System.Windows.Forms.TextBox txtBairroMed;
+        private System.Windows.Forms.Label lblBairroMed;
+        private System.Windows.Forms.Label lblNumMed;
+        private System.Windows.Forms.TextBox txtNumMed;
+        private System.Windows.Forms.TextBox txtEndMed;
+        private System.Windows.Forms.Label lblEndMed;
+        private System.Windows.Forms.Label lblNascMed;
+        private System.Windows.Forms.Label lblNomeMed;
+        private System.Windows.Forms.TextBox txtNomeMed;
+        private System.Windows.Forms.Label lblDataAgen;
+        private System.Windows.Forms.DateTimePicker dtpDataAgen;
+        private System.Windows.Forms.Label lblMedicoAgen;
+        private System.Windows.Forms.Label lblEspecialidadeMed;
+        private System.Windows.Forms.ComboBox cbxEspecialidadeMed;
+        private System.Windows.Forms.Label lblPlantonista;
+        private System.Windows.Forms.RadioButton rbNao;
+        private System.Windows.Forms.RadioButton rbSim;
+        private System.Windows.Forms.Label lblPacienteAgen;
+        private System.Windows.Forms.ComboBox cbxMedicoAgen;
+        private System.Windows.Forms.TextBox txtPacienteAgen;
+        private System.Windows.Forms.ComboBox cbxEspecialidadeAgen;
+        private System.Windows.Forms.Label lblEspecialidadeAgen;
+        private System.Windows.Forms.Label lblPlanoMedAgen;
+        private System.Windows.Forms.ComboBox cbxPlanoMedAgen;
+        private System.Windows.Forms.TextBox txtCelularMed;
+        private System.Windows.Forms.TextBox txtTelefoneMed;
+        private System.Windows.Forms.TextBox txtNascMed;
+        private System.Windows.Forms.TextBox txtCelularPaciente;
+        private System.Windows.Forms.TextBox txtTelefonePaciente;
+        private System.Windows.Forms.TextBox txtNascPaciente;
     }
 }
 

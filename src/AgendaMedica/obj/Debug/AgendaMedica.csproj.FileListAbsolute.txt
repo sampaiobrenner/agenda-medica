@@ -18,3 +18,6 @@ C:\Users\Raul\Desktop\Nova pasta\agenda-medica\src\AgendaMedica\obj\Debug\Agenda
 C:\Users\Raul\Desktop\Nova pasta\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.Properties.Resources.resources
 C:\Users\Raul\Desktop\Nova pasta\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.csproj.GenerateResource.Cache
 C:\Users\Raul\Desktop\Nova pasta\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.Main.resources
+C:\Carolina\FACULDADE\2-SEMESTRE\agenda-medica\src\AgendaMedica\bin\Debug\AgendaMedica.exe.config
+C:\Carolina\FACULDADE\2-SEMESTRE\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.exe
+C:\Carolina\FACULDADE\2-SEMESTRE\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.pdb
