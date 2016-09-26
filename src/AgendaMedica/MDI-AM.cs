@@ -106,5 +106,10 @@ namespace AgendaMedica
                 childForm.Close();
             }
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
