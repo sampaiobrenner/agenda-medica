@@ -57,10 +57,19 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\pessoas\Pessoa.cs" />
+    <Compile Include="MDI-AM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI-AM.Designer.cs">
+      <DependentUpon>MDI-AM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI-AM.resx">
+      <DependentUpon>MDI-AM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

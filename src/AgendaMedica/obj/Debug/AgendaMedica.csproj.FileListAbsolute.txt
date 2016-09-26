@@ -21,3 +21,13 @@ C:\Users\Raul\Desktop\Nova pasta\agenda-medica\src\AgendaMedica\obj\Debug\Agenda
 C:\Carolina\FACULDADE\2-SEMESTRE\agenda-medica\src\AgendaMedica\bin\Debug\AgendaMedica.exe.config
 C:\Carolina\FACULDADE\2-SEMESTRE\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.exe
 C:\Carolina\FACULDADE\2-SEMESTRE\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.pdb
+C:\Carolina\FACULDADE\agenda-medica\src\AgendaMedica\bin\Debug\AgendaMedica.exe.config
+C:\Carolina\FACULDADE\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.exe
+C:\Carolina\FACULDADE\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.pdb
+C:\Carolina\FACULDADE\agenda-medica\src\AgendaMedica\bin\Debug\AgendaMedica.exe
+C:\Carolina\FACULDADE\agenda-medica\src\AgendaMedica\bin\Debug\AgendaMedica.pdb
+C:\Carolina\FACULDADE\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.csprojResolveAssemblyReference.cache
+C:\Carolina\FACULDADE\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.Main.resources
+C:\Carolina\FACULDADE\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.MDI_AM.resources
+C:\Carolina\FACULDADE\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.Properties.Resources.resources
+C:\Carolina\FACULDADE\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.csproj.GenerateResource.Cache

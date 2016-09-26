@@ -13,7 +13,7 @@ namespace AgendaMedica {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new MDI_AM());
         }
     }
 }
