@@ -27,6 +27,7 @@ namespace AgendaMedica
             //childForm.Show();
             Main frmChild = new Main();
             frmChild.MdiParent = this;
+            frmChild.Text = "Cadastrar " + childFormNumber++;
             frmChild.Show();
         }
 
