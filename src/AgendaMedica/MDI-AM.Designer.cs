@@ -35,6 +35,7 @@ namespace AgendaMedica
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
@@ -48,21 +49,20 @@ namespace AgendaMedica
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -105,6 +105,16 @@ namespace AgendaMedica
             this.newToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.newToolStripMenuItem.Text = "&Cadastrar";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.ShowNewForm);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
+            this.toolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Black;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(167, 22);
+            this.toolStripMenuItem1.Text = "&Pesquisar";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripSeparator3
             // 
@@ -157,6 +167,7 @@ namespace AgendaMedica
             this.undoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
             this.undoToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.undoToolStripMenuItem.Text = "&Desfazer";
+            this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
             // redoToolStripMenuItem
             // 
@@ -215,6 +226,56 @@ namespace AgendaMedica
             this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.selectAllToolStripMenuItem.Text = "&Selecionar Tudo";
             // 
+            // viewMenu
+            // 
+            this.viewMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolBarToolStripMenuItem,
+            this.statusBarToolStripMenuItem});
+            this.viewMenu.Name = "viewMenu";
+            this.viewMenu.Size = new System.Drawing.Size(68, 20);
+            this.viewMenu.Text = "&Visualizar";
+            // 
+            // toolBarToolStripMenuItem
+            // 
+            this.toolBarToolStripMenuItem.Checked = true;
+            this.toolBarToolStripMenuItem.CheckOnClick = true;
+            this.toolBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolBarToolStripMenuItem.Name = "toolBarToolStripMenuItem";
+            this.toolBarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.toolBarToolStripMenuItem.Text = "&Toolbar";
+            this.toolBarToolStripMenuItem.Click += new System.EventHandler(this.ToolBarToolStripMenuItem_Click);
+            // 
+            // statusBarToolStripMenuItem
+            // 
+            this.statusBarToolStripMenuItem.Checked = true;
+            this.statusBarToolStripMenuItem.CheckOnClick = true;
+            this.statusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.statusBarToolStripMenuItem.Name = "statusBarToolStripMenuItem";
+            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.statusBarToolStripMenuItem.Text = "&Status Bar";
+            this.statusBarToolStripMenuItem.Click += new System.EventHandler(this.StatusBarToolStripMenuItem_Click);
+            // 
+            // toolsMenu
+            // 
+            this.toolsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.optionsToolStripMenuItem});
+            this.toolsMenu.Name = "toolsMenu";
+            this.toolsMenu.Size = new System.Drawing.Size(84, 20);
+            this.toolsMenu.Text = "&Ferramentas";
+            // 
+            // optionsToolStripMenuItem
+            // 
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.optionsToolStripMenuItem.Text = "&Opções";
+            // 
+            // sobreToolStripMenuItem
+            // 
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.sobreToolStripMenuItem.Text = "Sobre";
+            this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
+            // 
             // toolStrip
             // 
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -238,6 +299,22 @@ namespace AgendaMedica
             this.newToolStripButton.Text = "New";
             this.newToolStripButton.ToolTipText = "Cadastrar";
             this.newToolStripButton.Click += new System.EventHandler(this.ShowNewForm);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "Pesquisar";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // saveToolStripButton
             // 
@@ -264,82 +341,6 @@ namespace AgendaMedica
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "Pesquisar";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
-            this.toolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Black;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(167, 22);
-            this.toolStripMenuItem1.Text = "&Pesquisar";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // toolBarToolStripMenuItem
-            // 
-            this.toolBarToolStripMenuItem.Checked = true;
-            this.toolBarToolStripMenuItem.CheckOnClick = true;
-            this.toolBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.toolBarToolStripMenuItem.Name = "toolBarToolStripMenuItem";
-            this.toolBarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.toolBarToolStripMenuItem.Text = "&Toolbar";
-            this.toolBarToolStripMenuItem.Click += new System.EventHandler(this.ToolBarToolStripMenuItem_Click);
-            // 
-            // statusBarToolStripMenuItem
-            // 
-            this.statusBarToolStripMenuItem.Checked = true;
-            this.statusBarToolStripMenuItem.CheckOnClick = true;
-            this.statusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.statusBarToolStripMenuItem.Name = "statusBarToolStripMenuItem";
-            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.statusBarToolStripMenuItem.Text = "&Status Bar";
-            this.statusBarToolStripMenuItem.Click += new System.EventHandler(this.StatusBarToolStripMenuItem_Click);
-            // 
-            // viewMenu
-            // 
-            this.viewMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolBarToolStripMenuItem,
-            this.statusBarToolStripMenuItem});
-            this.viewMenu.Name = "viewMenu";
-            this.viewMenu.Size = new System.Drawing.Size(68, 20);
-            this.viewMenu.Text = "&Visualizar";
-            // 
-            // optionsToolStripMenuItem
-            // 
-            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.optionsToolStripMenuItem.Text = "&Opções";
-            // 
-            // toolsMenu
-            // 
-            this.toolsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.optionsToolStripMenuItem});
-            this.toolsMenu.Name = "toolsMenu";
-            this.toolsMenu.Size = new System.Drawing.Size(84, 20);
-            this.toolsMenu.Text = "&Ferramentas";
-            // 
-            // sobreToolStripMenuItem
-            // 
-            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.sobreToolStripMenuItem.Text = "Sobre";
-            this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
-            // 
             // MDI_AM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,6 +354,7 @@ namespace AgendaMedica
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MDI_AM";
             this.Text = "Agenda Médica";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.toolStrip.ResumeLayout(false);
@@ -362,7 +364,6 @@ namespace AgendaMedica
             this.ResumeLayout(false);
             this.PerformLayout();
 
-            this.WindowState = FormWindowState.Maximized;
         }
         #endregion
 

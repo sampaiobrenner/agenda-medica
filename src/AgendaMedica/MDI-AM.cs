@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgendaMedica.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -126,6 +127,10 @@ namespace AgendaMedica
             frmpChild.MdiParent = this;            
             frmpChild.Show();
             frmpChild.WindowState = FormWindowState.Maximized;
+        }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e) {
+                       
         }
     }
 }

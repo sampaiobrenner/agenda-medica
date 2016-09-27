@@ -43,11 +43,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabPesquisar = new System.Windows.Forms.TabControl();
             this.tabConsultas = new System.Windows.Forms.TabPage();
+            this.dtgListaConsultas = new System.Windows.Forms.DataGridView();
+            this.lblNomePesquisa = new System.Windows.Forms.Label();
+            this.txtNomePesquisa = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtNomePesquisa = new System.Windows.Forms.TextBox();
-            this.lblNomePesquisa = new System.Windows.Forms.Label();
-            this.dtgListaConsultas = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -201,6 +201,33 @@
             this.tabConsultas.Text = "Consultas";
             this.tabConsultas.UseVisualStyleBackColor = true;
             // 
+            // dtgListaConsultas
+            // 
+            this.dtgListaConsultas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgListaConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgListaConsultas.Location = new System.Drawing.Point(20, 48);
+            this.dtgListaConsultas.Name = "dtgListaConsultas";
+            this.dtgListaConsultas.Size = new System.Drawing.Size(577, 193);
+            this.dtgListaConsultas.TabIndex = 2;
+            // 
+            // lblNomePesquisa
+            // 
+            this.lblNomePesquisa.AutoSize = true;
+            this.lblNomePesquisa.Location = new System.Drawing.Point(17, 15);
+            this.lblNomePesquisa.Name = "lblNomePesquisa";
+            this.lblNomePesquisa.Size = new System.Drawing.Size(35, 13);
+            this.lblNomePesquisa.TabIndex = 1;
+            this.lblNomePesquisa.Text = "Nome";
+            this.lblNomePesquisa.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtNomePesquisa
+            // 
+            this.txtNomePesquisa.Location = new System.Drawing.Point(69, 12);
+            this.txtNomePesquisa.Name = "txtNomePesquisa";
+            this.txtNomePesquisa.Size = new System.Drawing.Size(263, 20);
+            this.txtNomePesquisa.TabIndex = 0;
+            // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -215,41 +242,17 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // txtNomePesquisa
-            // 
-            this.txtNomePesquisa.Location = new System.Drawing.Point(69, 12);
-            this.txtNomePesquisa.Name = "txtNomePesquisa";
-            this.txtNomePesquisa.Size = new System.Drawing.Size(263, 20);
-            this.txtNomePesquisa.TabIndex = 0;
-            // 
-            // lblNomePesquisa
-            // 
-            this.lblNomePesquisa.AutoSize = true;
-            this.lblNomePesquisa.Location = new System.Drawing.Point(17, 15);
-            this.lblNomePesquisa.Name = "lblNomePesquisa";
-            this.lblNomePesquisa.Size = new System.Drawing.Size(35, 13);
-            this.lblNomePesquisa.TabIndex = 1;
-            this.lblNomePesquisa.Text = "Nome";
-            this.lblNomePesquisa.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // dtgListaConsultas
-            // 
-            this.dtgListaConsultas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgListaConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgListaConsultas.Location = new System.Drawing.Point(20, 48);
-            this.dtgListaConsultas.Name = "dtgListaConsultas";
-            this.dtgListaConsultas.Size = new System.Drawing.Size(577, 193);
-            this.dtgListaConsultas.TabIndex = 2;
-            // 
             // Pesquisar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 366);
+            this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Pesquisar";
             this.Text = "Pesquisar";
             this.Load += new System.EventHandler(this.Pesquisar_Load);
