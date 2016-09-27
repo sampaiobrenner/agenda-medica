@@ -8,4 +8,5 @@ Em contra partida, o médico ou seu(ua) secretário(a), poderá mandar lembretes
 
 ## Tecnologias
 
-C#
+* C#
+* Entity Framework
