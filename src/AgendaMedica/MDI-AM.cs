@@ -132,18 +132,18 @@ namespace AgendaMedica
 
         private void undoToolStripMenuItem_Click(object sender, EventArgs e) {
 
-            EntidadeContext contexto = new EntidadeContext();
+            //Código de Teste -> Pode excluir
+            //EntidadeContext contexto = new EntidadeContext();
 
-            Medico medico = new Medico() {
-                Nome = "Paulo",
-                Sobrenome = "Muzzy"
-            };
-
-            contexto.Medicos.Add(medico);
-            contexto.SaveChanges();
-            contexto.Dispose();
+            //Medico medico = new Medico() {
+            //    Nome = "Paulo",
+            //    Sobrenome = "Muzzy"
+            //}; 
 
 
+            //contexto.Medicos.Add(medico);
+            //contexto.SaveChanges();
+            //contexto.Dispose();
 
         }
     }
