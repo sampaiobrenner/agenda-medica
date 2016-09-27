@@ -1,4 +1,5 @@
 ﻿using AgendaMedica.Classes;
+using AgendaMedica.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -130,7 +131,20 @@ namespace AgendaMedica
         }
 
         private void undoToolStripMenuItem_Click(object sender, EventArgs e) {
-                       
+
+            EntidadeContext contexto = new EntidadeContext();
+
+            Medico medico = new Medico() {
+                Nome = "Paulo",
+                Sobrenome = "Muzzy"
+            };
+
+            contexto.Medicos.Add(medico);
+            contexto.SaveChanges();
+            contexto.Dispose();
+
+
+
         }
     }
 }

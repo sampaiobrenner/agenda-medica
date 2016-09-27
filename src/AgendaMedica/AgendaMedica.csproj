@@ -108,6 +108,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.0.0-beta-23516\lib\dotnet5.2\System.Diagnostics.DiagnosticSource.dll</HintPath>
@@ -129,10 +130,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="agendaMedicaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>agendaMedicaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Consulta.cs" />
+    <Compile Include="Database\EntidadeContext.cs" />
     <Compile Include="Entidades\Medico.cs" />
     <Compile Include="Entidades\Paciente.cs" />
     <Compile Include="Entidades\Secretaria.cs" />
+    <Compile Include="Migrations\20160927222309_criaMedico.cs" />
+    <Compile Include="Migrations\20160927222309_criaMedico.designer.cs">
+      <DependentUpon>20160927222309_criaMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\EntidadeContextModelSnapshot.cs" />
     <Compile Include="Pesquisar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +193,17 @@
     <EmbeddedResource Include="Sobre.resx">
       <DependentUpon>Sobre.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="agendaMedicaDataSet.xsc">
+      <DependentUpon>agendaMedicaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="agendaMedicaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>agendaMedicaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="agendaMedicaDataSet.xss">
+      <DependentUpon>agendaMedicaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

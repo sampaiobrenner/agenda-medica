@@ -5,6 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AgendaMedica.Classes {
-    class Secretaria : Pessoa {
+    public class Secretaria : Pessoa {
     }
 }

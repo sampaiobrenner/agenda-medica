@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AgendaMedica.Classes {
-    class Medico : Pessoa {
+    public class Medico : Pessoa {
 
         public string Crm { get; set; }
     }
