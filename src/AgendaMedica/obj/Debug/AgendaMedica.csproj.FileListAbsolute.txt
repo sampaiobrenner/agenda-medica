@@ -50,7 +50,6 @@ F:\#git\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.exe
 F:\#git\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.pdb
 F:\#git\agenda-medica\src\AgendaMedica\bin\Debug\AgendaMedica.exe
 F:\#git\agenda-medica\src\AgendaMedica\bin\Debug\AgendaMedica.pdb
-F:\#git\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.csprojResolveAssemblyReference.cache
 F:\#git\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.Pesquisar.resources
 F:\#git\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.Cadastro.resources
 F:\#git\agenda-medica\src\AgendaMedica\obj\Debug\AgendaMedica.MDI_AM.resources

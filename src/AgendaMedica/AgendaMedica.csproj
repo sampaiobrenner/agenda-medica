@@ -158,11 +158,11 @@
       <DependentUpon>Cadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="Entidades\Pessoa.cs" />
-    <Compile Include="MDI-AM.cs">
+    <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDI-AM.Designer.cs">
-      <DependentUpon>MDI-AM.cs</DependentUpon>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -178,8 +178,8 @@
     <EmbeddedResource Include="Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDI-AM.resx">
-      <DependentUpon>MDI-AM.cs</DependentUpon>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
