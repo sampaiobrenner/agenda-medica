@@ -129,7 +129,7 @@
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxDescription.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxDescription.Location = new System.Drawing.Point(143, 107);
             this.textBoxDescription.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.textBoxDescription.Multiline = true;
