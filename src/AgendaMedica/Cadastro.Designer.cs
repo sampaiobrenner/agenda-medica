@@ -111,6 +111,13 @@ namespace AgendaMedica {
             this.lblNomeMed = new System.Windows.Forms.Label();
             this.txtNomeMed = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblCarteirinha = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblConvenioPac = new System.Windows.Forms.Label();
+            this.cbxConvenioPac = new System.Windows.Forms.ComboBox();
+            this.lblSexoPac = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.barAcoes.SuspendLayout();
             this.barInfos.SuspendLayout();
@@ -169,6 +176,8 @@ namespace AgendaMedica {
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(40, 40);
             this.btnLimpar.Text = "Adicionar";
+            this.btnLimpar.ToolTipText = "Limpar Tudo";
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnExit
             // 
@@ -331,6 +340,13 @@ namespace AgendaMedica {
             // 
             // tabPacientes
             // 
+            this.tabPacientes.Controls.Add(this.radioButton1);
+            this.tabPacientes.Controls.Add(this.radioButton2);
+            this.tabPacientes.Controls.Add(this.lblSexoPac);
+            this.tabPacientes.Controls.Add(this.lblConvenioPac);
+            this.tabPacientes.Controls.Add(this.cbxConvenioPac);
+            this.tabPacientes.Controls.Add(this.lblCarteirinha);
+            this.tabPacientes.Controls.Add(this.textBox1);
             this.tabPacientes.Controls.Add(this.lblEmailPaciente);
             this.tabPacientes.Controls.Add(this.txtEmailPaciente);
             this.tabPacientes.Controls.Add(this.lblCelularPaciente);
@@ -364,7 +380,7 @@ namespace AgendaMedica {
             // lblEmailPaciente
             // 
             this.lblEmailPaciente.AutoSize = true;
-            this.lblEmailPaciente.Location = new System.Drawing.Point(286, 155);
+            this.lblEmailPaciente.Location = new System.Drawing.Point(286, 143);
             this.lblEmailPaciente.Name = "lblEmailPaciente";
             this.lblEmailPaciente.Size = new System.Drawing.Size(35, 13);
             this.lblEmailPaciente.TabIndex = 21;
@@ -372,7 +388,7 @@ namespace AgendaMedica {
             // 
             // txtEmailPaciente
             // 
-            this.txtEmailPaciente.Location = new System.Drawing.Point(289, 171);
+            this.txtEmailPaciente.Location = new System.Drawing.Point(289, 159);
             this.txtEmailPaciente.Name = "txtEmailPaciente";
             this.txtEmailPaciente.Size = new System.Drawing.Size(341, 20);
             this.txtEmailPaciente.TabIndex = 20;
@@ -380,7 +396,7 @@ namespace AgendaMedica {
             // lblCelularPaciente
             // 
             this.lblCelularPaciente.AutoSize = true;
-            this.lblCelularPaciente.Location = new System.Drawing.Point(154, 155);
+            this.lblCelularPaciente.Location = new System.Drawing.Point(154, 143);
             this.lblCelularPaciente.Name = "lblCelularPaciente";
             this.lblCelularPaciente.Size = new System.Drawing.Size(39, 13);
             this.lblCelularPaciente.TabIndex = 19;
@@ -388,7 +404,7 @@ namespace AgendaMedica {
             // 
             // txtCelularPaciente
             // 
-            this.txtCelularPaciente.Location = new System.Drawing.Point(157, 171);
+            this.txtCelularPaciente.Location = new System.Drawing.Point(157, 159);
             this.txtCelularPaciente.Name = "txtCelularPaciente";
             this.txtCelularPaciente.Size = new System.Drawing.Size(115, 20);
             this.txtCelularPaciente.TabIndex = 18;
@@ -396,7 +412,7 @@ namespace AgendaMedica {
             // lblTelefonePaciente
             // 
             this.lblTelefonePaciente.AutoSize = true;
-            this.lblTelefonePaciente.Location = new System.Drawing.Point(20, 155);
+            this.lblTelefonePaciente.Location = new System.Drawing.Point(20, 143);
             this.lblTelefonePaciente.Name = "lblTelefonePaciente";
             this.lblTelefonePaciente.Size = new System.Drawing.Size(49, 13);
             this.lblTelefonePaciente.TabIndex = 17;
@@ -404,7 +420,7 @@ namespace AgendaMedica {
             // 
             // txtTelefonePaciente
             // 
-            this.txtTelefonePaciente.Location = new System.Drawing.Point(23, 171);
+            this.txtTelefonePaciente.Location = new System.Drawing.Point(23, 159);
             this.txtTelefonePaciente.Name = "txtTelefonePaciente";
             this.txtTelefonePaciente.Size = new System.Drawing.Size(118, 20);
             this.txtTelefonePaciente.TabIndex = 16;
@@ -412,7 +428,7 @@ namespace AgendaMedica {
             // lblCidadePaciente
             // 
             this.lblCidadePaciente.AutoSize = true;
-            this.lblCidadePaciente.Location = new System.Drawing.Point(491, 106);
+            this.lblCidadePaciente.Location = new System.Drawing.Point(491, 97);
             this.lblCidadePaciente.Name = "lblCidadePaciente";
             this.lblCidadePaciente.Size = new System.Drawing.Size(40, 13);
             this.lblCidadePaciente.TabIndex = 15;
@@ -421,7 +437,7 @@ namespace AgendaMedica {
             // lblUFPaciente
             // 
             this.lblUFPaciente.AutoSize = true;
-            this.lblUFPaciente.Location = new System.Drawing.Point(391, 106);
+            this.lblUFPaciente.Location = new System.Drawing.Point(391, 97);
             this.lblUFPaciente.Name = "lblUFPaciente";
             this.lblUFPaciente.Size = new System.Drawing.Size(21, 13);
             this.lblUFPaciente.TabIndex = 14;
@@ -430,7 +446,7 @@ namespace AgendaMedica {
             // lblCepPaciente
             // 
             this.lblCepPaciente.AutoSize = true;
-            this.lblCepPaciente.Location = new System.Drawing.Point(229, 106);
+            this.lblCepPaciente.Location = new System.Drawing.Point(229, 97);
             this.lblCepPaciente.Name = "lblCepPaciente";
             this.lblCepPaciente.Size = new System.Drawing.Size(28, 13);
             this.lblCepPaciente.TabIndex = 13;
@@ -438,7 +454,7 @@ namespace AgendaMedica {
             // 
             // txtCepPaciente
             // 
-            this.txtCepPaciente.Location = new System.Drawing.Point(232, 122);
+            this.txtCepPaciente.Location = new System.Drawing.Point(232, 113);
             this.txtCepPaciente.Name = "txtCepPaciente";
             this.txtCepPaciente.Size = new System.Drawing.Size(145, 20);
             this.txtCepPaciente.TabIndex = 12;
@@ -446,7 +462,7 @@ namespace AgendaMedica {
             // cbxCidadePaciente
             // 
             this.cbxCidadePaciente.FormattingEnabled = true;
-            this.cbxCidadePaciente.Location = new System.Drawing.Point(494, 121);
+            this.cbxCidadePaciente.Location = new System.Drawing.Point(494, 112);
             this.cbxCidadePaciente.Name = "cbxCidadePaciente";
             this.cbxCidadePaciente.Size = new System.Drawing.Size(136, 21);
             this.cbxCidadePaciente.TabIndex = 11;
@@ -454,14 +470,14 @@ namespace AgendaMedica {
             // cbxUFPaciente
             // 
             this.cbxUFPaciente.FormattingEnabled = true;
-            this.cbxUFPaciente.Location = new System.Drawing.Point(394, 121);
+            this.cbxUFPaciente.Location = new System.Drawing.Point(394, 112);
             this.cbxUFPaciente.Name = "cbxUFPaciente";
             this.cbxUFPaciente.Size = new System.Drawing.Size(83, 21);
             this.cbxUFPaciente.TabIndex = 10;
             // 
             // txtBairroPaciente
             // 
-            this.txtBairroPaciente.Location = new System.Drawing.Point(23, 122);
+            this.txtBairroPaciente.Location = new System.Drawing.Point(23, 113);
             this.txtBairroPaciente.Name = "txtBairroPaciente";
             this.txtBairroPaciente.Size = new System.Drawing.Size(192, 20);
             this.txtBairroPaciente.TabIndex = 9;
@@ -469,7 +485,7 @@ namespace AgendaMedica {
             // lblBairroPaciente
             // 
             this.lblBairroPaciente.AutoSize = true;
-            this.lblBairroPaciente.Location = new System.Drawing.Point(20, 106);
+            this.lblBairroPaciente.Location = new System.Drawing.Point(20, 97);
             this.lblBairroPaciente.Name = "lblBairroPaciente";
             this.lblBairroPaciente.Size = new System.Drawing.Size(34, 13);
             this.lblBairroPaciente.TabIndex = 8;
@@ -478,7 +494,7 @@ namespace AgendaMedica {
             // lblNumPaciente
             // 
             this.lblNumPaciente.AutoSize = true;
-            this.lblNumPaciente.Location = new System.Drawing.Point(549, 55);
+            this.lblNumPaciente.Location = new System.Drawing.Point(549, 53);
             this.lblNumPaciente.Name = "lblNumPaciente";
             this.lblNumPaciente.Size = new System.Drawing.Size(44, 13);
             this.lblNumPaciente.TabIndex = 7;
@@ -486,14 +502,14 @@ namespace AgendaMedica {
             // 
             // txtNumPaciente
             // 
-            this.txtNumPaciente.Location = new System.Drawing.Point(552, 71);
+            this.txtNumPaciente.Location = new System.Drawing.Point(552, 69);
             this.txtNumPaciente.Name = "txtNumPaciente";
             this.txtNumPaciente.Size = new System.Drawing.Size(78, 20);
             this.txtNumPaciente.TabIndex = 6;
             // 
             // txtEndPaciente
             // 
-            this.txtEndPaciente.Location = new System.Drawing.Point(23, 71);
+            this.txtEndPaciente.Location = new System.Drawing.Point(23, 69);
             this.txtEndPaciente.Name = "txtEndPaciente";
             this.txtEndPaciente.Size = new System.Drawing.Size(512, 20);
             this.txtEndPaciente.TabIndex = 5;
@@ -501,7 +517,7 @@ namespace AgendaMedica {
             // lblEndPaciente
             // 
             this.lblEndPaciente.AutoSize = true;
-            this.lblEndPaciente.Location = new System.Drawing.Point(20, 55);
+            this.lblEndPaciente.Location = new System.Drawing.Point(20, 53);
             this.lblEndPaciente.Name = "lblEndPaciente";
             this.lblEndPaciente.Size = new System.Drawing.Size(53, 13);
             this.lblEndPaciente.TabIndex = 4;
@@ -923,6 +939,71 @@ namespace AgendaMedica {
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.lbDateTime_Tick);
             // 
+            // lblCarteirinha
+            // 
+            this.lblCarteirinha.AutoSize = true;
+            this.lblCarteirinha.Location = new System.Drawing.Point(20, 187);
+            this.lblCarteirinha.Name = "lblCarteirinha";
+            this.lblCarteirinha.Size = new System.Drawing.Size(72, 13);
+            this.lblCarteirinha.TabIndex = 23;
+            this.lblCarteirinha.Text = "Nº Carteirinha";
+            this.lblCarteirinha.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(23, 203);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(249, 20);
+            this.textBox1.TabIndex = 22;
+            // 
+            // lblConvenioPac
+            // 
+            this.lblConvenioPac.AutoSize = true;
+            this.lblConvenioPac.Location = new System.Drawing.Point(286, 187);
+            this.lblConvenioPac.Name = "lblConvenioPac";
+            this.lblConvenioPac.Size = new System.Drawing.Size(52, 13);
+            this.lblConvenioPac.TabIndex = 25;
+            this.lblConvenioPac.Text = "Convênio";
+            // 
+            // cbxConvenioPac
+            // 
+            this.cbxConvenioPac.FormattingEnabled = true;
+            this.cbxConvenioPac.Location = new System.Drawing.Point(289, 202);
+            this.cbxConvenioPac.Name = "cbxConvenioPac";
+            this.cbxConvenioPac.Size = new System.Drawing.Size(246, 21);
+            this.cbxConvenioPac.TabIndex = 24;
+            // 
+            // lblSexoPac
+            // 
+            this.lblSexoPac.AutoSize = true;
+            this.lblSexoPac.Location = new System.Drawing.Point(550, 187);
+            this.lblSexoPac.Name = "lblSexoPac";
+            this.lblSexoPac.Size = new System.Drawing.Size(31, 13);
+            this.lblSexoPac.TabIndex = 26;
+            this.lblSexoPac.Text = "Sexo";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(596, 206);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(34, 17);
+            this.radioButton1.TabIndex = 28;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "M";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(553, 206);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(31, 17);
+            this.radioButton2.TabIndex = 27;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "F";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
             // Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1043,6 +1124,13 @@ namespace AgendaMedica {
         private System.Windows.Forms.RadioButton rdbSexoMMed;
         private System.Windows.Forms.RadioButton rdbSexoFMed;
         private System.Windows.Forms.Label lblSexoMed;
+        private System.Windows.Forms.Label lblCarteirinha;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblConvenioPac;
+        private System.Windows.Forms.ComboBox cbxConvenioPac;
+        private System.Windows.Forms.Label lblSexoPac;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }
 
