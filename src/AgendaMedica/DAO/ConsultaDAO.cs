@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AgendaMedica.Classes {
-    public class Secretaria : Pessoa {
+namespace AgendaMedica.DAO {
+    class ConsultaDAO {
     }
 }
