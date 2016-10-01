@@ -1,16 +1,15 @@
-﻿using AgendaMedica.Classes;
+﻿using AgendaMedica.Entidades;
 using Microsoft.Data.Entity;
-using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace AgendaMedica.Database {
     public class EntidadeContext : DbContext {
         //Lista de Médicos
         public DbSet<Medico> Medicos { get; set; }
+        public DbSet<Paciente> Pacientes { get; set; }
+        public DbSet<Convenio> Convenios { get; set; }
+        public DbSet<Atendente> Secretarias { get; set; }       
 
         //Sobrescrevendo a configuração do Entity        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
