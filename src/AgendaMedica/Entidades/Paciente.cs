@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AgendaMedica.Classes {
+namespace AgendaMedica.Entidades {
     public class Paciente : Pessoa {
                 
-        string NumeroCarteiraConvenio { get; set; }
-        string Convenio { get; set; }
+        public string NumeroCarteiraConvenio { get; set; }        
+        
+        //Navigation propertie
+        public virtual Convenio Convenio { get; set; }
+
+        public int ConvenioID { get; set; }
     }
 }

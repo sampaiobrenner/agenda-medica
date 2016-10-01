@@ -5,7 +5,7 @@ using Microsoft.Data.Entity.Metadata;
 
 namespace AgendaMedica.Migrations
 {
-    public partial class criaMedico : Migration
+    public partial class CriaMedicos : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,8 +15,9 @@ namespace AgendaMedica.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Bairro = table.Column<string>(nullable: true),
                     Celular = table.Column<string>(nullable: true),
-                    Cep = table.Column<int>(nullable: false),
+                    Cep = table.Column<string>(nullable: true),
                     Cidade = table.Column<string>(nullable: true),
                     Complemento = table.Column<string>(nullable: true),
                     Cpf = table.Column<string>(nullable: true),
@@ -24,9 +25,11 @@ namespace AgendaMedica.Migrations
                     DataNascimento = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
                     Endereco = table.Column<string>(nullable: true),
+                    Especialidade = table.Column<string>(nullable: true),
                     Estado = table.Column<string>(nullable: true),
                     Nome = table.Column<string>(nullable: true),
                     Numero = table.Column<string>(nullable: true),
+                    OrgaoEmissor = table.Column<string>(nullable: true),
                     Rg = table.Column<string>(nullable: true),
                     Sexo = table.Column<string>(nullable: true),
                     Sobrenome = table.Column<string>(nullable: true),

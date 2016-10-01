@@ -16,14 +16,16 @@ namespace AgendaMedica.Migrations
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("AgendaMedica.Classes.Medico", b =>
+            modelBuilder.Entity("AgendaMedica.Entidades.Medico", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Bairro");
+
                     b.Property<string>("Celular");
 
-                    b.Property<int>("Cep");
+                    b.Property<string>("Cep");
 
                     b.Property<string>("Cidade");
 
@@ -39,11 +41,15 @@ namespace AgendaMedica.Migrations
 
                     b.Property<string>("Endereco");
 
+                    b.Property<string>("Especialidade");
+
                     b.Property<string>("Estado");
 
                     b.Property<string>("Nome");
 
                     b.Property<string>("Numero");
+
+                    b.Property<string>("OrgaoEmissor");
 
                     b.Property<string>("Rg");
 
