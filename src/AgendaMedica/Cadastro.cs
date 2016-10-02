@@ -11,24 +11,36 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AgendaMedica.DAO;
 using System.Collections;
+using AgendaMedica.Helpers;
 
 namespace AgendaMedica {
     public partial class Cadastro : Form {
-        public Cadastro() {            
+        public Cadastro() {
+
             InitializeComponent();
-            carregaConvenios();
+
         }
 
         private void carregaConvenios() {
-            var dao = new ConvenioDAO();
-            var convenio = new Convenio();
-            IList resultado = dao.Get();
+            try {
+                var dao = new ConvenioDAO();
+                var convenio = new Convenio();
+                var listaConveniosCbx = (IList)cbxConvenioPaciente.Items;
 
-            foreach (var c in resultado) {
-                convenio = (Convenio)c;
+                IList resultado = dao.Get();
+                                                
+                foreach (var c in resultado) {
 
-                cbxConvenioPaciente.Items.Add(convenio.Nome);
+                    convenio = (Convenio)c;
+                    if (!listaConveniosCbx.Contains(convenio.Nome)) {
+                        cbxConvenioPaciente.Items.Add(convenio.Nome);
+                    }
+                    
+                }
+            } catch (Exception e) {
+                throw new Exception("Erro ao carregar os convênios");
             }
+
         }
 
         private void Form1_Load(object sender, EventArgs e) {
@@ -64,83 +76,96 @@ namespace AgendaMedica {
         }
 
         private void cadastrarConvenio() {
-            var dao = new ConvenioDAO();
+            try {
 
-            if (validaFormConvenio()) {
-                var convenio = new Convenio() {
-                    Nome = txtNomeConvenio.Text
+                var dao = new ConvenioDAO();
+
+                if (validaFormConvenio()) {
+                    var convenio = new Convenio() {
+                        Nome = txtNomeConvenio.Text
+                    };
+
+                    dao.Save(convenio);
+                    MessageBox.Show("Convênio Cadastrado Com sucesso");
                 };
 
-                dao.Save(convenio);
-                MessageBox.Show("Convênio Cadastrado Com sucesso");
-            };
-
-
+            } catch (Exception e) {
+                MessageBox.Show("Erro ao salvar o formulário no banco de dados");
+                Console.WriteLine(e);
+            }
         }
 
 
 
 
         private void cadastrarMedico() {
+            try {
+                if (validarFormMedico()) {
+                    var medico = new Medico() {
+                        Nome = txtNomeMed.Text,
+                        Sobrenome = txtSobrenomeMed.Text,
+                        DataNascimento = txtNascMed.Text,
+                        Sexo = (rdbSexoFMed.Checked ? "F" : "M"),
+                        Cpf = txtCpfMed.Text,
+                        Rg = txtRgMed.Text,
+                        OrgaoEmissor = txtOrgaoEmiMed.Text,
+                        Endereco = txtEnderecoMed.Text,
+                        Numero = txtNumeroEndMed.Text,
+                        Complemento = txtComplementoMed.Text,
+                        Cep = txtCepMed.Text,
+                        Bairro = txtBairroMed.Text,
+                        Estado = cbxUFMed.Text,
+                        Cidade = cbxCidadeMed.Text,
+                        Telefone = txtTelefoneMed.Text,
+                        Celular = txtCelularMed.Text,
+                        Email = txtEmailMed.Text,
+                        Especialidade = cbxEspecialidadeMed.Text,
+                        Crm = txtCrm.Text
+                    };
 
-            if (validarFormMedico()) {
-                var medico = new Medico() {
-                    Nome = txtNomeMed.Text,
-                    Sobrenome = txtSobrenomeMed.Text,
-                    DataNascimento = txtNascMed.Text,
-                    Sexo = (rdbSexoFMed.Checked ? "F" : "M"),
-                    Cpf = txtCpfMed.Text,
-                    Rg = txtRgMed.Text,
-                    OrgaoEmissor = txtOrgaoEmiMed.Text,
-                    Endereco = txtEnderecoMed.Text,
-                    Numero = txtNumeroEndMed.Text,
-                    Complemento = txtComplementoMed.Text,
-                    Cep = txtCepMed.Text,
-                    Bairro = txtBairroMed.Text,
-                    Estado = cbxUFMed.Text,
-                    Cidade = cbxCidadeMed.Text,
-                    Telefone = txtTelefoneMed.Text,
-                    Celular = txtCelularMed.Text,
-                    Email = txtEmailMed.Text,
-                    Especialidade = cbxEspecialidadeMed.Text,
-                    Crm = txtCrm.Text
-                };
+                    var dao = new MedicoDAO();
+                    dao.Save(medico);
 
-                var dao = new MedicoDAO();
-                dao.Save(medico);
-
-                MessageBox.Show("Médico Cadastrado com Sucesso");
+                    MessageBox.Show("Médico Cadastrado com Sucesso");
+                }
+            } catch (Exception e) {
+                var erro = new Exceptions(e, "Erro ao cadastrar o Médico no banco de dados");
+                erro.lancaException();
             }
         }
 
         private void cadastrarPaciente() {
+            try {
+                if (validarFormPaciente()) {
+                    var paciente = new Paciente() {
+                        Nome = txtNomePaciente.Text,
+                        Sobrenome = txtSobrenomePaciente.Text,
+                        DataNascimento = txtNascPaciente.Text,
+                        //sexo
+                        Cpf = txtCpfPaciente.Text,
+                        Rg = txtRgPaciente.Text,
+                        OrgaoEmissor = txtOrgaoEmiPaciente.Text,
+                        Endereco = txtEnderecoPaciente.Text,
+                        Numero = txtNumeroEndPaciente.Text,
+                        Complemento = txtComplementoPaciente.Text,
+                        Bairro = txtBairroPaciente.Text,
+                        Cidade = cbxCidadePaciente.Text,
+                        Estado = cbxUFPaciente.Text,
+                        Telefone = txtTelefonePaciente.Text,
+                        Celular = txtCelularPaciente.Text,
+                        Email = txtEmailPaciente.Text,
+                        //ConvenioID = cbxConvenioPaciente.Text,
+                        NumeroCarteiraConvenio = txtNumCarteirinhaPaciente.Text
+                    };
+                    var dao = new PacienteDAO();
 
-            if (validarFormPaciente()) {
-                var paciente = new Paciente() {
-                    Nome = txtNomePaciente.Text,
-                    Sobrenome = txtSobrenomePaciente.Text,
-                    DataNascimento = txtNascPaciente.Text,
-                    //sexo
-                    Cpf = txtCpfPaciente.Text,
-                    Rg = txtRgPaciente.Text,
-                    OrgaoEmissor = txtOrgaoEmiPaciente.Text,
-                    Endereco = txtEnderecoPaciente.Text,
-                    Numero = txtNumeroEndPaciente.Text,
-                    Complemento = txtComplementoPaciente.Text,
-                    Bairro = txtBairroPaciente.Text,
-                    Cidade = cbxCidadePaciente.Text,
-                    Estado = cbxUFPaciente.Text,
-                    Telefone = txtTelefonePaciente.Text,
-                    Celular = txtCelularPaciente.Text,
-                    Email = txtEmailPaciente.Text,
-                    //ConvenioID = cbxConvenioPaciente.Text,
-                    NumeroCarteiraConvenio = txtNumCarteirinhaPaciente.Text
-                };
-                var dao = new PacienteDAO();
+                    dao.Save(paciente);
 
-                dao.Save(paciente);
-
-                MessageBox.Show("Paciente cadastrado com sucesso!");
+                    MessageBox.Show("Paciente cadastrado com sucesso!");
+                }
+            } catch (Exception e) {
+                var erro = new Exceptions(e, "Erro ao cadastrar o Paciente no banco de dados");
+                erro.lancaException();
             }
         }
 
@@ -272,6 +297,13 @@ namespace AgendaMedica {
             }
         }
 
+        private void cbxConvenioPaciente_Click(object sender, EventArgs e) {
 
+            try {
+                carregaConvenios();
+            } catch (Exception ex) {
+
+            }
+        }
     }
 }

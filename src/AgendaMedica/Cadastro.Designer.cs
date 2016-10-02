@@ -127,10 +127,10 @@ namespace AgendaMedica {
             this.lblNascMed = new System.Windows.Forms.Label();
             this.lblNomeMed = new System.Windows.Forms.Label();
             this.txtNomeMed = new System.Windows.Forms.TextBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabConvenio = new System.Windows.Forms.TabPage();
             this.lblNomeConvenio = new System.Windows.Forms.Label();
             this.txtNomeConvenio = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.agendaMedicaDataSet = new AgendaMedica.agendaMedicaDataSet();
             this.agendaMedicaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
@@ -711,6 +711,7 @@ namespace AgendaMedica {
             this.cbxConvenioPaciente.Name = "cbxConvenioPaciente";
             this.cbxConvenioPaciente.Size = new System.Drawing.Size(162, 21);
             this.cbxConvenioPaciente.TabIndex = 24;
+            this.cbxConvenioPaciente.Click += new System.EventHandler(this.cbxConvenioPaciente_Click);
             // 
             // lblNumCarteirinhaPaciente
             // 
@@ -1165,12 +1166,6 @@ namespace AgendaMedica {
             this.txtNomeMed.Size = new System.Drawing.Size(194, 20);
             this.txtNomeMed.TabIndex = 1;
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.lbDateTime_Tick);
-            // 
             // tabConvenio
             // 
             this.tabConvenio.Controls.Add(this.lblNomeConvenio);
@@ -1199,6 +1194,12 @@ namespace AgendaMedica {
             this.txtNomeConvenio.Name = "txtNomeConvenio";
             this.txtNomeConvenio.Size = new System.Drawing.Size(194, 20);
             this.txtNomeConvenio.TabIndex = 24;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.lbDateTime_Tick);
             // 
             // agendaMedicaDataSet
             // 

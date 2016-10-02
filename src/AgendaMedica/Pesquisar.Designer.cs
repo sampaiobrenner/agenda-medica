@@ -56,6 +56,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.colDataConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colConvenio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -204,6 +208,11 @@
             this.dtgListaConsultas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgListaConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgListaConsultas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colDataConsulta,
+            this.colPaciente,
+            this.colConvenio,
+            this.colMedico});
             this.dtgListaConsultas.Location = new System.Drawing.Point(20, 48);
             this.dtgListaConsultas.Name = "dtgListaConsultas";
             this.dtgListaConsultas.Size = new System.Drawing.Size(577, 193);
@@ -328,6 +337,26 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // colDataConsulta
+            // 
+            this.colDataConsulta.HeaderText = "Data Consulta";
+            this.colDataConsulta.Name = "colDataConsulta";
+            // 
+            // colPaciente
+            // 
+            this.colPaciente.HeaderText = "Paciente";
+            this.colPaciente.Name = "colPaciente";
+            // 
+            // colConvenio
+            // 
+            this.colConvenio.HeaderText = "Convênio";
+            this.colConvenio.Name = "colConvenio";
+            // 
+            // colMedico
+            // 
+            this.colMedico.HeaderText = "Médico";
+            this.colMedico.Name = "colMedico";
+            // 
             // Pesquisar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,5 +420,9 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDataConsulta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPaciente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colConvenio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMedico;
     }
 }
