@@ -135,14 +135,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>agendaMedicaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Consulta.cs" />
+    <Compile Include="DAO\ConsultaDAO.cs" />
+    <Compile Include="DAO\ConvenioDAO.cs" />
+    <Compile Include="DAO\MedicoDAO.cs" />
+    <Compile Include="DAO\PacienteDAO.cs" />
+    <Compile Include="DAO\AtendenteDAO.cs" />
     <Compile Include="Database\EntidadeContext.cs" />
+    <Compile Include="Entidades\Consulta.cs" />
+    <Compile Include="Entidades\Convenio.cs" />
     <Compile Include="Entidades\Medico.cs" />
     <Compile Include="Entidades\Paciente.cs" />
-    <Compile Include="Entidades\Secretaria.cs" />
-    <Compile Include="Migrations\20160927222309_criaMedico.cs" />
-    <Compile Include="Migrations\20160927222309_criaMedico.designer.cs">
-      <DependentUpon>20160927222309_criaMedico.cs</DependentUpon>
+    <Compile Include="Entidades\Atendente.cs" />
+    <Compile Include="Migrations\20161001221636_CriaMedicos.cs" />
+    <Compile Include="Migrations\20161001221636_CriaMedicos.designer.cs">
+      <DependentUpon>20161001221636_CriaMedicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20161001230515_PacientesEConvenios.cs" />
+    <Compile Include="Migrations\20161001230515_PacientesEConvenios.designer.cs">
+      <DependentUpon>20161001230515_PacientesEConvenios.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\EntidadeContextModelSnapshot.cs" />
     <Compile Include="Pesquisar.cs">

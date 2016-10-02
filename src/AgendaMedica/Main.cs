@@ -1,4 +1,4 @@
-﻿using AgendaMedica.Classes;
+﻿using AgendaMedica.Entidades;
 using AgendaMedica.Database;
 using System;
 using System.Collections.Generic;

@@ -41,21 +41,21 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabPesquisar = new System.Windows.Forms.TabControl();
             this.tabConsultas = new System.Windows.Forms.TabPage();
+            this.btnPesquisarConsultas = new System.Windows.Forms.Button();
             this.dtgListaConsultas = new System.Windows.Forms.DataGridView();
             this.lblNomePesquisa = new System.Windows.Forms.Label();
             this.txtNomePesquisa = new System.Windows.Forms.TextBox();
             this.tabPesquisarPaciente = new System.Windows.Forms.TabPage();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnPesquisarConsultas = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -64,8 +64,8 @@
             this.tabConsultas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaConsultas)).BeginInit();
             this.tabPesquisarPaciente.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -189,6 +189,16 @@
             this.tabConsultas.Text = "Consultas";
             this.tabConsultas.UseVisualStyleBackColor = true;
             // 
+            // btnPesquisarConsultas
+            // 
+            this.btnPesquisarConsultas.Location = new System.Drawing.Point(522, 10);
+            this.btnPesquisarConsultas.Name = "btnPesquisarConsultas";
+            this.btnPesquisarConsultas.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisarConsultas.TabIndex = 3;
+            this.btnPesquisarConsultas.Text = "Pesquisar";
+            this.btnPesquisarConsultas.UseVisualStyleBackColor = true;
+            this.btnPesquisarConsultas.Click += new System.EventHandler(this.btnPesquisarConsultas_Click);
+            // 
             // dtgListaConsultas
             // 
             this.dtgListaConsultas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -230,33 +240,6 @@
             this.tabPesquisarPaciente.Text = "Pacientes";
             this.tabPesquisarPaciente.UseVisualStyleBackColor = true;
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.dataGridView2);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(618, 267);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Médicos";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // btnPesquisarConsultas
-            // 
-            this.btnPesquisarConsultas.Location = new System.Drawing.Point(522, 10);
-            this.btnPesquisarConsultas.Name = "btnPesquisarConsultas";
-            this.btnPesquisarConsultas.Size = new System.Drawing.Size(75, 23);
-            this.btnPesquisarConsultas.TabIndex = 3;
-            this.btnPesquisarConsultas.Text = "Pesquisar";
-            this.btnPesquisarConsultas.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(524, 18);
@@ -291,6 +274,20 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(458, 20);
             this.textBox1.TabIndex = 4;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.dataGridView2);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(618, 267);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Médicos";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -327,6 +324,10 @@
             this.textBox2.Size = new System.Drawing.Size(458, 20);
             this.textBox2.TabIndex = 4;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Pesquisar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,9 +355,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaConsultas)).EndInit();
             this.tabPesquisarPaciente.ResumeLayout(false);
             this.tabPesquisarPaciente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 

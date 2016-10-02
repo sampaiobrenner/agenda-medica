@@ -1,4 +1,4 @@
-﻿using AgendaMedica.Classes;
+﻿using AgendaMedica.Entidades;
 using AgendaMedica.Database;
 using System;
 using System.Collections.Generic;
@@ -9,95 +9,82 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AgendaMedica.DAO;
+using System.Collections;
 
-namespace AgendaMedica
-{
-    public partial class Cadastro : Form
-    {
-        public Cadastro()
-        {
+namespace AgendaMedica {
+    public partial class Cadastro : Form {
+        public Cadastro() {            
             InitializeComponent();
+            carregaConvenios();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+        private void carregaConvenios() {
+            var dao = new ConvenioDAO();
+            var convenio = new Convenio();
+            IList resultado = dao.Get();
+
+            foreach (var c in resultado) {
+                convenio = (Convenio)c;
+
+                cbxConvenioPaciente.Items.Add(convenio.Nome);
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e) {
             lbDateTime_Tick(e, e);
         }
 
-        private void lbDateTime_Tick(object sender, EventArgs e)
-        {
-            DateTime dataHora = DateTime.Now;
+        private void lbDateTime_Tick(object sender, EventArgs e) {
+            var dataHora = DateTime.Now;
             lbDateTime.Text = "Data: " + dataHora.ToShortDateString() + " | Hora: " + dataHora.ToLongTimeString();
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void label24_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void textBox17_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
+        private void btnExit_Click(object sender, EventArgs e) {
             this.Close();
         }
 
-        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
+        private void btnAdicionar_Click(object sender, EventArgs e) {
 
-        }
-
-        private void txtNascMed_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-
-
-            switch (tabCadastrar.SelectedTab.Name)
-            {
+            switch (tabCadastrar.SelectedTab.Name) {
                 case "tabAgendamento":
                     cadastrarAgendamento();
                     break;
-                case "tabPacientes":
+                case "tabPaciente":
                     cadastrarPaciente();
                     break;
                 case "tabMedicos":
                     cadastrarMedico();
                     break;
+                case "tabConvenio":
+                    cadastrarConvenio();
+                    break;
             }
 
         }
 
-        private void cadastrarMedico()
-        {
+        private void cadastrarConvenio() {
+            var dao = new ConvenioDAO();
 
-            if (validarFormMedico())
-            {
-                EntidadeContext contexto = new EntidadeContext();
-                Medico medico = new Medico()
-                {
+            if (validaFormConvenio()) {
+                var convenio = new Convenio() {
+                    Nome = txtNomeConvenio.Text
+                };
+
+                dao.Save(convenio);
+                MessageBox.Show("Convênio Cadastrado Com sucesso");
+            };
+
+
+        }
+
+
+
+
+        private void cadastrarMedico() {
+
+            if (validarFormMedico()) {
+                var medico = new Medico() {
                     Nome = txtNomeMed.Text,
                     Sobrenome = txtSobrenomeMed.Text,
                     DataNascimento = txtNascMed.Text,
@@ -119,95 +106,87 @@ namespace AgendaMedica
                     Crm = txtCrm.Text
                 };
 
-
-                contexto.Medicos.Add(medico);
-                contexto.SaveChanges();
-                contexto.Dispose();
+                var dao = new MedicoDAO();
+                dao.Save(medico);
 
                 MessageBox.Show("Médico Cadastrado com Sucesso");
             }
         }
 
-        private bool validarFormMedico()
-        {
+        private void cadastrarPaciente() {
+
+            if (validarFormPaciente()) {
+                var paciente = new Paciente() {
+                    Nome = txtNomePaciente.Text,
+                    Sobrenome = txtSobrenomePaciente.Text,
+                    DataNascimento = txtNascPaciente.Text,
+                    //sexo
+                    Cpf = txtCpfPaciente.Text,
+                    Rg = txtRgPaciente.Text,
+                    OrgaoEmissor = txtOrgaoEmiPaciente.Text,
+                    Endereco = txtEnderecoPaciente.Text,
+                    Numero = txtNumeroEndPaciente.Text,
+                    Complemento = txtComplementoPaciente.Text,
+                    Bairro = txtBairroPaciente.Text,
+                    Cidade = cbxCidadePaciente.Text,
+                    Estado = cbxUFPaciente.Text,
+                    Telefone = txtTelefonePaciente.Text,
+                    Celular = txtCelularPaciente.Text,
+                    Email = txtEmailPaciente.Text,
+                    //ConvenioID = cbxConvenioPaciente.Text,
+                    NumeroCarteiraConvenio = txtNumCarteirinhaPaciente.Text
+                };
+                var dao = new PacienteDAO();
+
+                dao.Save(paciente);
+
+                MessageBox.Show("Paciente cadastrado com sucesso!");
+            }
+        }
+
+        private bool validarFormMedico() {
             string nome = "";
 
-            if (String.IsNullOrEmpty(txtNomeMed.Text))
-            {
+            if (String.IsNullOrEmpty(txtNomeMed.Text)) {
                 nome = "Nome";
-            }
-            else if (String.IsNullOrEmpty(txtSobrenomeMed.Text))
-            {
+            } else if (String.IsNullOrEmpty(txtSobrenomeMed.Text)) {
                 nome = "Sobrenome";
-            }
-            else if (String.IsNullOrEmpty(txtNascMed.Text))
-            {
+            } else if (String.IsNullOrEmpty(txtNascMed.Text)) {
                 nome = "Data de Nascimento";
-            }
-            else if (String.IsNullOrEmpty(txtCpfMed.Text))
-            {
+            } else if (String.IsNullOrEmpty(txtCpfMed.Text)) {
                 nome = "CPF";
-            }
-            else if (String.IsNullOrEmpty(txtRgMed.Text))
-            {
+            } else if (String.IsNullOrEmpty(txtRgMed.Text)) {
                 nome = "RG";
-            }
-            else if (String.IsNullOrEmpty(txtOrgaoEmiMed.Text))
-            {
+            } else if (String.IsNullOrEmpty(txtOrgaoEmiMed.Text)) {
                 nome = "Orgão Emissor";
-            }
-            else if (String.IsNullOrEmpty(txtEnderecoMed.Text))
-            {
+            } else if (String.IsNullOrEmpty(txtEnderecoMed.Text)) {
                 nome = "Endereço";
-            }
-            else if (String.IsNullOrEmpty(txtNumeroEndMed.Text))
-            {
+            } else if (String.IsNullOrEmpty(txtNumeroEndMed.Text)) {
                 nome = "Número";
-            }
-            else if (String.IsNullOrEmpty(txtCepMed.Text))
-            {
+            } else if (String.IsNullOrEmpty(txtCepMed.Text)) {
                 nome = "CEP";
-            }
-            else if (String.IsNullOrEmpty(txtBairroMed.Text))
-            {
+            } else if (String.IsNullOrEmpty(txtBairroMed.Text)) {
                 nome = "Bairro";
-            }
-            else if (String.IsNullOrEmpty(cbxUFMed.Text))
-            {
+            } else if (String.IsNullOrEmpty(cbxUFMed.Text)) {
                 nome = "UF";
-            }
-            else if (String.IsNullOrEmpty(cbxCidadeMed.Text))
-            {
+            } else if (String.IsNullOrEmpty(cbxCidadeMed.Text)) {
                 nome = "Cidade";
-            }
-            else if (String.IsNullOrEmpty(txtTelefoneMed.Text))
-            {
+            } else if (String.IsNullOrEmpty(txtTelefoneMed.Text)) {
                 nome = "Telefone";
-            }
-            else if (String.IsNullOrEmpty(txtCelularMed.Text))
-            {
+            } else if (String.IsNullOrEmpty(txtCelularMed.Text)) {
                 nome = "Celular";
-            }
-            else if (String.IsNullOrEmpty(txtEmailMed.Text))
-            {
+            } else if (String.IsNullOrEmpty(txtEmailMed.Text)) {
                 nome = "E-mail";
-            }
-            else if (String.IsNullOrEmpty(cbxEspecialidadeMed.Text))
-            {
+            } else if (String.IsNullOrEmpty(cbxEspecialidadeMed.Text)) {
                 nome = "Especialidade";
-            }
-            else if (String.IsNullOrEmpty(txtCrm.Text))
-            {
+            } else if (String.IsNullOrEmpty(txtCrm.Text)) {
                 nome = "CRM";
-            }
-            else if (!rdbSexoFMed.Checked && !rdbSexoMMed.Checked)
-            {
+            } else if (!rdbSexoFMed.Checked && !rdbSexoMMed.Checked) {
                 nome = "Sexo";
             }
 
             //Retorna
-            if (!String.IsNullOrEmpty(nome))
-            {
+            if (!String.IsNullOrEmpty(nome)) {
                 MessageBox.Show("Preencha o campo: " + nome);
                 return false;
             }
@@ -215,36 +194,84 @@ namespace AgendaMedica
 
         }
 
-        private void cadastrarPaciente()
-        {
+        public bool validarFormPaciente() {
+            var campo = "";
+
+            if (String.IsNullOrEmpty(txtNomePaciente.Text)) {
+                campo = "Nome";
+            } else if (String.IsNullOrEmpty(txtSobrenomePaciente.Text)) {
+                campo = "Sobrenome";
+            } else if (String.IsNullOrEmpty(txtNascPaciente.Text)) {
+                campo = "Data de Nascimento";
+            } else if (String.IsNullOrEmpty(txtCpfPaciente.Text)) {
+                campo = "CPF";
+            } else if (String.IsNullOrEmpty(txtRgPaciente.Text)) {
+                campo = "RG";
+            } else if (String.IsNullOrEmpty(txtNumeroEndPaciente.Text)) {
+                campo = "Número";
+            } else if (String.IsNullOrEmpty(txtCepPaciente.Text)) {
+                campo = "CEP";
+            } else if (String.IsNullOrEmpty(txtBairroPaciente.Text)) {
+                campo = "Bairro";
+            } else if (String.IsNullOrEmpty(cbxCidadePaciente.Text)) {
+                campo = "Cidade";
+            } else if (String.IsNullOrEmpty(cbxUFPaciente.Text)) {
+                campo = "UF";
+            } else if (String.IsNullOrEmpty(txtTelefonePaciente.Text) || String.IsNullOrEmpty(txtCepPaciente.Text)) {
+                campo = "Telefone ou Celular";
+            } else if (String.IsNullOrEmpty(txtEmailPaciente.Text)) {
+                campo = "E-mail";
+            } else if (String.IsNullOrEmpty(txtNumCarteirinhaPaciente.Text)) {
+                campo = "Nº Carteirinha";
+            } else if (String.IsNullOrEmpty(cbxConvenioPaciente.Text)) {
+                campo = "Convênio";
+            }
+
+            if (!String.IsNullOrEmpty(campo)) {
+                MessageBox.Show("Por favor, informe o campo " + campo);
+                return false;
+            }
+            return true;
+
+        }
+
+        private bool validaFormConvenio() {
+            var campo = "";
+            if (String.IsNullOrEmpty(txtNomeConvenio.Text)) {
+                campo = "Nome";
+            }
+
+            if (!String.IsNullOrEmpty(campo)) {
+                MessageBox.Show("Por favor, preencha o campo" + campo);
+                return false;
+            }
+            return true;
+        }
+
+
+
+        private void cadastrarAgendamento() {
             throw new NotImplementedException();
         }
 
-        private void cadastrarAgendamento()
-        {
-            throw new NotImplementedException();
+        private void btnLimpar_Click(object sender, EventArgs e) {
+            LimparTextBox(this.tabMedicos);
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            LimparTextBox(this);
-        }
 
-        
-        public void LimparTextBox(Control controle)
-        {
-            foreach (Control ctle in controle.Controls)
-            {
-                if (ctle is TextBox)
-                {
+        public void LimparTextBox(Control controle) {
+
+            foreach (Control ctle in controle.Controls) {
+                Console.WriteLine(ctle);
+                if (ctle is TextBox) {
+
                     ((TextBox)ctle).Text = string.Empty;
-                }else if(ctle.Controls.Count > 0)
-                {
+                } else if (ctle.Controls.Count > 0) {
                     LimparTextBox(ctle);
                 }
             }
         }
 
-        
+
     }
 }
