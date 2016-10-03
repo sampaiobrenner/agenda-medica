@@ -283,28 +283,25 @@ namespace AgendaMedica {
             // 
             // cbxPlanoMedAgen
             // 
-            this.cbxPlanoMedAgen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxPlanoMedAgen.FormattingEnabled = true;
             this.cbxPlanoMedAgen.Location = new System.Drawing.Point(401, 69);
             this.cbxPlanoMedAgen.Name = "cbxPlanoMedAgen";
-            this.cbxPlanoMedAgen.Size = new System.Drawing.Size(241, 24);
+            this.cbxPlanoMedAgen.Size = new System.Drawing.Size(241, 21);
             this.cbxPlanoMedAgen.TabIndex = 8;
             // 
             // txtPacienteAgen
             // 
-            this.txtPacienteAgen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPacienteAgen.Location = new System.Drawing.Point(12, 69);
             this.txtPacienteAgen.Name = "txtPacienteAgen";
-            this.txtPacienteAgen.Size = new System.Drawing.Size(373, 22);
+            this.txtPacienteAgen.Size = new System.Drawing.Size(373, 20);
             this.txtPacienteAgen.TabIndex = 7;
             // 
             // cbxEspecialidadeAgen
             // 
-            this.cbxEspecialidadeAgen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEspecialidadeAgen.FormattingEnabled = true;
             this.cbxEspecialidadeAgen.Location = new System.Drawing.Point(12, 24);
             this.cbxEspecialidadeAgen.Name = "cbxEspecialidadeAgen";
-            this.cbxEspecialidadeAgen.Size = new System.Drawing.Size(143, 24);
+            this.cbxEspecialidadeAgen.Size = new System.Drawing.Size(143, 21);
             this.cbxEspecialidadeAgen.TabIndex = 6;
             // 
             // lblEspecialidadeAgen
@@ -327,11 +324,10 @@ namespace AgendaMedica {
             // 
             // cbxMedicoAgen
             // 
-            this.cbxMedicoAgen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxMedicoAgen.FormattingEnabled = true;
             this.cbxMedicoAgen.Location = new System.Drawing.Point(171, 24);
             this.cbxMedicoAgen.Name = "cbxMedicoAgen";
-            this.cbxMedicoAgen.Size = new System.Drawing.Size(214, 24);
+            this.cbxMedicoAgen.Size = new System.Drawing.Size(214, 21);
             this.cbxMedicoAgen.TabIndex = 3;
             // 
             // lblMedicoAgen
@@ -354,12 +350,9 @@ namespace AgendaMedica {
             // 
             // dtpDataAgen
             // 
-            this.dtpDataAgen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDataAgen.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDataAgen.Location = new System.Drawing.Point(401, 24);
-            this.dtpDataAgen.MinDate = new System.DateTime(2016, 1, 1, 0, 0, 0, 0);
             this.dtpDataAgen.Name = "dtpDataAgen";
-            this.dtpDataAgen.Size = new System.Drawing.Size(159, 22);
+            this.dtpDataAgen.Size = new System.Drawing.Size(241, 20);
             this.dtpDataAgen.TabIndex = 0;
             // 
             // tabPacientes
@@ -422,13 +415,10 @@ namespace AgendaMedica {
             // 
             // txtComplementoPaciente
             // 
-            this.txtComplementoPaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtComplementoPaciente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComplementoPaciente.Location = new System.Drawing.Point(437, 119);
             this.txtComplementoPaciente.Name = "txtComplementoPaciente";
-            this.txtComplementoPaciente.Size = new System.Drawing.Size(85, 22);
-            this.txtComplementoPaciente.TabIndex = 9;
-            this.txtComplementoPaciente.WordWrap = false;
+            this.txtComplementoPaciente.Size = new System.Drawing.Size(85, 20);
+            this.txtComplementoPaciente.TabIndex = 66;
             // 
             // lblEmailPaciente
             // 
@@ -441,13 +431,10 @@ namespace AgendaMedica {
             // 
             // txtEmailPaciente
             // 
-            this.txtEmailPaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtEmailPaciente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailPaciente.Location = new System.Drawing.Point(24, 217);
             this.txtEmailPaciente.Name = "txtEmailPaciente";
-            this.txtEmailPaciente.Size = new System.Drawing.Size(287, 22);
-            this.txtEmailPaciente.TabIndex = 16;
-            this.txtEmailPaciente.WordWrap = false;
+            this.txtEmailPaciente.Size = new System.Drawing.Size(287, 20);
+            this.txtEmailPaciente.TabIndex = 73;
             // 
             // lblCelularPaciente
             // 
@@ -460,13 +447,10 @@ namespace AgendaMedica {
             // 
             // txtCelularPaciente
             // 
-            this.txtCelularPaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCelularPaciente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCelularPaciente.Location = new System.Drawing.Point(535, 167);
             this.txtCelularPaciente.Name = "txtCelularPaciente";
-            this.txtCelularPaciente.Size = new System.Drawing.Size(96, 22);
-            this.txtCelularPaciente.TabIndex = 15;
-            this.txtCelularPaciente.WordWrap = false;
+            this.txtCelularPaciente.Size = new System.Drawing.Size(96, 20);
+            this.txtCelularPaciente.TabIndex = 72;
             // 
             // lblTelefonePaciente
             // 
@@ -479,13 +463,10 @@ namespace AgendaMedica {
             // 
             // txtTelefonePaciente
             // 
-            this.txtTelefonePaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTelefonePaciente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonePaciente.Location = new System.Drawing.Point(437, 167);
             this.txtTelefonePaciente.Name = "txtTelefonePaciente";
-            this.txtTelefonePaciente.Size = new System.Drawing.Size(85, 22);
-            this.txtTelefonePaciente.TabIndex = 14;
-            this.txtTelefonePaciente.WordWrap = false;
+            this.txtTelefonePaciente.Size = new System.Drawing.Size(85, 20);
+            this.txtTelefonePaciente.TabIndex = 71;
             // 
             // lblCidadePaciente
             // 
@@ -516,13 +497,10 @@ namespace AgendaMedica {
             // 
             // txtCepPaciente
             // 
-            this.txtCepPaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCepPaciente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCepPaciente.Location = new System.Drawing.Point(535, 119);
             this.txtCepPaciente.Name = "txtCepPaciente";
-            this.txtCepPaciente.Size = new System.Drawing.Size(96, 22);
-            this.txtCepPaciente.TabIndex = 10;
-            this.txtCepPaciente.WordWrap = false;
+            this.txtCepPaciente.Size = new System.Drawing.Size(96, 20);
+            this.txtCepPaciente.TabIndex = 68;
             // 
             // cbxCidadePaciente
             // 
@@ -530,7 +508,7 @@ namespace AgendaMedica {
             this.cbxCidadePaciente.Location = new System.Drawing.Point(207, 167);
             this.cbxCidadePaciente.Name = "cbxCidadePaciente";
             this.cbxCidadePaciente.Size = new System.Drawing.Size(136, 21);
-            this.cbxCidadePaciente.TabIndex = 12;
+            this.cbxCidadePaciente.TabIndex = 70;
             // 
             // cbxUFPaciente
             // 
@@ -567,17 +545,14 @@ namespace AgendaMedica {
             this.cbxUFPaciente.Location = new System.Drawing.Point(362, 167);
             this.cbxUFPaciente.Name = "cbxUFPaciente";
             this.cbxUFPaciente.Size = new System.Drawing.Size(60, 21);
-            this.cbxUFPaciente.TabIndex = 13;
+            this.cbxUFPaciente.TabIndex = 69;
             // 
             // txtBairroPaciente
             // 
-            this.txtBairroPaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtBairroPaciente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBairroPaciente.Location = new System.Drawing.Point(24, 167);
             this.txtBairroPaciente.Name = "txtBairroPaciente";
-            this.txtBairroPaciente.Size = new System.Drawing.Size(161, 22);
-            this.txtBairroPaciente.TabIndex = 11;
-            this.txtBairroPaciente.WordWrap = false;
+            this.txtBairroPaciente.Size = new System.Drawing.Size(161, 20);
+            this.txtBairroPaciente.TabIndex = 67;
             // 
             // lblBairroPaciente
             // 
@@ -599,23 +574,17 @@ namespace AgendaMedica {
             // 
             // txtNumeroEndPaciente
             // 
-            this.txtNumeroEndPaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNumeroEndPaciente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumeroEndPaciente.Location = new System.Drawing.Point(362, 119);
             this.txtNumeroEndPaciente.Name = "txtNumeroEndPaciente";
-            this.txtNumeroEndPaciente.Size = new System.Drawing.Size(60, 22);
-            this.txtNumeroEndPaciente.TabIndex = 8;
-            this.txtNumeroEndPaciente.WordWrap = false;
+            this.txtNumeroEndPaciente.Size = new System.Drawing.Size(60, 20);
+            this.txtNumeroEndPaciente.TabIndex = 65;
             // 
             // txtEnderecoPaciente
             // 
-            this.txtEnderecoPaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtEnderecoPaciente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEnderecoPaciente.Location = new System.Drawing.Point(24, 119);
             this.txtEnderecoPaciente.Name = "txtEnderecoPaciente";
-            this.txtEnderecoPaciente.Size = new System.Drawing.Size(321, 22);
-            this.txtEnderecoPaciente.TabIndex = 7;
-            this.txtEnderecoPaciente.WordWrap = false;
+            this.txtEnderecoPaciente.Size = new System.Drawing.Size(321, 20);
+            this.txtEnderecoPaciente.TabIndex = 64;
             // 
             // lblEnderecoPaciente
             // 
@@ -637,13 +606,11 @@ namespace AgendaMedica {
             // 
             // txtOrgaoEmiPaciente
             // 
-            this.txtOrgaoEmiPaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtOrgaoEmiPaciente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOrgaoEmiPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOrgaoEmiPaciente.Location = new System.Drawing.Point(545, 70);
             this.txtOrgaoEmiPaciente.Name = "txtOrgaoEmiPaciente";
-            this.txtOrgaoEmiPaciente.Size = new System.Drawing.Size(87, 22);
-            this.txtOrgaoEmiPaciente.TabIndex = 6;
-            this.txtOrgaoEmiPaciente.WordWrap = false;
+            this.txtOrgaoEmiPaciente.Size = new System.Drawing.Size(87, 20);
+            this.txtOrgaoEmiPaciente.TabIndex = 60;
             // 
             // lblRgPaciente
             // 
@@ -656,13 +623,11 @@ namespace AgendaMedica {
             // 
             // txtRgPaciente
             // 
-            this.txtRgPaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtRgPaciente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRgPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRgPaciente.Location = new System.Drawing.Point(325, 70);
             this.txtRgPaciente.Name = "txtRgPaciente";
-            this.txtRgPaciente.Size = new System.Drawing.Size(194, 22);
-            this.txtRgPaciente.TabIndex = 5;
-            this.txtRgPaciente.WordWrap = false;
+            this.txtRgPaciente.Size = new System.Drawing.Size(194, 20);
+            this.txtRgPaciente.TabIndex = 59;
             // 
             // lblCpfPaciente
             // 
@@ -675,13 +640,11 @@ namespace AgendaMedica {
             // 
             // txtCpfPaciente
             // 
-            this.txtCpfPaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCpfPaciente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpfPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCpfPaciente.Location = new System.Drawing.Point(117, 70);
             this.txtCpfPaciente.Name = "txtCpfPaciente";
-            this.txtCpfPaciente.Size = new System.Drawing.Size(194, 22);
-            this.txtCpfPaciente.TabIndex = 4;
-            this.txtCpfPaciente.WordWrap = false;
+            this.txtCpfPaciente.Size = new System.Drawing.Size(194, 20);
+            this.txtCpfPaciente.TabIndex = 58;
             // 
             // lblSobrenomePaciente
             // 
@@ -694,13 +657,10 @@ namespace AgendaMedica {
             // 
             // txtSobrenomePaciente
             // 
-            this.txtSobrenomePaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSobrenomePaciente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSobrenomePaciente.Location = new System.Drawing.Point(232, 25);
             this.txtSobrenomePaciente.Name = "txtSobrenomePaciente";
-            this.txtSobrenomePaciente.Size = new System.Drawing.Size(218, 22);
-            this.txtSobrenomePaciente.TabIndex = 1;
-            this.txtSobrenomePaciente.WordWrap = false;
+            this.txtSobrenomePaciente.Size = new System.Drawing.Size(218, 20);
+            this.txtSobrenomePaciente.TabIndex = 29;
             // 
             // rdbSexoMPaciente
             // 
@@ -719,7 +679,7 @@ namespace AgendaMedica {
             this.rdbSexoFPaciente.Location = new System.Drawing.Point(24, 71);
             this.rdbSexoFPaciente.Name = "rdbSexoFPaciente";
             this.rdbSexoFPaciente.Size = new System.Drawing.Size(31, 17);
-            this.rdbSexoFPaciente.TabIndex = 3;
+            this.rdbSexoFPaciente.TabIndex = 27;
             this.rdbSexoFPaciente.TabStop = true;
             this.rdbSexoFPaciente.Text = "F";
             this.rdbSexoFPaciente.UseVisualStyleBackColor = true;
@@ -750,8 +710,8 @@ namespace AgendaMedica {
             this.cbxConvenioPaciente.Location = new System.Drawing.Point(468, 217);
             this.cbxConvenioPaciente.Name = "cbxConvenioPaciente";
             this.cbxConvenioPaciente.Size = new System.Drawing.Size(162, 21);
-            this.cbxConvenioPaciente.TabIndex = 18;
-            this.cbxConvenioPaciente.GotFocus += new System.EventHandler(this.cbxConvenioPaciente_Focus);
+            this.cbxConvenioPaciente.TabIndex = 24;
+            this.cbxConvenioPaciente.Click += new System.EventHandler(this.cbxConvenioPaciente_Click);
             // 
             // lblNumCarteirinhaPaciente
             // 
@@ -764,23 +724,17 @@ namespace AgendaMedica {
             // 
             // txtNumCarteirinhaPaciente
             // 
-            this.txtNumCarteirinhaPaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNumCarteirinhaPaciente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumCarteirinhaPaciente.Location = new System.Drawing.Point(334, 217);
             this.txtNumCarteirinhaPaciente.Name = "txtNumCarteirinhaPaciente";
-            this.txtNumCarteirinhaPaciente.Size = new System.Drawing.Size(116, 22);
-            this.txtNumCarteirinhaPaciente.TabIndex = 17;
-            this.txtNumCarteirinhaPaciente.WordWrap = false;
+            this.txtNumCarteirinhaPaciente.Size = new System.Drawing.Size(116, 20);
+            this.txtNumCarteirinhaPaciente.TabIndex = 22;
             // 
             // txtNascPaciente
             // 
-            this.txtNascPaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNascPaciente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNascPaciente.Location = new System.Drawing.Point(468, 25);
             this.txtNascPaciente.Name = "txtNascPaciente";
-            this.txtNascPaciente.Size = new System.Drawing.Size(162, 22);
-            this.txtNascPaciente.TabIndex = 2;
-            this.txtNascPaciente.WordWrap = false;
+            this.txtNascPaciente.Size = new System.Drawing.Size(162, 20);
+            this.txtNascPaciente.TabIndex = 3;
             // 
             // lblNascPaciente
             // 
@@ -802,13 +756,10 @@ namespace AgendaMedica {
             // 
             // txtNomePaciente
             // 
-            this.txtNomePaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNomePaciente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomePaciente.Location = new System.Drawing.Point(23, 25);
             this.txtNomePaciente.Name = "txtNomePaciente";
-            this.txtNomePaciente.Size = new System.Drawing.Size(192, 22);
+            this.txtNomePaciente.Size = new System.Drawing.Size(192, 20);
             this.txtNomePaciente.TabIndex = 0;
-            this.txtNomePaciente.WordWrap = false;
             // 
             // tabMedicos
             // 
@@ -872,7 +823,6 @@ namespace AgendaMedica {
             // 
             this.cbxUFMed.AllowDrop = true;
             this.cbxUFMed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxUFMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxUFMed.Items.AddRange(new object[] {
             "AC",
             "AL",
@@ -903,7 +853,7 @@ namespace AgendaMedica {
             "TO"});
             this.cbxUFMed.Location = new System.Drawing.Point(362, 153);
             this.cbxUFMed.Name = "cbxUFMed";
-            this.cbxUFMed.Size = new System.Drawing.Size(60, 24);
+            this.cbxUFMed.Size = new System.Drawing.Size(60, 21);
             this.cbxUFMed.TabIndex = 80;
             // 
             // lblSexoMed
@@ -948,13 +898,11 @@ namespace AgendaMedica {
             // 
             // txtOrgaoEmiMed
             // 
-            this.txtOrgaoEmiMed.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtOrgaoEmiMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOrgaoEmiMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOrgaoEmiMed.Location = new System.Drawing.Point(540, 67);
             this.txtOrgaoEmiMed.Name = "txtOrgaoEmiMed";
-            this.txtOrgaoEmiMed.Size = new System.Drawing.Size(87, 22);
+            this.txtOrgaoEmiMed.Size = new System.Drawing.Size(87, 20);
             this.txtOrgaoEmiMed.TabIndex = 8;
-            this.txtOrgaoEmiMed.WordWrap = false;
             // 
             // lblRgMed
             // 
@@ -967,13 +915,11 @@ namespace AgendaMedica {
             // 
             // txtRgMed
             // 
-            this.txtRgMed.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtRgMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRgMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRgMed.Location = new System.Drawing.Point(320, 67);
             this.txtRgMed.Name = "txtRgMed";
-            this.txtRgMed.Size = new System.Drawing.Size(194, 22);
+            this.txtRgMed.Size = new System.Drawing.Size(194, 20);
             this.txtRgMed.TabIndex = 7;
-            this.txtRgMed.WordWrap = false;
             // 
             // label1
             // 
@@ -986,13 +932,11 @@ namespace AgendaMedica {
             // 
             // txtCpfMed
             // 
-            this.txtCpfMed.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCpfMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpfMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCpfMed.Location = new System.Drawing.Point(112, 67);
             this.txtCpfMed.Name = "txtCpfMed";
-            this.txtCpfMed.Size = new System.Drawing.Size(194, 22);
+            this.txtCpfMed.Size = new System.Drawing.Size(194, 20);
             this.txtCpfMed.TabIndex = 6;
-            this.txtCpfMed.WordWrap = false;
             // 
             // lblComplementoMed
             // 
@@ -1005,13 +949,10 @@ namespace AgendaMedica {
             // 
             // txtComplementoMed
             // 
-            this.txtComplementoMed.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtComplementoMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComplementoMed.Location = new System.Drawing.Point(437, 106);
             this.txtComplementoMed.Name = "txtComplementoMed";
-            this.txtComplementoMed.Size = new System.Drawing.Size(85, 22);
+            this.txtComplementoMed.Size = new System.Drawing.Size(85, 20);
             this.txtComplementoMed.TabIndex = 11;
-            this.txtComplementoMed.WordWrap = false;
             // 
             // lblSobrenomeMed
             // 
@@ -1024,13 +965,11 @@ namespace AgendaMedica {
             // 
             // txtSobrenomeMed
             // 
-            this.txtSobrenomeMed.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSobrenomeMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSobrenomeMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSobrenomeMed.Location = new System.Drawing.Point(232, 23);
             this.txtSobrenomeMed.Name = "txtSobrenomeMed";
-            this.txtSobrenomeMed.Size = new System.Drawing.Size(219, 22);
+            this.txtSobrenomeMed.Size = new System.Drawing.Size(219, 20);
             this.txtSobrenomeMed.TabIndex = 2;
-            this.txtSobrenomeMed.WordWrap = false;
             // 
             // lblEspecialidadeMed
             // 
@@ -1043,11 +982,10 @@ namespace AgendaMedica {
             // 
             // cbxEspecialidadeMed
             // 
-            this.cbxEspecialidadeMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEspecialidadeMed.FormattingEnabled = true;
             this.cbxEspecialidadeMed.Location = new System.Drawing.Point(362, 203);
             this.cbxEspecialidadeMed.Name = "cbxEspecialidadeMed";
-            this.cbxEspecialidadeMed.Size = new System.Drawing.Size(177, 24);
+            this.cbxEspecialidadeMed.Size = new System.Drawing.Size(177, 21);
             this.cbxEspecialidadeMed.TabIndex = 18;
             // 
             // lblCRM
@@ -1061,13 +999,10 @@ namespace AgendaMedica {
             // 
             // txtCrm
             // 
-            this.txtCrm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCrm.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCrm.Location = new System.Drawing.Point(553, 205);
             this.txtCrm.Name = "txtCrm";
-            this.txtCrm.Size = new System.Drawing.Size(78, 22);
+            this.txtCrm.Size = new System.Drawing.Size(78, 20);
             this.txtCrm.TabIndex = 19;
-            this.txtCrm.WordWrap = false;
             // 
             // lblEmailMed
             // 
@@ -1080,13 +1015,10 @@ namespace AgendaMedica {
             // 
             // txtEmailMed
             // 
-            this.txtEmailMed.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtEmailMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailMed.Location = new System.Drawing.Point(24, 204);
             this.txtEmailMed.Name = "txtEmailMed";
-            this.txtEmailMed.Size = new System.Drawing.Size(321, 22);
+            this.txtEmailMed.Size = new System.Drawing.Size(321, 20);
             this.txtEmailMed.TabIndex = 17;
-            this.txtEmailMed.WordWrap = false;
             // 
             // lblCelularMed
             // 
@@ -1099,13 +1031,10 @@ namespace AgendaMedica {
             // 
             // txtCelularMed
             // 
-            this.txtCelularMed.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCelularMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCelularMed.Location = new System.Drawing.Point(535, 153);
             this.txtCelularMed.Name = "txtCelularMed";
-            this.txtCelularMed.Size = new System.Drawing.Size(96, 22);
+            this.txtCelularMed.Size = new System.Drawing.Size(96, 20);
             this.txtCelularMed.TabIndex = 16;
-            this.txtCelularMed.WordWrap = false;
             // 
             // lblTelefoneMed
             // 
@@ -1118,13 +1047,10 @@ namespace AgendaMedica {
             // 
             // txtTelefoneMed
             // 
-            this.txtTelefoneMed.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTelefoneMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefoneMed.Location = new System.Drawing.Point(437, 153);
             this.txtTelefoneMed.Name = "txtTelefoneMed";
-            this.txtTelefoneMed.Size = new System.Drawing.Size(85, 22);
+            this.txtTelefoneMed.Size = new System.Drawing.Size(85, 20);
             this.txtTelefoneMed.TabIndex = 15;
-            this.txtTelefoneMed.WordWrap = false;
             // 
             // lblCidadeMed
             // 
@@ -1146,32 +1072,25 @@ namespace AgendaMedica {
             // 
             // txtCepMed
             // 
-            this.txtCepMed.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCepMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCepMed.Location = new System.Drawing.Point(535, 106);
             this.txtCepMed.Name = "txtCepMed";
-            this.txtCepMed.Size = new System.Drawing.Size(96, 22);
+            this.txtCepMed.Size = new System.Drawing.Size(96, 20);
             this.txtCepMed.TabIndex = 12;
-            this.txtCepMed.WordWrap = false;
             // 
             // cbxCidadeMed
             // 
-            this.cbxCidadeMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCidadeMed.FormattingEnabled = true;
             this.cbxCidadeMed.Location = new System.Drawing.Point(204, 154);
             this.cbxCidadeMed.Name = "cbxCidadeMed";
-            this.cbxCidadeMed.Size = new System.Drawing.Size(136, 24);
+            this.cbxCidadeMed.Size = new System.Drawing.Size(136, 21);
             this.cbxCidadeMed.TabIndex = 14;
             // 
             // txtBairroMed
             // 
-            this.txtBairroMed.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtBairroMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBairroMed.Location = new System.Drawing.Point(24, 154);
             this.txtBairroMed.Name = "txtBairroMed";
-            this.txtBairroMed.Size = new System.Drawing.Size(161, 22);
+            this.txtBairroMed.Size = new System.Drawing.Size(161, 20);
             this.txtBairroMed.TabIndex = 12;
-            this.txtBairroMed.WordWrap = false;
             // 
             // lblBairroMed
             // 
@@ -1193,23 +1112,17 @@ namespace AgendaMedica {
             // 
             // txtNumeroEndMed
             // 
-            this.txtNumeroEndMed.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNumeroEndMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumeroEndMed.Location = new System.Drawing.Point(362, 106);
             this.txtNumeroEndMed.Name = "txtNumeroEndMed";
-            this.txtNumeroEndMed.Size = new System.Drawing.Size(60, 22);
+            this.txtNumeroEndMed.Size = new System.Drawing.Size(60, 20);
             this.txtNumeroEndMed.TabIndex = 10;
-            this.txtNumeroEndMed.WordWrap = false;
             // 
             // txtEnderecoMed
             // 
-            this.txtEnderecoMed.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtEnderecoMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEnderecoMed.Location = new System.Drawing.Point(24, 106);
             this.txtEnderecoMed.Name = "txtEnderecoMed";
-            this.txtEnderecoMed.Size = new System.Drawing.Size(321, 22);
+            this.txtEnderecoMed.Size = new System.Drawing.Size(321, 20);
             this.txtEnderecoMed.TabIndex = 9;
-            this.txtEnderecoMed.WordWrap = false;
             // 
             // lblEndMed
             // 
@@ -1222,13 +1135,10 @@ namespace AgendaMedica {
             // 
             // txtNascMed
             // 
-            this.txtNascMed.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNascMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNascMed.Location = new System.Drawing.Point(469, 23);
             this.txtNascMed.Name = "txtNascMed";
-            this.txtNascMed.Size = new System.Drawing.Size(162, 22);
+            this.txtNascMed.Size = new System.Drawing.Size(162, 20);
             this.txtNascMed.TabIndex = 3;
-            this.txtNascMed.WordWrap = false;
             // 
             // lblNascMed
             // 
@@ -1250,13 +1160,11 @@ namespace AgendaMedica {
             // 
             // txtNomeMed
             // 
-            this.txtNomeMed.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNomeMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeMed.Location = new System.Drawing.Point(24, 24);
             this.txtNomeMed.Name = "txtNomeMed";
-            this.txtNomeMed.Size = new System.Drawing.Size(194, 22);
+            this.txtNomeMed.Size = new System.Drawing.Size(194, 20);
             this.txtNomeMed.TabIndex = 1;
-            this.txtNomeMed.WordWrap = false;
             // 
             // tabConvenio
             // 
@@ -1281,13 +1189,11 @@ namespace AgendaMedica {
             // 
             // txtNomeConvenio
             // 
-            this.txtNomeConvenio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNomeConvenio.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeConvenio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeConvenio.Location = new System.Drawing.Point(21, 29);
             this.txtNomeConvenio.Name = "txtNomeConvenio";
-            this.txtNomeConvenio.Size = new System.Drawing.Size(194, 21);
+            this.txtNomeConvenio.Size = new System.Drawing.Size(194, 20);
             this.txtNomeConvenio.TabIndex = 24;
-            this.txtNomeConvenio.WordWrap = false;
             // 
             // timer1
             // 
@@ -1341,112 +1247,112 @@ namespace AgendaMedica {
 
         #endregion
 
-        public System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.Timer timer1;
-        public System.Windows.Forms.TabControl tabCadastrar;
-        public System.Windows.Forms.TabPage tabAgendamento;
-        public System.Windows.Forms.TabPage tabMedicos;
-        public System.Windows.Forms.Label lblCRM;
-        public System.Windows.Forms.TextBox txtCrm;
-        public System.Windows.Forms.Label lblEmailMed;
-        public System.Windows.Forms.TextBox txtEmailMed;
-        public System.Windows.Forms.Label lblCelularMed;
-        public System.Windows.Forms.Label lblTelefoneMed;
-        public System.Windows.Forms.Label lblCidadeMed;
-        public System.Windows.Forms.Label lblCepMed;
-        public System.Windows.Forms.TextBox txtCepMed;
-        public System.Windows.Forms.ComboBox cbxCidadeMed;
-        public System.Windows.Forms.TextBox txtBairroMed;
-        public System.Windows.Forms.Label lblBairroMed;
-        public System.Windows.Forms.Label lblNumMed;
-        public System.Windows.Forms.TextBox txtNumeroEndMed;
-        public System.Windows.Forms.TextBox txtEnderecoMed;
-        public System.Windows.Forms.Label lblEndMed;
-        public System.Windows.Forms.Label lblNascMed;
-        public System.Windows.Forms.Label lblNomeMed;
-        public System.Windows.Forms.TextBox txtNomeMed;
-        public System.Windows.Forms.Label lblDataAgen;
-        public System.Windows.Forms.DateTimePicker dtpDataAgen;
-        public System.Windows.Forms.Label lblMedicoAgen;
-        public System.Windows.Forms.Label lblEspecialidadeMed;
-        public System.Windows.Forms.ComboBox cbxEspecialidadeMed;
-        public System.Windows.Forms.Label lblPacienteAgen;
-        public System.Windows.Forms.ComboBox cbxMedicoAgen;
-        public System.Windows.Forms.TextBox txtPacienteAgen;
-        public System.Windows.Forms.ComboBox cbxEspecialidadeAgen;
-        public System.Windows.Forms.Label lblEspecialidadeAgen;
-        public System.Windows.Forms.Label lblPlanoMedAgen;
-        public System.Windows.Forms.ComboBox cbxPlanoMedAgen;
-        public System.Windows.Forms.TextBox txtCelularMed;
-        public System.Windows.Forms.TextBox txtTelefoneMed;
-        public System.Windows.Forms.TextBox txtNascMed;
-        public System.Windows.Forms.TextBox txtSobrenomeMed;
-        public System.Windows.Forms.Label lblComplementoMed;
-        public System.Windows.Forms.TextBox txtComplementoMed;
-        public System.Windows.Forms.Label lblSobrenomeMed;
-        public System.Windows.Forms.Label lblOrgaoEmiMed;
-        public System.Windows.Forms.TextBox txtOrgaoEmiMed;
-        public System.Windows.Forms.Label lblRgMed;
-        public System.Windows.Forms.TextBox txtRgMed;
-        public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox txtCpfMed;
-        public System.Windows.Forms.RadioButton rdbSexoMMed;
-        public System.Windows.Forms.RadioButton rdbSexoFMed;
-        public System.Windows.Forms.Label lblSexoMed;
-        public System.Windows.Forms.ToolStrip barAcoes;
-        public System.Windows.Forms.ToolStripButton btnAdicionar;
-        public System.Windows.Forms.ToolStripButton btnLimpar;
-        public System.Windows.Forms.ToolStripButton btnExit;
-        public System.Windows.Forms.StatusStrip barInfos;
-        public System.Windows.Forms.ToolStripStatusLabel lbDateTime;
-        public System.Windows.Forms.TabPage tabPacientes;
-        public System.Windows.Forms.Label lblComplementoPaciente;
-        public System.Windows.Forms.TextBox txtComplementoPaciente;
-        public System.Windows.Forms.Label lblEmailPaciente;
-        public System.Windows.Forms.Label lblCelularPaciente;
-        public System.Windows.Forms.TextBox txtCelularPaciente;
-        public System.Windows.Forms.Label lblTelefonePaciente;
-        public System.Windows.Forms.Label lblCidadePaciente;
-        public System.Windows.Forms.Label lblEstadoPaciente;
-        public System.Windows.Forms.Label lblCepPaciente;
-        public System.Windows.Forms.TextBox txtCepPaciente;
-        public System.Windows.Forms.ComboBox cbxCidadePaciente;
-        public System.Windows.Forms.TextBox txtBairroPaciente;
-        public System.Windows.Forms.Label lblBairroPaciente;
-        public System.Windows.Forms.Label lblNumeroEndPaciente;
-        public System.Windows.Forms.Label lblEnderecoPaciente;
-        public System.Windows.Forms.Label lblOrgaoEmiPaciente;
-        public System.Windows.Forms.TextBox txtOrgaoEmiPaciente;
-        public System.Windows.Forms.Label lblRgPaciente;
-        public System.Windows.Forms.TextBox txtRgPaciente;
-        public System.Windows.Forms.Label lblCpfPaciente;
-        public System.Windows.Forms.Label lblSobrenomePaciente;
-        public System.Windows.Forms.RadioButton rdbSexoMPaciente;
-        public System.Windows.Forms.RadioButton rdbSexoFPaciente;
-        public System.Windows.Forms.Label lblSexoPac;
-        public System.Windows.Forms.Label lblConvenioPac;
-        public System.Windows.Forms.ComboBox cbxConvenioPaciente;
-        public System.Windows.Forms.Label lblNumCarteirinhaPaciente;
-        public System.Windows.Forms.TextBox txtNascPaciente;
-        public System.Windows.Forms.Label lblNascPaciente;
-        public System.Windows.Forms.Label lblNomePaciente;
-        public System.Windows.Forms.TextBox txtEmailPaciente;
-        public System.Windows.Forms.TextBox txtTelefonePaciente;
-        public System.Windows.Forms.ComboBox cbxUFPaciente;
-        public System.Windows.Forms.TextBox txtNumeroEndPaciente;
-        public System.Windows.Forms.TextBox txtEnderecoPaciente;
-        public System.Windows.Forms.TextBox txtCpfPaciente;
-        public System.Windows.Forms.TextBox txtSobrenomePaciente;
-        public System.Windows.Forms.TextBox txtNumCarteirinhaPaciente;
-        public System.Windows.Forms.TextBox txtNomePaciente;
-        public System.Windows.Forms.Label lblUfMed;
-        public System.Windows.Forms.ComboBox cbxUFMed;
-        public System.Windows.Forms.TabPage tabConvenio;
-        public System.Windows.Forms.Label lblNomeConvenio;
-        public System.Windows.Forms.TextBox txtNomeConvenio;
-        public agendaMedicaDataSet agendaMedicaDataSet;
-        public System.Windows.Forms.BindingSource agendaMedicaDataSetBindingSource;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TabControl tabCadastrar;
+        private System.Windows.Forms.TabPage tabAgendamento;
+        private System.Windows.Forms.TabPage tabMedicos;
+        private System.Windows.Forms.Label lblCRM;
+        private System.Windows.Forms.TextBox txtCrm;
+        private System.Windows.Forms.Label lblEmailMed;
+        private System.Windows.Forms.TextBox txtEmailMed;
+        private System.Windows.Forms.Label lblCelularMed;
+        private System.Windows.Forms.Label lblTelefoneMed;
+        private System.Windows.Forms.Label lblCidadeMed;
+        private System.Windows.Forms.Label lblCepMed;
+        private System.Windows.Forms.TextBox txtCepMed;
+        private System.Windows.Forms.ComboBox cbxCidadeMed;
+        private System.Windows.Forms.TextBox txtBairroMed;
+        private System.Windows.Forms.Label lblBairroMed;
+        private System.Windows.Forms.Label lblNumMed;
+        private System.Windows.Forms.TextBox txtNumeroEndMed;
+        private System.Windows.Forms.TextBox txtEnderecoMed;
+        private System.Windows.Forms.Label lblEndMed;
+        private System.Windows.Forms.Label lblNascMed;
+        private System.Windows.Forms.Label lblNomeMed;
+        private System.Windows.Forms.TextBox txtNomeMed;
+        private System.Windows.Forms.Label lblDataAgen;
+        private System.Windows.Forms.DateTimePicker dtpDataAgen;
+        private System.Windows.Forms.Label lblMedicoAgen;
+        private System.Windows.Forms.Label lblEspecialidadeMed;
+        private System.Windows.Forms.ComboBox cbxEspecialidadeMed;
+        private System.Windows.Forms.Label lblPacienteAgen;
+        private System.Windows.Forms.ComboBox cbxMedicoAgen;
+        private System.Windows.Forms.TextBox txtPacienteAgen;
+        private System.Windows.Forms.ComboBox cbxEspecialidadeAgen;
+        private System.Windows.Forms.Label lblEspecialidadeAgen;
+        private System.Windows.Forms.Label lblPlanoMedAgen;
+        private System.Windows.Forms.ComboBox cbxPlanoMedAgen;
+        private System.Windows.Forms.TextBox txtCelularMed;
+        private System.Windows.Forms.TextBox txtTelefoneMed;
+        private System.Windows.Forms.TextBox txtNascMed;
+        private System.Windows.Forms.TextBox txtSobrenomeMed;
+        private System.Windows.Forms.Label lblComplementoMed;
+        private System.Windows.Forms.TextBox txtComplementoMed;
+        private System.Windows.Forms.Label lblSobrenomeMed;
+        private System.Windows.Forms.Label lblOrgaoEmiMed;
+        private System.Windows.Forms.TextBox txtOrgaoEmiMed;
+        private System.Windows.Forms.Label lblRgMed;
+        private System.Windows.Forms.TextBox txtRgMed;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCpfMed;
+        private System.Windows.Forms.RadioButton rdbSexoMMed;
+        private System.Windows.Forms.RadioButton rdbSexoFMed;
+        private System.Windows.Forms.Label lblSexoMed;
+        private System.Windows.Forms.ToolStrip barAcoes;
+        private System.Windows.Forms.ToolStripButton btnAdicionar;
+        private System.Windows.Forms.ToolStripButton btnLimpar;
+        private System.Windows.Forms.ToolStripButton btnExit;
+        private System.Windows.Forms.StatusStrip barInfos;
+        private System.Windows.Forms.ToolStripStatusLabel lbDateTime;
+        private System.Windows.Forms.TabPage tabPacientes;
+        private System.Windows.Forms.Label lblComplementoPaciente;
+        private System.Windows.Forms.TextBox txtComplementoPaciente;
+        private System.Windows.Forms.Label lblEmailPaciente;
+        private System.Windows.Forms.Label lblCelularPaciente;
+        private System.Windows.Forms.TextBox txtCelularPaciente;
+        private System.Windows.Forms.Label lblTelefonePaciente;
+        private System.Windows.Forms.Label lblCidadePaciente;
+        private System.Windows.Forms.Label lblEstadoPaciente;
+        private System.Windows.Forms.Label lblCepPaciente;
+        private System.Windows.Forms.TextBox txtCepPaciente;
+        private System.Windows.Forms.ComboBox cbxCidadePaciente;
+        private System.Windows.Forms.TextBox txtBairroPaciente;
+        private System.Windows.Forms.Label lblBairroPaciente;
+        private System.Windows.Forms.Label lblNumeroEndPaciente;
+        private System.Windows.Forms.Label lblEnderecoPaciente;
+        private System.Windows.Forms.Label lblOrgaoEmiPaciente;
+        private System.Windows.Forms.TextBox txtOrgaoEmiPaciente;
+        private System.Windows.Forms.Label lblRgPaciente;
+        private System.Windows.Forms.TextBox txtRgPaciente;
+        private System.Windows.Forms.Label lblCpfPaciente;
+        private System.Windows.Forms.Label lblSobrenomePaciente;
+        private System.Windows.Forms.RadioButton rdbSexoMPaciente;
+        private System.Windows.Forms.RadioButton rdbSexoFPaciente;
+        private System.Windows.Forms.Label lblSexoPac;
+        private System.Windows.Forms.Label lblConvenioPac;
+        private System.Windows.Forms.ComboBox cbxConvenioPaciente;
+        private System.Windows.Forms.Label lblNumCarteirinhaPaciente;
+        private System.Windows.Forms.TextBox txtNascPaciente;
+        private System.Windows.Forms.Label lblNascPaciente;
+        private System.Windows.Forms.Label lblNomePaciente;
+        private System.Windows.Forms.TextBox txtEmailPaciente;
+        private System.Windows.Forms.TextBox txtTelefonePaciente;
+        private System.Windows.Forms.ComboBox cbxUFPaciente;
+        private System.Windows.Forms.TextBox txtNumeroEndPaciente;
+        private System.Windows.Forms.TextBox txtEnderecoPaciente;
+        private System.Windows.Forms.TextBox txtCpfPaciente;
+        private System.Windows.Forms.TextBox txtSobrenomePaciente;
+        private System.Windows.Forms.TextBox txtNumCarteirinhaPaciente;
+        private System.Windows.Forms.TextBox txtNomePaciente;
+        private System.Windows.Forms.Label lblUfMed;
+        private System.Windows.Forms.ComboBox cbxUFMed;
+        private System.Windows.Forms.TabPage tabConvenio;
+        private System.Windows.Forms.Label lblNomeConvenio;
+        private System.Windows.Forms.TextBox txtNomeConvenio;
+        private agendaMedicaDataSet agendaMedicaDataSet;
+        private System.Windows.Forms.BindingSource agendaMedicaDataSetBindingSource;
     }
 }
 
