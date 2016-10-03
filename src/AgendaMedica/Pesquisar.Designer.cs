@@ -61,6 +61,7 @@
             this.colPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colConvenio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIdConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -224,7 +225,8 @@
             this.colDataConsulta,
             this.colPaciente,
             this.colMedico,
-            this.colConvenio});
+            this.colConvenio,
+            this.colIdConsulta});
             this.dtgListaConsultas.Location = new System.Drawing.Point(20, 48);
             this.dtgListaConsultas.Name = "dtgListaConsultas";
             this.dtgListaConsultas.Size = new System.Drawing.Size(577, 193);
@@ -346,25 +348,35 @@
             // 
             this.colDataConsulta.HeaderText = "Data Consulta";
             this.colDataConsulta.Name = "colDataConsulta";
+            this.colDataConsulta.ReadOnly = true;
             // 
             // colPaciente
             // 
             this.colPaciente.FillWeight = 200F;
             this.colPaciente.HeaderText = "Paciente";
             this.colPaciente.Name = "colPaciente";
+            this.colPaciente.ReadOnly = true;
             this.colPaciente.Width = 200;
             // 
             // colMedico
             // 
             this.colMedico.HeaderText = "Médico";
             this.colMedico.Name = "colMedico";
+            this.colMedico.ReadOnly = true;
             this.colMedico.Width = 200;
             // 
             // colConvenio
             // 
             this.colConvenio.HeaderText = "Convênio";
             this.colConvenio.Name = "colConvenio";
+            this.colConvenio.ReadOnly = true;
             this.colConvenio.Width = 130;
+            // 
+            // colIdConsulta
+            // 
+            this.colIdConsulta.HeaderText = "idConsulta";
+            this.colIdConsulta.Name = "colIdConsulta";
+            this.colIdConsulta.Visible = false;
             // 
             // Pesquisar
             // 
@@ -431,9 +443,10 @@
         private agendaMedicaDataSet agendaMedicaDataSet;
         public System.Windows.Forms.DateTimePicker dtpDataConsulta;
         public System.Windows.Forms.DataGridView dtgListaConsultas;
-        public System.Windows.Forms.DataGridViewTextBoxColumn colDataConsulta;
-        public System.Windows.Forms.DataGridViewTextBoxColumn colPaciente;
-        public System.Windows.Forms.DataGridViewTextBoxColumn colMedico;
-        public System.Windows.Forms.DataGridViewTextBoxColumn colConvenio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDataConsulta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPaciente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMedico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colConvenio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIdConsulta;
     }
 }

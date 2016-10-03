@@ -79,7 +79,7 @@ namespace AgendaMedica.Helpers {
                 medico = medicoDao.SearchById(con.IdMedico);
                 var nomeCompletoMedico = medico.Nome + " " + medico.Sobrenome;
                 contextoPesquisa.dtgListaConsultas.Rows
-                    .Add(con.DataConsulta, con.Paciente, nomeCompletoMedico, convenioDao.SearchById(con.IdConvenio).Nome);
+                    .Add(con.DataConsulta, con.Paciente, nomeCompletoMedico, convenioDao.SearchById(con.IdConvenio).Nome,con.Id);
 
 
 
