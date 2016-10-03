@@ -58,7 +58,7 @@ namespace AgendaMedica
             this.txtNomePacientePesquisa = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnPesquisarMedico = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dtgListaMedicos = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNomeMedicoPesquisa = new System.Windows.Forms.TextBox();
             this.agendaMedicaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -84,7 +84,7 @@ namespace AgendaMedica
             this.tabPesquisarPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaPacientes)).BeginInit();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgListaMedicos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendaMedicaDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendaMedicaDataSet)).BeginInit();
             this.SuspendLayout();
@@ -333,12 +333,12 @@ namespace AgendaMedica
             this.txtNomePacientePesquisa.Name = "txtNomePacientePesquisa";
             this.txtNomePacientePesquisa.Size = new System.Drawing.Size(458, 20);
             this.txtNomePacientePesquisa.TabIndex = 4;
-            this.txtNomePacientePesquisa.KeyDown += new System.Windows.Forms.KeyEventHandler(this.enter);
+            this.txtNomePacientePesquisa.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyDownEnterPaciente);
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.btnPesquisarMedico);
-            this.tabPage1.Controls.Add(this.dataGridView2);
+            this.tabPage1.Controls.Add(this.dtgListaMedicos);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.txtNomeMedicoPesquisa);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -357,22 +357,23 @@ namespace AgendaMedica
             this.btnPesquisarMedico.TabIndex = 7;
             this.btnPesquisarMedico.Text = "Pesquisar";
             this.btnPesquisarMedico.UseVisualStyleBackColor = true;
+            this.btnPesquisarMedico.Click += new System.EventHandler(this.btnPesquisarMedico_Click);
             // 
-            // dataGridView2
+            // dtgListaMedicos
             // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtgListaMedicos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgListaMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgListaMedicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colIdMedico,
             this.colNomeMedico,
             this.colEmailMedico,
             this.colTelMedico,
             this.colCelMedico});
-            this.dataGridView2.Location = new System.Drawing.Point(22, 56);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(577, 193);
-            this.dataGridView2.TabIndex = 6;
+            this.dtgListaMedicos.Location = new System.Drawing.Point(22, 56);
+            this.dtgListaMedicos.Name = "dtgListaMedicos";
+            this.dtgListaMedicos.Size = new System.Drawing.Size(577, 193);
+            this.dtgListaMedicos.TabIndex = 6;
             // 
             // label2
             // 
@@ -389,6 +390,7 @@ namespace AgendaMedica
             this.txtNomeMedicoPesquisa.Name = "txtNomeMedicoPesquisa";
             this.txtNomeMedicoPesquisa.Size = new System.Drawing.Size(458, 20);
             this.txtNomeMedicoPesquisa.TabIndex = 4;
+            this.txtNomeMedicoPesquisa.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyDownEnterMedico);
             // 
             // agendaMedicaDataSetBindingSource
             // 
@@ -502,7 +504,7 @@ namespace AgendaMedica
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaPacientes)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgListaMedicos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendaMedicaDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendaMedicaDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -530,7 +532,6 @@ namespace AgendaMedica
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNomePacientePesquisa;
         private System.Windows.Forms.Button btnPesquisarMedico;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNomeMedicoPesquisa;
         private System.Windows.Forms.BindingSource agendaMedicaDataSetBindingSource;
@@ -553,5 +554,6 @@ namespace AgendaMedica
         private DataGridViewTextBoxColumn colEmailMedico;
         private DataGridViewTextBoxColumn colTelMedico;
         private DataGridViewTextBoxColumn colCelMedico;
+        public DataGridView dtgListaMedicos;
     }
 }

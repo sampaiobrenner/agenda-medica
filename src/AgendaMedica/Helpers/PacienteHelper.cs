@@ -61,13 +61,13 @@ namespace AgendaMedica.Helpers {
         }
 
         internal void FillGrid(List<Paciente> listaPacientes) {
-            contextoPesquisar.dtgListaPacientes.Rows.Clear();            
-           
+            contextoPesquisar.dtgListaPacientes.Rows.Clear();
+
             foreach (var pac in listaPacientes) {
-                
-                var nomeCompletoMedico = pac.Nome + " " + pac.Sobrenome;
+
+                var nomeCompletoPaciente = pac.Nome + " " + pac.Sobrenome;
                 contextoPesquisar.dtgListaPacientes.Rows
-                    .Add(pac.Id,pac.Nome, pac.Email, pac.Telefone, pac.Celular);
+                    .Add(pac.Id, nomeCompletoPaciente, pac.Email, pac.Telefone, pac.Celular);
             }
         }
 

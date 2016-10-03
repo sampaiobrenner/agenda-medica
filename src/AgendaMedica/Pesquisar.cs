@@ -45,10 +45,17 @@ namespace AgendaMedica {
             pesquisarPaciente();
         }
 
-        private void enter(object sender, KeyEventArgs e) {
+        private void keyDownEnterPaciente(object sender, KeyEventArgs e) {            
             if (e.KeyCode == Keys.Enter) {
                 pesquisarPaciente();
+                //Remove o Barulho do keypress
+                e.SuppressKeyPress = true;
+            }
+        }
 
+        private void keyDownEnterMedico(object sender, KeyEventArgs e) {
+            if (e.KeyCode == Keys.Enter) {
+                pesquisarMedicos();
                 //Remove o Barulho do keypress
                 e.SuppressKeyPress = true;
             }
@@ -58,7 +65,18 @@ namespace AgendaMedica {
             var pacienteDao = new PacienteDAO();
             var pacienteHelper = new PacienteHelper(this);
 
-            pacienteHelper.FillGrid(pacienteDao.SearchByName(txtNomePacientePesquisa.Text));
+            pacienteHelper.FillGrid(pacienteDao.getListByName(txtNomePacientePesquisa.Text));
+        }
+
+        private void btnPesquisarMedico_Click(object sender, EventArgs e) {
+            pesquisarMedicos();
+        }
+
+        private void pesquisarMedicos() {
+            var medicoDao = new MedicoDAO();
+            var medicoHelper = new MedicoHelper(this);  
+                      
+            medicoHelper.FillGrid(medicoDao.getListByName(txtNomeMedicoPesquisa.Text));
         }
     }
 }

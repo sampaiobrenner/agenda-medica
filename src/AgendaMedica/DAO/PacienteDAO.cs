@@ -26,7 +26,7 @@ namespace AgendaMedica.DAO {
             return contexto.Pacientes.FirstOrDefault(p => p.Id == id);
         }
 
-        public List<Paciente> SearchByName(string nome) {
+        public List<Paciente> getListByName(string nome) {
             var pacientes = new List<Paciente>();
             IQueryable<Paciente> busca;
             try {
