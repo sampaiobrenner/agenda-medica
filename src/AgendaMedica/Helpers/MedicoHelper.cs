@@ -1,6 +1,7 @@
 ﻿using AgendaMedica.DAO;
 using AgendaMedica.Entidades;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -62,8 +63,6 @@ namespace AgendaMedica.Helpers {
                 nome = "Nome";
             } else if (String.IsNullOrEmpty(contexto.txtSobrenomeMed.Text)) {
                 nome = "Sobrenome";
-            } else if (String.IsNullOrEmpty(contexto.dtpDataNascPaciente.Text)) {
-                nome = "Data de Nascimento";
             } else if (String.IsNullOrEmpty(contexto.txtCpfMed.Text)) {
                 nome = "CPF";
             } else if (String.IsNullOrEmpty(contexto.txtRgMed.Text)) {
@@ -104,6 +103,30 @@ namespace AgendaMedica.Helpers {
             return true;
 
         }
+
+        internal void carregaMedicos() {
+            try {
+                var dao = new MedicoDAO();
+                var medico = new Medico();
+                var listaConveniosCbx = (IList)contexto.cbxConvenioPaciente.Items;
+
+                IList resultado = dao.Get();
+
+                foreach (var m in resultado) {
+
+                    medico = (Medico)m;
+                    if (!listaConveniosCbx.Contains(medico.Nome)) {
+                        contexto.cbxMedicoAgen.Items.Add(medico.Nome +" "+ medico.Sobrenome);                        
+                    }
+
+                }
+            } catch (Exception e) {
+                throw new Exception("Erro ao carregar os convênios");
+            }
+        }
+
+
+
     }
 
 

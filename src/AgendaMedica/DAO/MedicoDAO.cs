@@ -1,5 +1,6 @@
 ﻿using AgendaMedica.Database;
 using AgendaMedica.Entidades;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace AgendaMedica.DAO {
@@ -26,6 +27,18 @@ namespace AgendaMedica.DAO {
 
         public void Update(Medico medico) {
             contexto.SaveChanges();
+        }
+
+        public List<Medico> Get() {
+
+            List<Medico> medicos = new List<Medico>();
+
+            var busca = from medico in contexto.Medicos orderby medico.Nome select medico;
+
+            foreach (var medico in busca) {
+                medicos.Add(medico);
+            }
+            return medicos;
         }
     }
 

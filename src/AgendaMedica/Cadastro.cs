@@ -16,9 +16,10 @@ using AgendaMedica.Helpers;
 namespace AgendaMedica {
     public partial class Cadastro : Form {
 
-        public Cadastro() {            
-            InitializeComponent();            
+        public Cadastro() {
+            InitializeComponent();
         }
+
 
 
         private void Form1_Load(object sender, EventArgs e) {
@@ -56,7 +57,7 @@ namespace AgendaMedica {
 
         }
 
-   
+
         private void cadastrarAgendamento() {
             throw new NotImplementedException();
         }
@@ -79,15 +80,22 @@ namespace AgendaMedica {
             }
         }
 
-        private void cbxConvenioPaciente_Focus(object sender, EventArgs e) {
-
+        private void carregaConvenio(object sender, EventArgs e) {
             try {
                 var convenio = new ConvenioHelper(this);
                 convenio.carregaConvenios();
             } catch (Exception ex) {
-
+                MessageBox.Show(ex.Message);
             }
         }
 
+        private void carregaMedicos(object sender, EventArgs e) {
+            try {
+                var medico = new MedicoHelper(this);
+                medico.carregaMedicos();
+            } catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

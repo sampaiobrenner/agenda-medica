@@ -49,6 +49,7 @@ namespace AgendaMedica.Helpers {
                     convenio = (Convenio)c;
                     if (!listaConveniosCbx.Contains(convenio.Nome)) {
                         contexto.cbxConvenioPaciente.Items.Add(convenio.Nome);
+                        contexto.cbxConvenioAgendamento.Items.Add(convenio.Nome);
                     }
 
                 }

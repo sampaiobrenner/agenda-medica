@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace AgendaMedica {
     partial class Cadastro {
@@ -38,7 +39,7 @@ namespace AgendaMedica {
             this.tabCadastrar = new System.Windows.Forms.TabControl();
             this.tabAgendamento = new System.Windows.Forms.TabPage();
             this.lblPlanoMedAgen = new System.Windows.Forms.Label();
-            this.cbxPlanoMedAgen = new System.Windows.Forms.ComboBox();
+            this.cbxConvenioAgendamento = new System.Windows.Forms.ComboBox();
             this.txtPacienteAgen = new System.Windows.Forms.TextBox();
             this.cbxEspecialidadeAgen = new System.Windows.Forms.ComboBox();
             this.lblEspecialidadeAgen = new System.Windows.Forms.Label();
@@ -255,7 +256,7 @@ namespace AgendaMedica {
             // tabAgendamento
             // 
             this.tabAgendamento.Controls.Add(this.lblPlanoMedAgen);
-            this.tabAgendamento.Controls.Add(this.cbxPlanoMedAgen);
+            this.tabAgendamento.Controls.Add(this.cbxConvenioAgendamento);
             this.tabAgendamento.Controls.Add(this.txtPacienteAgen);
             this.tabAgendamento.Controls.Add(this.cbxEspecialidadeAgen);
             this.tabAgendamento.Controls.Add(this.lblEspecialidadeAgen);
@@ -275,42 +276,102 @@ namespace AgendaMedica {
             // lblPlanoMedAgen
             // 
             this.lblPlanoMedAgen.AutoSize = true;
-            this.lblPlanoMedAgen.Location = new System.Drawing.Point(321, 53);
+            this.lblPlanoMedAgen.Location = new System.Drawing.Point(470, 53);
             this.lblPlanoMedAgen.Name = "lblPlanoMedAgen";
-            this.lblPlanoMedAgen.Size = new System.Drawing.Size(72, 13);
+            this.lblPlanoMedAgen.Size = new System.Drawing.Size(52, 13);
             this.lblPlanoMedAgen.TabIndex = 9;
-            this.lblPlanoMedAgen.Text = "Plano Médico";
+            this.lblPlanoMedAgen.Text = "Convênio";
             // 
-            // cbxPlanoMedAgen
+            // cbxConvenioAgendamento
             // 
-            this.cbxPlanoMedAgen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxPlanoMedAgen.FormattingEnabled = true;
-            this.cbxPlanoMedAgen.Location = new System.Drawing.Point(324, 69);
-            this.cbxPlanoMedAgen.Name = "cbxPlanoMedAgen";
-            this.cbxPlanoMedAgen.Size = new System.Drawing.Size(203, 24);
-            this.cbxPlanoMedAgen.TabIndex = 8;
+            this.cbxConvenioAgendamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxConvenioAgendamento.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxConvenioAgendamento.FormattingEnabled = true;
+            this.cbxConvenioAgendamento.Location = new System.Drawing.Point(473, 69);
+            this.cbxConvenioAgendamento.Name = "cbxConvenioAgendamento";
+            this.cbxConvenioAgendamento.Size = new System.Drawing.Size(154, 24);
+            this.cbxConvenioAgendamento.TabIndex = 8;
+            this.cbxConvenioAgendamento.GotFocus += new System.EventHandler(this.carregaConvenio);
             // 
             // txtPacienteAgen
             // 
+            this.txtPacienteAgen.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPacienteAgen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPacienteAgen.Location = new System.Drawing.Point(12, 69);
+            this.txtPacienteAgen.Location = new System.Drawing.Point(122, 69);
             this.txtPacienteAgen.Name = "txtPacienteAgen";
-            this.txtPacienteAgen.Size = new System.Drawing.Size(293, 22);
+            this.txtPacienteAgen.Size = new System.Drawing.Size(342, 22);
             this.txtPacienteAgen.TabIndex = 7;
+            this.txtPacienteAgen.WordWrap = false;
             // 
             // cbxEspecialidadeAgen
             // 
+            this.cbxEspecialidadeAgen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEspecialidadeAgen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEspecialidadeAgen.FormattingEnabled = true;
-            this.cbxEspecialidadeAgen.Location = new System.Drawing.Point(12, 24);
+            this.cbxEspecialidadeAgen.Items.AddRange(new object[] {
+            "ACUPUNTURA",
+            "ALERGIA E IMUNOLOGIA",
+            "ANESTESIOLOGIA",
+            "ANGIOLOGIA",
+            "CANCEROLOGIA (ONCOLOGIA)",
+            "CARDIOLOGIA",
+            "CIRURGIA CARDIOVASCULAR",
+            "CIRURGIA DA MÃO",
+            "CIRURGIA DE CABEÇA E PESCOÇO",
+            "CIRURGIA DO APARELHO DIGESTIVO",
+            "CIRURGIA GERAL",
+            "CIRURGIA PEDIÁTRICA",
+            "CIRURGIA PLÁSTICA",
+            "CIRURGIA TORÁCICA",
+            "CIRURGIA VASCULAR",
+            "CLÍNICA MÉDICA (MEDICINA INTERNA)",
+            "COLOPROCTOLOGIA",
+            "DERMATOLOGIA",
+            "ENDOCRINOLOGIA E METABOLOGIA",
+            "ENDOSCOPIA",
+            "GASTROENTEROLOGIA",
+            "GENÉTICA MÉDICA",
+            "GERIATRIA",
+            "GINECOLOGIA E OBSTETRÍCIA",
+            "HEMATOLOGIA E HEMOTERAPIA",
+            "HOMEOPATIA",
+            "INFECTOLOGIA",
+            "MASTOLOGIA",
+            "MEDICINA DE FAMÍLIA E COMUNIDADE",
+            "MEDICINA DO TRABALHO",
+            "MEDICINA DO TRÁFEGO",
+            "MEDICINA ESPORTIVA",
+            "MEDICINA FÍSICA E REABILITAÇÃO",
+            "MEDICINA INTENSIVA",
+            "MEDICINA LEGAL E PERÍCIA MÉDICA",
+            "MEDICINA NUCLEAR",
+            "MEDICINA PREVENTIVA E SOCIAL",
+            "NEFROLOGIA",
+            "NEUROCIRURGIA",
+            "NEUROLOGIA",
+            "NUTROLOGIA",
+            "OBSTETRÍCIA",
+            "OFTALMOLOGIA",
+            "ORTOPEDIA E TRAUMATOLOGIA",
+            "OTORRINOLARINGOLOGIA",
+            "PATOLOGIA",
+            "PATOLOGIA CLÍNICA/MEDICINA LABORATORIAL",
+            "PEDIATRIA",
+            "PNEUMOLOGIA",
+            "PSIQUIATRIA",
+            "RADIOLOGIA E DIAGNÓSTICO POR IMAGEM",
+            "RADIOTERAPIA",
+            "REUMATOLOGIA",
+            "UROLOGIA"});
+            this.cbxEspecialidadeAgen.Location = new System.Drawing.Point(301, 22);
             this.cbxEspecialidadeAgen.Name = "cbxEspecialidadeAgen";
-            this.cbxEspecialidadeAgen.Size = new System.Drawing.Size(143, 24);
+            this.cbxEspecialidadeAgen.Size = new System.Drawing.Size(326, 24);
             this.cbxEspecialidadeAgen.TabIndex = 6;
             // 
             // lblEspecialidadeAgen
             // 
             this.lblEspecialidadeAgen.AutoSize = true;
-            this.lblEspecialidadeAgen.Location = new System.Drawing.Point(9, 7);
+            this.lblEspecialidadeAgen.Location = new System.Drawing.Point(298, 6);
             this.lblEspecialidadeAgen.Name = "lblEspecialidadeAgen";
             this.lblEspecialidadeAgen.Size = new System.Drawing.Size(73, 13);
             this.lblEspecialidadeAgen.TabIndex = 5;
@@ -319,7 +380,7 @@ namespace AgendaMedica {
             // lblPacienteAgen
             // 
             this.lblPacienteAgen.AutoSize = true;
-            this.lblPacienteAgen.Location = new System.Drawing.Point(9, 52);
+            this.lblPacienteAgen.Location = new System.Drawing.Point(119, 53);
             this.lblPacienteAgen.Name = "lblPacienteAgen";
             this.lblPacienteAgen.Size = new System.Drawing.Size(49, 13);
             this.lblPacienteAgen.TabIndex = 4;
@@ -327,17 +388,19 @@ namespace AgendaMedica {
             // 
             // cbxMedicoAgen
             // 
+            this.cbxMedicoAgen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMedicoAgen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxMedicoAgen.FormattingEnabled = true;
-            this.cbxMedicoAgen.Location = new System.Drawing.Point(171, 24);
+            this.cbxMedicoAgen.Location = new System.Drawing.Point(12, 22);
             this.cbxMedicoAgen.Name = "cbxMedicoAgen";
-            this.cbxMedicoAgen.Size = new System.Drawing.Size(214, 24);
+            this.cbxMedicoAgen.Size = new System.Drawing.Size(273, 24);
             this.cbxMedicoAgen.TabIndex = 3;
+            this.cbxMedicoAgen.GotFocus += new System.EventHandler(this.carregaMedicos);
             // 
             // lblMedicoAgen
             // 
             this.lblMedicoAgen.AutoSize = true;
-            this.lblMedicoAgen.Location = new System.Drawing.Point(168, 10);
+            this.lblMedicoAgen.Location = new System.Drawing.Point(9, 8);
             this.lblMedicoAgen.Name = "lblMedicoAgen";
             this.lblMedicoAgen.Size = new System.Drawing.Size(42, 13);
             this.lblMedicoAgen.TabIndex = 2;
@@ -346,7 +409,7 @@ namespace AgendaMedica {
             // lblDataAgen
             // 
             this.lblDataAgen.AutoSize = true;
-            this.lblDataAgen.Location = new System.Drawing.Point(398, 8);
+            this.lblDataAgen.Location = new System.Drawing.Point(12, 53);
             this.lblDataAgen.Name = "lblDataAgen";
             this.lblDataAgen.Size = new System.Drawing.Size(30, 13);
             this.lblDataAgen.TabIndex = 1;
@@ -356,10 +419,10 @@ namespace AgendaMedica {
             // 
             this.dtpDataConsulta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDataConsulta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataConsulta.Location = new System.Drawing.Point(401, 24);
+            this.dtpDataConsulta.Location = new System.Drawing.Point(15, 69);
             this.dtpDataConsulta.MinDate = new System.DateTime(2016, 1, 1, 0, 0, 0, 0);
             this.dtpDataConsulta.Name = "dtpDataConsulta";
-            this.dtpDataConsulta.Size = new System.Drawing.Size(126, 22);
+            this.dtpDataConsulta.Size = new System.Drawing.Size(101, 22);
             this.dtpDataConsulta.TabIndex = 0;
             // 
             // tabPacientes
@@ -761,7 +824,7 @@ namespace AgendaMedica {
             this.cbxConvenioPaciente.Name = "cbxConvenioPaciente";
             this.cbxConvenioPaciente.Size = new System.Drawing.Size(162, 21);
             this.cbxConvenioPaciente.TabIndex = 18;
-            this.cbxConvenioPaciente.GotFocus += new System.EventHandler(this.cbxConvenioPaciente_Focus);
+            this.cbxConvenioPaciente.GotFocus += new System.EventHandler(this.carregaConvenio);
             // 
             // lblNumCarteirinhaPaciente
             // 
@@ -1377,7 +1440,7 @@ namespace AgendaMedica {
         public System.Windows.Forms.ComboBox cbxEspecialidadeAgen;
         public System.Windows.Forms.Label lblEspecialidadeAgen;
         public System.Windows.Forms.Label lblPlanoMedAgen;
-        public System.Windows.Forms.ComboBox cbxPlanoMedAgen;
+        public System.Windows.Forms.ComboBox cbxConvenioAgendamento;
         public System.Windows.Forms.TextBox txtCelularMed;
         public System.Windows.Forms.TextBox txtTelefoneMed;
         public System.Windows.Forms.TextBox txtSobrenomeMed;
