@@ -1,4 +1,6 @@
-﻿namespace AgendaMedica
+﻿using System.Windows.Forms;
+
+namespace AgendaMedica
 {
     partial class Pesquisar
     {
@@ -44,11 +46,21 @@
             this.dtpDataConsulta = new System.Windows.Forms.DateTimePicker();
             this.btnPesquisarConsultas = new System.Windows.Forms.Button();
             this.dtgListaConsultas = new System.Windows.Forms.DataGridView();
+            this.colDataConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colConvenio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIdConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPesquisarPaciente = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnPesquisarPaciente = new System.Windows.Forms.Button();
+            this.dtgListaPacientes = new System.Windows.Forms.DataGridView();
+            this.colIdPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNomePaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmailPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTelPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCelPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNomePacientePesquisa = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -57,11 +69,6 @@
             this.agendaMedicaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.agendaMedicaDataSet = new AgendaMedica.agendaMedicaDataSet();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.colDataConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colConvenio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colIdConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -70,7 +77,7 @@
             this.tabConsultas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaConsultas)).BeginInit();
             this.tabPesquisarPaciente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgListaPacientes)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendaMedicaDataSetBindingSource)).BeginInit();
@@ -232,12 +239,46 @@
             this.dtgListaConsultas.Size = new System.Drawing.Size(577, 193);
             this.dtgListaConsultas.TabIndex = 2;
             // 
+            // colDataConsulta
+            // 
+            this.colDataConsulta.HeaderText = "Data Consulta";
+            this.colDataConsulta.Name = "colDataConsulta";
+            this.colDataConsulta.ReadOnly = true;
+            // 
+            // colPaciente
+            // 
+            this.colPaciente.FillWeight = 200F;
+            this.colPaciente.HeaderText = "Paciente";
+            this.colPaciente.Name = "colPaciente";
+            this.colPaciente.ReadOnly = true;
+            this.colPaciente.Width = 200;
+            // 
+            // colMedico
+            // 
+            this.colMedico.HeaderText = "Médico";
+            this.colMedico.Name = "colMedico";
+            this.colMedico.ReadOnly = true;
+            this.colMedico.Width = 200;
+            // 
+            // colConvenio
+            // 
+            this.colConvenio.HeaderText = "Convênio";
+            this.colConvenio.Name = "colConvenio";
+            this.colConvenio.ReadOnly = true;
+            this.colConvenio.Width = 130;
+            // 
+            // colIdConsulta
+            // 
+            this.colIdConsulta.HeaderText = "idConsulta";
+            this.colIdConsulta.Name = "colIdConsulta";
+            this.colIdConsulta.Visible = false;
+            // 
             // tabPesquisarPaciente
             // 
-            this.tabPesquisarPaciente.Controls.Add(this.button1);
-            this.tabPesquisarPaciente.Controls.Add(this.dataGridView1);
+            this.tabPesquisarPaciente.Controls.Add(this.btnPesquisarPaciente);
+            this.tabPesquisarPaciente.Controls.Add(this.dtgListaPacientes);
             this.tabPesquisarPaciente.Controls.Add(this.label1);
-            this.tabPesquisarPaciente.Controls.Add(this.textBox1);
+            this.tabPesquisarPaciente.Controls.Add(this.txtNomePacientePesquisa);
             this.tabPesquisarPaciente.Location = new System.Drawing.Point(4, 22);
             this.tabPesquisarPaciente.Name = "tabPesquisarPaciente";
             this.tabPesquisarPaciente.Padding = new System.Windows.Forms.Padding(3);
@@ -246,24 +287,63 @@
             this.tabPesquisarPaciente.Text = "Pacientes";
             this.tabPesquisarPaciente.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnPesquisarPaciente
             // 
-            this.button1.Location = new System.Drawing.Point(524, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Pesquisar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPesquisarPaciente.Location = new System.Drawing.Point(524, 18);
+            this.btnPesquisarPaciente.Name = "btnPesquisarPaciente";
+            this.btnPesquisarPaciente.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisarPaciente.TabIndex = 7;
+            this.btnPesquisarPaciente.Text = "Pesquisar";
+            this.btnPesquisarPaciente.UseVisualStyleBackColor = true;
+            this.btnPesquisarPaciente.Click += new System.EventHandler(this.btnPesquisar_click);
             // 
-            // dataGridView1
+            // dtgListaPacientes
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtgListaPacientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 56);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(577, 193);
-            this.dataGridView1.TabIndex = 6;
+            this.dtgListaPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgListaPacientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colIdPaciente,
+            this.colNomePaciente,
+            this.colEmailPaciente,
+            this.colTelPaciente,
+            this.colCelPaciente});
+            this.dtgListaPacientes.Location = new System.Drawing.Point(22, 56);
+            this.dtgListaPacientes.Name = "dtgListaPacientes";
+            this.dtgListaPacientes.Size = new System.Drawing.Size(577, 193);
+            this.dtgListaPacientes.TabIndex = 6;
+            // 
+            // colIdPaciente
+            // 
+            this.colIdPaciente.HeaderText = "IdPaciente";
+            this.colIdPaciente.Name = "colIdPaciente";
+            this.colIdPaciente.Visible = false;
+            // 
+            // colNomePaciente
+            // 
+            this.colNomePaciente.HeaderText = "Nome";
+            this.colNomePaciente.Name = "colNomePaciente";
+            this.colNomePaciente.ReadOnly = true;
+            this.colNomePaciente.Width = 200;
+            // 
+            // colEmailPaciente
+            // 
+            this.colEmailPaciente.HeaderText = "E-mail";
+            this.colEmailPaciente.Name = "colEmailPaciente";
+            this.colEmailPaciente.ReadOnly = true;
+            this.colEmailPaciente.Width = 150;
+            // 
+            // colTelPaciente
+            // 
+            this.colTelPaciente.HeaderText = "Telefone";
+            this.colTelPaciente.Name = "colTelPaciente";
+            this.colTelPaciente.ReadOnly = true;
+            // 
+            // colCelPaciente
+            // 
+            this.colCelPaciente.HeaderText = "Celular";
+            this.colCelPaciente.Name = "colCelPaciente";
+            this.colCelPaciente.ReadOnly = true;
             // 
             // label1
             // 
@@ -274,12 +354,13 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Nome";
             // 
-            // textBox1
+            // txtNomePacientePesquisa
             // 
-            this.textBox1.Location = new System.Drawing.Point(58, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(458, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtNomePacientePesquisa.Location = new System.Drawing.Point(58, 20);
+            this.txtNomePacientePesquisa.Name = "txtNomePacientePesquisa";
+            this.txtNomePacientePesquisa.Size = new System.Drawing.Size(458, 20);
+            this.txtNomePacientePesquisa.TabIndex = 4;
+            this.txtNomePacientePesquisa.KeyDown += new KeyEventHandler(this.enter);
             // 
             // tabPage1
             // 
@@ -344,40 +425,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // colDataConsulta
-            // 
-            this.colDataConsulta.HeaderText = "Data Consulta";
-            this.colDataConsulta.Name = "colDataConsulta";
-            this.colDataConsulta.ReadOnly = true;
-            // 
-            // colPaciente
-            // 
-            this.colPaciente.FillWeight = 200F;
-            this.colPaciente.HeaderText = "Paciente";
-            this.colPaciente.Name = "colPaciente";
-            this.colPaciente.ReadOnly = true;
-            this.colPaciente.Width = 200;
-            // 
-            // colMedico
-            // 
-            this.colMedico.HeaderText = "Médico";
-            this.colMedico.Name = "colMedico";
-            this.colMedico.ReadOnly = true;
-            this.colMedico.Width = 200;
-            // 
-            // colConvenio
-            // 
-            this.colConvenio.HeaderText = "Convênio";
-            this.colConvenio.Name = "colConvenio";
-            this.colConvenio.ReadOnly = true;
-            this.colConvenio.Width = 130;
-            // 
-            // colIdConsulta
-            // 
-            this.colIdConsulta.HeaderText = "idConsulta";
-            this.colIdConsulta.Name = "colIdConsulta";
-            this.colIdConsulta.Visible = false;
-            // 
             // Pesquisar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,7 +451,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaConsultas)).EndInit();
             this.tabPesquisarPaciente.ResumeLayout(false);
             this.tabPesquisarPaciente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgListaPacientes)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -431,10 +478,9 @@
         private System.Windows.Forms.TabPage tabPesquisarPaciente;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnPesquisarConsultas;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnPesquisarPaciente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNomePacientePesquisa;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label2;
@@ -448,5 +494,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colMedico;
         private System.Windows.Forms.DataGridViewTextBoxColumn colConvenio;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdConsulta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIdPaciente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNomePaciente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEmailPaciente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTelPaciente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCelPaciente;
+        public System.Windows.Forms.DataGridView dtgListaPacientes;
     }
 }

@@ -9,10 +9,15 @@ using System.Windows.Forms;
 
 namespace AgendaMedica.Helpers {
     public class PacienteHelper {
-        private Cadastro contexto;
+        private Cadastro contextoCadastro;
+        private Pesquisar contextoPesquisar;
+
+        public PacienteHelper(Pesquisar pesquisar) {
+            this.contextoPesquisar = pesquisar;
+        }
 
         public PacienteHelper(Cadastro contexto) {
-            this.contexto = contexto;
+            this.contextoCadastro = contexto;
         }
 
         public void cadastrarPaciente() {
@@ -23,25 +28,25 @@ namespace AgendaMedica.Helpers {
                     var convenioDAO = new ConvenioDAO();
 
                     var paciente = new Paciente() {
-                        Nome = contexto.txtNomePaciente.Text,
-                        Sobrenome = contexto.txtSobrenomePaciente.Text,
-                        DataNascimento = contexto.dtpDataNascPaciente.Text,
-                        Sexo = (contexto.rdbSexoFPaciente.Checked ? "F" : "M"),
-                        Cpf = contexto.txtCpfPaciente.Text,
-                        Rg = contexto.txtRgPaciente.Text,
-                        OrgaoEmissor = contexto.txtOrgaoEmiPaciente.Text,
-                        Endereco = contexto.txtEnderecoPaciente.Text,
-                        Numero = contexto.txtNumeroEndPaciente.Text,
-                        Complemento = contexto.txtComplementoPaciente.Text,
-                        Bairro = contexto.txtBairroPaciente.Text,
-                        Cidade = contexto.cbxCidadePaciente.Text,
-                        Estado = contexto.cbxUFPaciente.Text,
-                        Cep = contexto.txtCepPaciente.Text,
-                        Telefone = contexto.txtTelefonePaciente.Text,
-                        Celular = contexto.txtCelularPaciente.Text,
-                        Email = contexto.txtEmailPaciente.Text,
-                        ConvenioID = convenioDAO.SearchByName(contexto.cbxConvenioPaciente.Text),
-                        NumeroCarteiraConvenio = contexto.txtNumCarteirinhaPaciente.Text
+                        Nome = contextoCadastro.txtNomePaciente.Text,
+                        Sobrenome = contextoCadastro.txtSobrenomePaciente.Text,
+                        DataNascimento = contextoCadastro.dtpDataNascPaciente.Text,
+                        Sexo = (contextoCadastro.rdbSexoFPaciente.Checked ? "F" : "M"),
+                        Cpf = contextoCadastro.txtCpfPaciente.Text,
+                        Rg = contextoCadastro.txtRgPaciente.Text,
+                        OrgaoEmissor = contextoCadastro.txtOrgaoEmiPaciente.Text,
+                        Endereco = contextoCadastro.txtEnderecoPaciente.Text,
+                        Numero = contextoCadastro.txtNumeroEndPaciente.Text,
+                        Complemento = contextoCadastro.txtComplementoPaciente.Text,
+                        Bairro = contextoCadastro.txtBairroPaciente.Text,
+                        Cidade = contextoCadastro.cbxCidadePaciente.Text,
+                        Estado = contextoCadastro.cbxUFPaciente.Text,
+                        Cep = contextoCadastro.txtCepPaciente.Text,
+                        Telefone = contextoCadastro.txtTelefonePaciente.Text,
+                        Celular = contextoCadastro.txtCelularPaciente.Text,
+                        Email = contextoCadastro.txtEmailPaciente.Text,
+                        ConvenioID = convenioDAO.SearchByName(contextoCadastro.cbxConvenioPaciente.Text),
+                        NumeroCarteiraConvenio = contextoCadastro.txtNumCarteirinhaPaciente.Text
                     };
                     var pacienteDAO = new PacienteDAO();
 
@@ -55,36 +60,47 @@ namespace AgendaMedica.Helpers {
             }
         }
 
+        internal void FillGrid(List<Paciente> listaPacientes) {
+            contextoPesquisar.dtgListaPacientes.Rows.Clear();            
+           
+            foreach (var pac in listaPacientes) {
+                
+                var nomeCompletoMedico = pac.Nome + " " + pac.Sobrenome;
+                contextoPesquisar.dtgListaPacientes.Rows
+                    .Add(pac.Id,pac.Nome, pac.Email, pac.Telefone, pac.Celular);
+            }
+        }
+
         public bool validarFormPaciente() {
             var campo = "";
 
-            if (String.IsNullOrEmpty(contexto.txtNomePaciente.Text)) {
+            if (String.IsNullOrEmpty(contextoCadastro.txtNomePaciente.Text)) {
                 campo = "Nome";
-            } else if (String.IsNullOrEmpty(contexto.txtSobrenomePaciente.Text)) {
+            } else if (String.IsNullOrEmpty(contextoCadastro.txtSobrenomePaciente.Text)) {
                 campo = "Sobrenome";
-            } else if (String.IsNullOrEmpty(contexto.dtpDataNascPaciente.Text)) {
+            } else if (String.IsNullOrEmpty(contextoCadastro.dtpDataNascPaciente.Text)) {
                 campo = "Data de Nascimento";
-            } else if (String.IsNullOrEmpty(contexto.txtCpfPaciente.Text)) {
+            } else if (String.IsNullOrEmpty(contextoCadastro.txtCpfPaciente.Text)) {
                 campo = "CPF";
-            } else if (String.IsNullOrEmpty(contexto.txtRgPaciente.Text)) {
+            } else if (String.IsNullOrEmpty(contextoCadastro.txtRgPaciente.Text)) {
                 campo = "RG";
-            } else if (String.IsNullOrEmpty(contexto.txtNumeroEndPaciente.Text)) {
+            } else if (String.IsNullOrEmpty(contextoCadastro.txtNumeroEndPaciente.Text)) {
                 campo = "Número";
-            } else if (String.IsNullOrEmpty(contexto.txtCepPaciente.Text)) {
+            } else if (String.IsNullOrEmpty(contextoCadastro.txtCepPaciente.Text)) {
                 campo = "CEP";
-            } else if (String.IsNullOrEmpty(contexto.txtBairroPaciente.Text)) {
+            } else if (String.IsNullOrEmpty(contextoCadastro.txtBairroPaciente.Text)) {
                 campo = "Bairro";
-            } else if (String.IsNullOrEmpty(contexto.cbxCidadePaciente.Text)) {
+            } else if (String.IsNullOrEmpty(contextoCadastro.cbxCidadePaciente.Text)) {
                 campo = "Cidade";
-            } else if (String.IsNullOrEmpty(contexto.cbxUFPaciente.Text)) {
+            } else if (String.IsNullOrEmpty(contextoCadastro.cbxUFPaciente.Text)) {
                 campo = "UF";
-            } else if (String.IsNullOrEmpty(contexto.txtTelefonePaciente.Text) || String.IsNullOrEmpty(contexto.txtCepPaciente.Text)) {
+            } else if (String.IsNullOrEmpty(contextoCadastro.txtTelefonePaciente.Text) || String.IsNullOrEmpty(contextoCadastro.txtCepPaciente.Text)) {
                 campo = "Telefone ou Celular";
-            } else if (String.IsNullOrEmpty(contexto.txtEmailPaciente.Text)) {
+            } else if (String.IsNullOrEmpty(contextoCadastro.txtEmailPaciente.Text)) {
                 campo = "E-mail";
-            } else if (String.IsNullOrEmpty(contexto.txtNumCarteirinhaPaciente.Text)) {
+            } else if (String.IsNullOrEmpty(contextoCadastro.txtNumCarteirinhaPaciente.Text)) {
                 campo = "Nº Carteirinha";
-            } else if (String.IsNullOrEmpty(contexto.cbxConvenioPaciente.Text)) {
+            } else if (String.IsNullOrEmpty(contextoCadastro.cbxConvenioPaciente.Text)) {
                 campo = "Convênio";
             }
 

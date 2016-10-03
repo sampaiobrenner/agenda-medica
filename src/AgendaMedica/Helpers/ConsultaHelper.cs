@@ -67,8 +67,7 @@ namespace AgendaMedica.Helpers {
         }
 
         internal void FillGrid(List<Consulta> listaConsulta) {
-            contextoPesquisa.dtgListaConsultas.Rows.Clear();
-            var consulta = new Consulta();
+            contextoPesquisa.dtgListaConsultas.Rows.Clear();            
             var medicoDao = new MedicoDAO();
             var convenioDao = new ConvenioDAO();
             var medico = new Medico();
@@ -80,9 +79,6 @@ namespace AgendaMedica.Helpers {
                 var nomeCompletoMedico = medico.Nome + " " + medico.Sobrenome;
                 contextoPesquisa.dtgListaConsultas.Rows
                     .Add(con.DataConsulta, con.Paciente, nomeCompletoMedico, convenioDao.SearchById(con.IdConvenio).Nome,con.Id);
-
-
-
             }
         }
     }

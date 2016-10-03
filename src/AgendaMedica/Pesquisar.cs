@@ -15,6 +15,7 @@ namespace AgendaMedica {
     public partial class Pesquisar : Form {
         public Pesquisar() {
             InitializeComponent();
+
         }
 
         private void timer1_Tick(object sender, EventArgs e) {
@@ -37,8 +38,27 @@ namespace AgendaMedica {
             var consultaDao = new ConsultaDAO();
             var consultaHelper = new ConsultaHelper(this);
 
-            consultaHelper.FillGrid(consultaDao.SearchByDate(dtpDataConsulta.Text));            
+            consultaHelper.FillGrid(consultaDao.SearchByDate(dtpDataConsulta.Text));
         }
-        
+
+        private void btnPesquisar_click(object sender, EventArgs e) {
+            pesquisarPaciente();
+        }
+
+        private void enter(object sender, KeyEventArgs e) {
+            if (e.KeyCode == Keys.Enter) {
+                pesquisarPaciente();
+
+                //Remove o Barulho do keypress
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void pesquisarPaciente() {
+            var pacienteDao = new PacienteDAO();
+            var pacienteHelper = new PacienteHelper(this);
+
+            pacienteHelper.FillGrid(pacienteDao.SearchByName(txtNomePacientePesquisa.Text));
+        }
     }
 }
