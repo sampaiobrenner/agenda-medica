@@ -25,16 +25,21 @@ namespace AgendaMedica.DAO {
         public List<Convenio> Get() {
             List<Convenio> convenios = new List<Convenio>();
 
-            var busca = from convenio in contexto.Convenios orderby convenio.Nome select convenio ;
+            var busca = from convenio in contexto.Convenios orderby convenio.Nome select convenio;
 
-            foreach(var convenio in busca) {
+            foreach (var convenio in busca) {
                 convenios.Add(convenio);
             }
-            return  convenios;
+            return convenios;
         }
 
         public Convenio SearchById(int id) {
             return contexto.Convenios.FirstOrDefault(c => c.Id == id);
+        }
+
+        public int SearchByName(string nome) {
+
+            return (from convenio in contexto.Convenios where convenio.Nome == nome select convenio.Id).First();
         }
     }
 }
