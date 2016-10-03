@@ -146,6 +146,7 @@
     <Compile Include="Entidades\Medico.cs" />
     <Compile Include="Entidades\Paciente.cs" />
     <Compile Include="Entidades\Atendente.cs" />
+    <Compile Include="Helpers\ConsultaHelper.cs" />
     <Compile Include="Helpers\ConvenioHelper.cs" />
     <Compile Include="Helpers\ExceptionsHelper.cs" />
     <Compile Include="Helpers\PacienteHelper.cs" />
@@ -156,6 +157,10 @@
     <Compile Include="Migrations\20161001230515_PacientesEConvenios.cs" />
     <Compile Include="Migrations\20161001230515_PacientesEConvenios.designer.cs">
       <DependentUpon>20161001230515_PacientesEConvenios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20161003164800_Consulta.cs" />
+    <Compile Include="Migrations\20161003164800_Consulta.designer.cs">
+      <DependentUpon>20161003164800_Consulta.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\EntidadeContextModelSnapshot.cs" />
     <Compile Include="Pesquisar.cs">

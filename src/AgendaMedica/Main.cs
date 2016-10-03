@@ -59,5 +59,6 @@ namespace AgendaMedica {
             tela.Show();
             tela.WindowState = FormWindowState.Maximized;
         }
+       
     }
 }

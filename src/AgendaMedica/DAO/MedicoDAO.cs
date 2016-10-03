@@ -2,6 +2,9 @@
 using AgendaMedica.Entidades;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.SqlClient;
+using System.Linq.Expressions;
+
 
 namespace AgendaMedica.DAO {
 
@@ -21,7 +24,7 @@ namespace AgendaMedica.DAO {
             contexto.SaveChanges();
         }
 
-        public Medico SearchById(int id) {            
+        public Medico SearchById(int id) {
             return contexto.Medicos.FirstOrDefault(m => m.Id == id); ;
         }
 
@@ -39,6 +42,14 @@ namespace AgendaMedica.DAO {
                 medicos.Add(medico);
             }
             return medicos;
+        }
+
+        public int SearchByName(string nome) {
+
+            return (from medico in contexto.Medicos
+                    where nome.Contains(medico.Nome)
+                    && nome.Contains(medico.Sobrenome)
+                    select medico.Id).First();
         }
     }
 

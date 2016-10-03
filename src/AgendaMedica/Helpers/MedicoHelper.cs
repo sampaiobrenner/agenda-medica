@@ -116,7 +116,7 @@ namespace AgendaMedica.Helpers {
 
                     medico = (Medico)m;
                     if (!listaConveniosCbx.Contains(medico.Nome)) {
-                        contexto.cbxMedicoAgen.Items.Add(medico.Nome +" "+ medico.Sobrenome);                        
+                        contexto.cbxMedicoConsulta.Items.Add(medico.Nome +" "+ medico.Sobrenome);                        
                     }
 
                 }

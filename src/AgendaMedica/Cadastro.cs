@@ -38,14 +38,15 @@ namespace AgendaMedica {
         private void btnAdicionar_Click(object sender, EventArgs e) {
 
             switch (tabCadastrar.SelectedTab.Name) {
-                case "tabAgendamento":
-                    cadastrarAgendamento();
+                case "tabConsulta":
+                    var consultaHelper = new ConsultaHelper(this);
+                    consultaHelper.cadastrarConsulta();
                     break;
-                case "tabPacientes":
+                case "tabPaciente":
                     var pacienteHelper = new PacienteHelper(this);
                     pacienteHelper.cadastrarPaciente();
                     break;
-                case "tabMedicos":
+                case "tabMedico":
                     var medicoHelper = new MedicoHelper(this);
                     medicoHelper.cadastrarMedico();
                     break;
@@ -57,13 +58,8 @@ namespace AgendaMedica {
 
         }
 
-
-        private void cadastrarAgendamento() {
-            throw new NotImplementedException();
-        }
-
         private void btnLimpar_Click(object sender, EventArgs e) {
-            LimparTextBox(this.tabMedicos);
+            LimparTextBox(this.tabMedico);
         }
 
 

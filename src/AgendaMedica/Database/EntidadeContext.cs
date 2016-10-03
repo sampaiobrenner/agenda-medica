@@ -9,7 +9,8 @@ namespace AgendaMedica.Database {
         public DbSet<Medico> Medicos { get; set; }
         public DbSet<Paciente> Pacientes { get; set; }
         public DbSet<Convenio> Convenios { get; set; }
-        public DbSet<Atendente> Secretarias { get; set; }       
+        public DbSet<Atendente> Atendentes { get; set; }      
+        public DbSet<Consulta> Consultas { get; set; }
 
         //Sobrescrevendo a configuração do Entity        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {

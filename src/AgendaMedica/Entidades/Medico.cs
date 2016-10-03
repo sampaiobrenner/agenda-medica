@@ -10,5 +10,6 @@ namespace AgendaMedica.Entidades {
         public string Especialidade { get; set; }
         public string Crm { get; set; }
 
+        public virtual IList<Consulta> Consultas { get; set; }
     }
 }
