@@ -9,10 +9,15 @@ using System.Windows.Forms;
 
 namespace AgendaMedica.Helpers {
     class ConsultaHelper {
-        public Cadastro contexto;
+        public Cadastro contextoCadastro;
+        public Pesquisar contextoPesquisa;
 
         public ConsultaHelper(Cadastro contexto) {
-            this.contexto = contexto;
+            this.contextoCadastro = contexto;
+        }
+
+        public ConsultaHelper(Pesquisar contexto) {
+            this.contextoPesquisa = contexto;
         }
 
         public void cadastrarConsulta() {
@@ -25,11 +30,11 @@ namespace AgendaMedica.Helpers {
 
                 if (validaFormConsulta()) {
                     var consulta = new Consulta() {
-                        DataConsulta = contexto.dtpDataConsulta.Text,
-                        IdMedico = medicoDao.SearchByName(contexto.cbxMedicoConsulta.Text),
-                        IdConvenio = convenioDao.SearchByName(contexto.cbxConvenioConsulta.Text),
-                        Especialidade = contexto.cbxEspecialidadeConsulta.Text,
-                        Paciente = contexto.txtPacienteConsulta.Text,                        
+                        DataConsulta = contextoCadastro.dtpDataConsulta.Text,
+                        IdMedico = medicoDao.SearchByName(contextoCadastro.cbxMedicoConsulta.Text),
+                        IdConvenio = convenioDao.SearchByName(contextoCadastro.cbxConvenioConsulta.Text),
+                        Especialidade = contextoCadastro.cbxEspecialidadeConsulta.Text,
+                        Paciente = contextoCadastro.txtPacienteConsulta.Text,
                     };
 
                     consultaDao.Save(consulta);
@@ -44,13 +49,13 @@ namespace AgendaMedica.Helpers {
 
         private bool validaFormConsulta() {
             var campo = "";
-            if (String.IsNullOrEmpty(contexto.cbxMedicoConsulta.Text)) {
+            if (String.IsNullOrEmpty(contextoCadastro.cbxMedicoConsulta.Text)) {
                 campo = "Médico";
-            } else if (String.IsNullOrEmpty(contexto.cbxEspecialidadeConsulta.Text)) {
+            } else if (String.IsNullOrEmpty(contextoCadastro.cbxEspecialidadeConsulta.Text)) {
                 campo = "Especialidade";
-            } else if (String.IsNullOrEmpty(contexto.txtPacienteConsulta.Text)) {
+            } else if (String.IsNullOrEmpty(contextoCadastro.txtPacienteConsulta.Text)) {
                 campo = "Paciente";
-            } else if (String.IsNullOrEmpty(contexto.cbxConvenioConsulta.Text)) {
+            } else if (String.IsNullOrEmpty(contextoCadastro.cbxConvenioConsulta.Text)) {
                 campo = "Convênio";
             }
 
@@ -59,6 +64,26 @@ namespace AgendaMedica.Helpers {
                 return false;
             }
             return true;
+        }
+
+        internal void FillGrid(List<Consulta> listaConsulta) {
+            contextoPesquisa.dtgListaConsultas.Rows.Clear();
+            var consulta = new Consulta();
+            var medicoDao = new MedicoDAO();
+            var convenioDao = new ConvenioDAO();
+            var medico = new Medico();
+
+
+
+            foreach (var con in listaConsulta) {
+                medico = medicoDao.SearchById(con.IdMedico);
+                var nomeCompletoMedico = medico.Nome + " " + medico.Sobrenome;
+                contextoPesquisa.dtgListaConsultas.Rows
+                    .Add(con.DataConsulta, con.Paciente, nomeCompletoMedico, convenioDao.SearchById(con.IdConvenio).Nome);
+
+
+
+            }
         }
     }
 }

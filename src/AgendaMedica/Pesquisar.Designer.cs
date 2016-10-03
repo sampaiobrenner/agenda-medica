@@ -41,10 +41,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabPesquisar = new System.Windows.Forms.TabControl();
             this.tabConsultas = new System.Windows.Forms.TabPage();
+            this.dtpDataConsulta = new System.Windows.Forms.DateTimePicker();
             this.btnPesquisarConsultas = new System.Windows.Forms.Button();
             this.dtgListaConsultas = new System.Windows.Forms.DataGridView();
-            this.lblNomePesquisa = new System.Windows.Forms.Label();
-            this.txtNomePesquisa = new System.Windows.Forms.TextBox();
             this.tabPesquisarPaciente = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -55,11 +54,13 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.agendaMedicaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agendaMedicaDataSet = new AgendaMedica.agendaMedicaDataSet();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.colDataConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colConvenio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colConvenio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -71,6 +72,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendaMedicaDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendaMedicaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -181,10 +184,9 @@
             // 
             // tabConsultas
             // 
+            this.tabConsultas.Controls.Add(this.dtpDataConsulta);
             this.tabConsultas.Controls.Add(this.btnPesquisarConsultas);
             this.tabConsultas.Controls.Add(this.dtgListaConsultas);
-            this.tabConsultas.Controls.Add(this.lblNomePesquisa);
-            this.tabConsultas.Controls.Add(this.txtNomePesquisa);
             this.tabConsultas.Location = new System.Drawing.Point(4, 22);
             this.tabConsultas.Name = "tabConsultas";
             this.tabConsultas.Padding = new System.Windows.Forms.Padding(3);
@@ -193,9 +195,19 @@
             this.tabConsultas.Text = "Consultas";
             this.tabConsultas.UseVisualStyleBackColor = true;
             // 
+            // dtpDataConsulta
+            // 
+            this.dtpDataConsulta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDataConsulta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataConsulta.Location = new System.Drawing.Point(20, 11);
+            this.dtpDataConsulta.MinDate = new System.DateTime(2016, 1, 1, 0, 0, 0, 0);
+            this.dtpDataConsulta.Name = "dtpDataConsulta";
+            this.dtpDataConsulta.Size = new System.Drawing.Size(101, 22);
+            this.dtpDataConsulta.TabIndex = 4;
+            // 
             // btnPesquisarConsultas
             // 
-            this.btnPesquisarConsultas.Location = new System.Drawing.Point(522, 10);
+            this.btnPesquisarConsultas.Location = new System.Drawing.Point(136, 11);
             this.btnPesquisarConsultas.Name = "btnPesquisarConsultas";
             this.btnPesquisarConsultas.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisarConsultas.TabIndex = 3;
@@ -211,29 +223,12 @@
             this.dtgListaConsultas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDataConsulta,
             this.colPaciente,
-            this.colConvenio,
-            this.colMedico});
+            this.colMedico,
+            this.colConvenio});
             this.dtgListaConsultas.Location = new System.Drawing.Point(20, 48);
             this.dtgListaConsultas.Name = "dtgListaConsultas";
             this.dtgListaConsultas.Size = new System.Drawing.Size(577, 193);
             this.dtgListaConsultas.TabIndex = 2;
-            // 
-            // lblNomePesquisa
-            // 
-            this.lblNomePesquisa.AutoSize = true;
-            this.lblNomePesquisa.Location = new System.Drawing.Point(17, 15);
-            this.lblNomePesquisa.Name = "lblNomePesquisa";
-            this.lblNomePesquisa.Size = new System.Drawing.Size(35, 13);
-            this.lblNomePesquisa.TabIndex = 1;
-            this.lblNomePesquisa.Text = "Nome";
-            this.lblNomePesquisa.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtNomePesquisa
-            // 
-            this.txtNomePesquisa.Location = new System.Drawing.Point(56, 12);
-            this.txtNomePesquisa.Name = "txtNomePesquisa";
-            this.txtNomePesquisa.Size = new System.Drawing.Size(458, 20);
-            this.txtNomePesquisa.TabIndex = 0;
             // 
             // tabPesquisarPaciente
             // 
@@ -333,6 +328,16 @@
             this.textBox2.Size = new System.Drawing.Size(458, 20);
             this.textBox2.TabIndex = 4;
             // 
+            // agendaMedicaDataSetBindingSource
+            // 
+            this.agendaMedicaDataSetBindingSource.DataSource = this.agendaMedicaDataSet;
+            this.agendaMedicaDataSetBindingSource.Position = 0;
+            // 
+            // agendaMedicaDataSet
+            // 
+            this.agendaMedicaDataSet.DataSetName = "agendaMedicaDataSet";
+            this.agendaMedicaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -344,18 +349,22 @@
             // 
             // colPaciente
             // 
+            this.colPaciente.FillWeight = 200F;
             this.colPaciente.HeaderText = "Paciente";
             this.colPaciente.Name = "colPaciente";
-            // 
-            // colConvenio
-            // 
-            this.colConvenio.HeaderText = "Convênio";
-            this.colConvenio.Name = "colConvenio";
+            this.colPaciente.Width = 200;
             // 
             // colMedico
             // 
             this.colMedico.HeaderText = "Médico";
             this.colMedico.Name = "colMedico";
+            this.colMedico.Width = 200;
+            // 
+            // colConvenio
+            // 
+            this.colConvenio.HeaderText = "Convênio";
+            this.colConvenio.Name = "colConvenio";
+            this.colConvenio.Width = 130;
             // 
             // Pesquisar
             // 
@@ -380,7 +389,6 @@
             this.panel2.ResumeLayout(false);
             this.tabPesquisar.ResumeLayout(false);
             this.tabConsultas.ResumeLayout(false);
-            this.tabConsultas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaConsultas)).EndInit();
             this.tabPesquisarPaciente.ResumeLayout(false);
             this.tabPesquisarPaciente.PerformLayout();
@@ -388,6 +396,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendaMedicaDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendaMedicaDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -407,9 +417,6 @@
         private System.Windows.Forms.TabControl tabPesquisar;
         private System.Windows.Forms.TabPage tabConsultas;
         private System.Windows.Forms.TabPage tabPesquisarPaciente;
-        private System.Windows.Forms.Label lblNomePesquisa;
-        private System.Windows.Forms.TextBox txtNomePesquisa;
-        private System.Windows.Forms.DataGridView dtgListaConsultas;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnPesquisarConsultas;
         private System.Windows.Forms.Button button1;
@@ -420,9 +427,13 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDataConsulta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPaciente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colConvenio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMedico;
+        private System.Windows.Forms.BindingSource agendaMedicaDataSetBindingSource;
+        private agendaMedicaDataSet agendaMedicaDataSet;
+        public System.Windows.Forms.DateTimePicker dtpDataConsulta;
+        public System.Windows.Forms.DataGridView dtgListaConsultas;
+        public System.Windows.Forms.DataGridViewTextBoxColumn colDataConsulta;
+        public System.Windows.Forms.DataGridViewTextBoxColumn colPaciente;
+        public System.Windows.Forms.DataGridViewTextBoxColumn colMedico;
+        public System.Windows.Forms.DataGridViewTextBoxColumn colConvenio;
     }
 }

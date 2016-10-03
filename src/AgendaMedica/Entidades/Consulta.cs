@@ -15,7 +15,7 @@ namespace AgendaMedica.Entidades {
         public string DataConsulta { get; set; }
         public string Paciente { get; set; }
 
-        public virtual Convenio convenio { get; set; }
+        public virtual Convenio Convenio { get; set; }
         public int IdConvenio { get; set; }
     }
 }

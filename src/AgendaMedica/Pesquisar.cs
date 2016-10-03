@@ -1,5 +1,6 @@
 ﻿using AgendaMedica.DAO;
 using AgendaMedica.Entidades;
+using AgendaMedica.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,17 +31,14 @@ namespace AgendaMedica {
             timer1_Tick(e, e);
         }
 
-        private void label1_Click(object sender, EventArgs e) {
-
-        }
 
         private void btnPesquisarConsultas_Click(object sender, EventArgs e) {
-            MedicoDAO dao = new MedicoDAO();
-            Medico medico = new Medico();
-            medico = dao.SearchById(1);
 
-            dao.Delete(medico);
-            MessageBox.Show("Adeus");
+            var consultaDao = new ConsultaDAO();
+            var consultaHelper = new ConsultaHelper(this);
+
+            consultaHelper.FillGrid(consultaDao.SearchByDate(dtpDataConsulta.Text));            
         }
+        
     }
 }
