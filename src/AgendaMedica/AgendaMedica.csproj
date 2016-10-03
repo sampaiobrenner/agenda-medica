@@ -146,7 +146,9 @@
     <Compile Include="Entidades\Medico.cs" />
     <Compile Include="Entidades\Paciente.cs" />
     <Compile Include="Entidades\Atendente.cs" />
-    <Compile Include="Helpers\Exceptions.cs" />
+    <Compile Include="Helpers\ConvenioHelper.cs" />
+    <Compile Include="Helpers\ExceptionsHelper.cs" />
+    <Compile Include="Helpers\PacienteHelper.cs" />
     <Compile Include="Migrations\20161001221636_CriaMedicos.cs" />
     <Compile Include="Migrations\20161001221636_CriaMedicos.designer.cs">
       <DependentUpon>20161001221636_CriaMedicos.cs</DependentUpon>
@@ -229,7 +231,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Helpers\MedicoHelper.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
