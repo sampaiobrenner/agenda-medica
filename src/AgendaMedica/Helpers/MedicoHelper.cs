@@ -24,7 +24,7 @@ namespace AgendaMedica.Helpers {
                     var medico = new Medico() {
                         Nome = contexto.txtNomeMed.Text,
                         Sobrenome = contexto.txtSobrenomeMed.Text,
-                        DataNascimento = contexto.txtNascMed.Text,
+                        DataNascimento = contexto.dtpDataNascPaciente.Text,
                         Sexo = (contexto.rdbSexoFMed.Checked ? "F" : "M"),
                         Cpf = contexto.txtCpfMed.Text,
                         Rg = contexto.txtRgMed.Text,
@@ -62,7 +62,7 @@ namespace AgendaMedica.Helpers {
                 nome = "Nome";
             } else if (String.IsNullOrEmpty(contexto.txtSobrenomeMed.Text)) {
                 nome = "Sobrenome";
-            } else if (String.IsNullOrEmpty(contexto.txtNascMed.Text)) {
+            } else if (String.IsNullOrEmpty(contexto.dtpDataNascPaciente.Text)) {
                 nome = "Data de Nascimento";
             } else if (String.IsNullOrEmpty(contexto.txtCpfMed.Text)) {
                 nome = "CPF";

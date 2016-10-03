@@ -46,8 +46,9 @@ namespace AgendaMedica {
             this.cbxMedicoAgen = new System.Windows.Forms.ComboBox();
             this.lblMedicoAgen = new System.Windows.Forms.Label();
             this.lblDataAgen = new System.Windows.Forms.Label();
-            this.dtpDataAgen = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataConsulta = new System.Windows.Forms.DateTimePicker();
             this.tabPacientes = new System.Windows.Forms.TabPage();
+            this.dtpDataNascPaciente = new System.Windows.Forms.DateTimePicker();
             this.lblComplementoPaciente = new System.Windows.Forms.Label();
             this.txtComplementoPaciente = new System.Windows.Forms.TextBox();
             this.lblEmailPaciente = new System.Windows.Forms.Label();
@@ -83,11 +84,11 @@ namespace AgendaMedica {
             this.cbxConvenioPaciente = new System.Windows.Forms.ComboBox();
             this.lblNumCarteirinhaPaciente = new System.Windows.Forms.Label();
             this.txtNumCarteirinhaPaciente = new System.Windows.Forms.TextBox();
-            this.txtNascPaciente = new System.Windows.Forms.TextBox();
             this.lblNascPaciente = new System.Windows.Forms.Label();
             this.lblNomePaciente = new System.Windows.Forms.Label();
             this.txtNomePaciente = new System.Windows.Forms.TextBox();
             this.tabMedicos = new System.Windows.Forms.TabPage();
+            this.dtpDataNascMedico = new System.Windows.Forms.DateTimePicker();
             this.lblUfMed = new System.Windows.Forms.Label();
             this.cbxUFMed = new System.Windows.Forms.ComboBox();
             this.lblSexoMed = new System.Windows.Forms.Label();
@@ -123,7 +124,6 @@ namespace AgendaMedica {
             this.txtNumeroEndMed = new System.Windows.Forms.TextBox();
             this.txtEnderecoMed = new System.Windows.Forms.TextBox();
             this.lblEndMed = new System.Windows.Forms.Label();
-            this.txtNascMed = new System.Windows.Forms.TextBox();
             this.lblNascMed = new System.Windows.Forms.Label();
             this.lblNomeMed = new System.Windows.Forms.Label();
             this.txtNomeMed = new System.Windows.Forms.TextBox();
@@ -263,7 +263,7 @@ namespace AgendaMedica {
             this.tabAgendamento.Controls.Add(this.cbxMedicoAgen);
             this.tabAgendamento.Controls.Add(this.lblMedicoAgen);
             this.tabAgendamento.Controls.Add(this.lblDataAgen);
-            this.tabAgendamento.Controls.Add(this.dtpDataAgen);
+            this.tabAgendamento.Controls.Add(this.dtpDataConsulta);
             this.tabAgendamento.Location = new System.Drawing.Point(4, 22);
             this.tabAgendamento.Name = "tabAgendamento";
             this.tabAgendamento.Padding = new System.Windows.Forms.Padding(3);
@@ -275,7 +275,7 @@ namespace AgendaMedica {
             // lblPlanoMedAgen
             // 
             this.lblPlanoMedAgen.AutoSize = true;
-            this.lblPlanoMedAgen.Location = new System.Drawing.Point(398, 52);
+            this.lblPlanoMedAgen.Location = new System.Drawing.Point(321, 53);
             this.lblPlanoMedAgen.Name = "lblPlanoMedAgen";
             this.lblPlanoMedAgen.Size = new System.Drawing.Size(72, 13);
             this.lblPlanoMedAgen.TabIndex = 9;
@@ -285,9 +285,9 @@ namespace AgendaMedica {
             // 
             this.cbxPlanoMedAgen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxPlanoMedAgen.FormattingEnabled = true;
-            this.cbxPlanoMedAgen.Location = new System.Drawing.Point(401, 69);
+            this.cbxPlanoMedAgen.Location = new System.Drawing.Point(324, 69);
             this.cbxPlanoMedAgen.Name = "cbxPlanoMedAgen";
-            this.cbxPlanoMedAgen.Size = new System.Drawing.Size(241, 24);
+            this.cbxPlanoMedAgen.Size = new System.Drawing.Size(203, 24);
             this.cbxPlanoMedAgen.TabIndex = 8;
             // 
             // txtPacienteAgen
@@ -295,7 +295,7 @@ namespace AgendaMedica {
             this.txtPacienteAgen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPacienteAgen.Location = new System.Drawing.Point(12, 69);
             this.txtPacienteAgen.Name = "txtPacienteAgen";
-            this.txtPacienteAgen.Size = new System.Drawing.Size(373, 22);
+            this.txtPacienteAgen.Size = new System.Drawing.Size(293, 22);
             this.txtPacienteAgen.TabIndex = 7;
             // 
             // cbxEspecialidadeAgen
@@ -352,18 +352,19 @@ namespace AgendaMedica {
             this.lblDataAgen.TabIndex = 1;
             this.lblDataAgen.Text = "Data";
             // 
-            // dtpDataAgen
+            // dtpDataConsulta
             // 
-            this.dtpDataAgen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDataAgen.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataAgen.Location = new System.Drawing.Point(401, 24);
-            this.dtpDataAgen.MinDate = new System.DateTime(2016, 1, 1, 0, 0, 0, 0);
-            this.dtpDataAgen.Name = "dtpDataAgen";
-            this.dtpDataAgen.Size = new System.Drawing.Size(159, 22);
-            this.dtpDataAgen.TabIndex = 0;
+            this.dtpDataConsulta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDataConsulta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataConsulta.Location = new System.Drawing.Point(401, 24);
+            this.dtpDataConsulta.MinDate = new System.DateTime(2016, 1, 1, 0, 0, 0, 0);
+            this.dtpDataConsulta.Name = "dtpDataConsulta";
+            this.dtpDataConsulta.Size = new System.Drawing.Size(126, 22);
+            this.dtpDataConsulta.TabIndex = 0;
             // 
             // tabPacientes
             // 
+            this.tabPacientes.Controls.Add(this.dtpDataNascPaciente);
             this.tabPacientes.Controls.Add(this.lblComplementoPaciente);
             this.tabPacientes.Controls.Add(this.txtComplementoPaciente);
             this.tabPacientes.Controls.Add(this.lblEmailPaciente);
@@ -399,7 +400,6 @@ namespace AgendaMedica {
             this.tabPacientes.Controls.Add(this.cbxConvenioPaciente);
             this.tabPacientes.Controls.Add(this.lblNumCarteirinhaPaciente);
             this.tabPacientes.Controls.Add(this.txtNumCarteirinhaPaciente);
-            this.tabPacientes.Controls.Add(this.txtNascPaciente);
             this.tabPacientes.Controls.Add(this.lblNascPaciente);
             this.tabPacientes.Controls.Add(this.lblNomePaciente);
             this.tabPacientes.Controls.Add(this.txtNomePaciente);
@@ -410,6 +410,16 @@ namespace AgendaMedica {
             this.tabPacientes.TabIndex = 2;
             this.tabPacientes.Text = "Paciente";
             this.tabPacientes.UseVisualStyleBackColor = true;
+            // 
+            // dtpDataNascPaciente
+            // 
+            this.dtpDataNascPaciente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDataNascPaciente.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataNascPaciente.Location = new System.Drawing.Point(468, 23);
+            this.dtpDataNascPaciente.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtpDataNascPaciente.Name = "dtpDataNascPaciente";
+            this.dtpDataNascPaciente.Size = new System.Drawing.Size(162, 22);
+            this.dtpDataNascPaciente.TabIndex = 2;
             // 
             // lblComplementoPaciente
             // 
@@ -772,16 +782,6 @@ namespace AgendaMedica {
             this.txtNumCarteirinhaPaciente.TabIndex = 17;
             this.txtNumCarteirinhaPaciente.WordWrap = false;
             // 
-            // txtNascPaciente
-            // 
-            this.txtNascPaciente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNascPaciente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNascPaciente.Location = new System.Drawing.Point(468, 25);
-            this.txtNascPaciente.Name = "txtNascPaciente";
-            this.txtNascPaciente.Size = new System.Drawing.Size(162, 22);
-            this.txtNascPaciente.TabIndex = 2;
-            this.txtNascPaciente.WordWrap = false;
-            // 
             // lblNascPaciente
             // 
             this.lblNascPaciente.AutoSize = true;
@@ -812,6 +812,7 @@ namespace AgendaMedica {
             // 
             // tabMedicos
             // 
+            this.tabMedicos.Controls.Add(this.dtpDataNascMedico);
             this.tabMedicos.Controls.Add(this.lblUfMed);
             this.tabMedicos.Controls.Add(this.cbxUFMed);
             this.tabMedicos.Controls.Add(this.lblSexoMed);
@@ -847,7 +848,6 @@ namespace AgendaMedica {
             this.tabMedicos.Controls.Add(this.txtNumeroEndMed);
             this.tabMedicos.Controls.Add(this.txtEnderecoMed);
             this.tabMedicos.Controls.Add(this.lblEndMed);
-            this.tabMedicos.Controls.Add(this.txtNascMed);
             this.tabMedicos.Controls.Add(this.lblNascMed);
             this.tabMedicos.Controls.Add(this.lblNomeMed);
             this.tabMedicos.Controls.Add(this.txtNomeMed);
@@ -859,10 +859,20 @@ namespace AgendaMedica {
             this.tabMedicos.Text = "Médicos";
             this.tabMedicos.UseVisualStyleBackColor = true;
             // 
+            // dtpDataNascMedico
+            // 
+            this.dtpDataNascMedico.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDataNascMedico.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataNascMedico.Location = new System.Drawing.Point(469, 24);
+            this.dtpDataNascMedico.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtpDataNascMedico.Name = "dtpDataNascMedico";
+            this.dtpDataNascMedico.Size = new System.Drawing.Size(158, 22);
+            this.dtpDataNascMedico.TabIndex = 82;
+            // 
             // lblUfMed
             // 
             this.lblUfMed.AutoSize = true;
-            this.lblUfMed.Location = new System.Drawing.Point(359, 137);
+            this.lblUfMed.Location = new System.Drawing.Point(317, 137);
             this.lblUfMed.Name = "lblUfMed";
             this.lblUfMed.Size = new System.Drawing.Size(21, 13);
             this.lblUfMed.TabIndex = 81;
@@ -901,7 +911,7 @@ namespace AgendaMedica {
             "SP",
             "SE",
             "TO"});
-            this.cbxUFMed.Location = new System.Drawing.Point(362, 153);
+            this.cbxUFMed.Location = new System.Drawing.Point(320, 152);
             this.cbxUFMed.Name = "cbxUFMed";
             this.cbxUFMed.Size = new System.Drawing.Size(60, 24);
             this.cbxUFMed.TabIndex = 80;
@@ -1035,7 +1045,7 @@ namespace AgendaMedica {
             // lblEspecialidadeMed
             // 
             this.lblEspecialidadeMed.AutoSize = true;
-            this.lblEspecialidadeMed.Location = new System.Drawing.Point(359, 187);
+            this.lblEspecialidadeMed.Location = new System.Drawing.Point(342, 186);
             this.lblEspecialidadeMed.Name = "lblEspecialidadeMed";
             this.lblEspecialidadeMed.Size = new System.Drawing.Size(73, 13);
             this.lblEspecialidadeMed.TabIndex = 47;
@@ -1045,7 +1055,7 @@ namespace AgendaMedica {
             // 
             this.cbxEspecialidadeMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEspecialidadeMed.FormattingEnabled = true;
-            this.cbxEspecialidadeMed.Location = new System.Drawing.Point(362, 203);
+            this.cbxEspecialidadeMed.Location = new System.Drawing.Point(345, 202);
             this.cbxEspecialidadeMed.Name = "cbxEspecialidadeMed";
             this.cbxEspecialidadeMed.Size = new System.Drawing.Size(177, 24);
             this.cbxEspecialidadeMed.TabIndex = 18;
@@ -1053,7 +1063,7 @@ namespace AgendaMedica {
             // lblCRM
             // 
             this.lblCRM.AutoSize = true;
-            this.lblCRM.Location = new System.Drawing.Point(550, 188);
+            this.lblCRM.Location = new System.Drawing.Point(532, 188);
             this.lblCRM.Name = "lblCRM";
             this.lblCRM.Size = new System.Drawing.Size(31, 13);
             this.lblCRM.TabIndex = 45;
@@ -1063,9 +1073,9 @@ namespace AgendaMedica {
             // 
             this.txtCrm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCrm.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCrm.Location = new System.Drawing.Point(553, 205);
+            this.txtCrm.Location = new System.Drawing.Point(534, 204);
             this.txtCrm.Name = "txtCrm";
-            this.txtCrm.Size = new System.Drawing.Size(78, 22);
+            this.txtCrm.Size = new System.Drawing.Size(93, 22);
             this.txtCrm.TabIndex = 19;
             this.txtCrm.WordWrap = false;
             // 
@@ -1084,14 +1094,14 @@ namespace AgendaMedica {
             this.txtEmailMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailMed.Location = new System.Drawing.Point(24, 204);
             this.txtEmailMed.Name = "txtEmailMed";
-            this.txtEmailMed.Size = new System.Drawing.Size(321, 22);
+            this.txtEmailMed.Size = new System.Drawing.Size(314, 22);
             this.txtEmailMed.TabIndex = 17;
             this.txtEmailMed.WordWrap = false;
             // 
             // lblCelularMed
             // 
             this.lblCelularMed.AutoSize = true;
-            this.lblCelularMed.Location = new System.Drawing.Point(532, 137);
+            this.lblCelularMed.Location = new System.Drawing.Point(513, 137);
             this.lblCelularMed.Name = "lblCelularMed";
             this.lblCelularMed.Size = new System.Drawing.Size(39, 13);
             this.lblCelularMed.TabIndex = 41;
@@ -1101,16 +1111,16 @@ namespace AgendaMedica {
             // 
             this.txtCelularMed.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCelularMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCelularMed.Location = new System.Drawing.Point(535, 153);
+            this.txtCelularMed.Location = new System.Drawing.Point(516, 152);
             this.txtCelularMed.Name = "txtCelularMed";
-            this.txtCelularMed.Size = new System.Drawing.Size(96, 22);
+            this.txtCelularMed.Size = new System.Drawing.Size(111, 22);
             this.txtCelularMed.TabIndex = 16;
             this.txtCelularMed.WordWrap = false;
             // 
             // lblTelefoneMed
             // 
             this.lblTelefoneMed.AutoSize = true;
-            this.lblTelefoneMed.Location = new System.Drawing.Point(434, 137);
+            this.lblTelefoneMed.Location = new System.Drawing.Point(395, 138);
             this.lblTelefoneMed.Name = "lblTelefoneMed";
             this.lblTelefoneMed.Size = new System.Drawing.Size(49, 13);
             this.lblTelefoneMed.TabIndex = 39;
@@ -1120,16 +1130,16 @@ namespace AgendaMedica {
             // 
             this.txtTelefoneMed.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTelefoneMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefoneMed.Location = new System.Drawing.Point(437, 153);
+            this.txtTelefoneMed.Location = new System.Drawing.Point(398, 152);
             this.txtTelefoneMed.Name = "txtTelefoneMed";
-            this.txtTelefoneMed.Size = new System.Drawing.Size(85, 22);
+            this.txtTelefoneMed.Size = new System.Drawing.Size(107, 22);
             this.txtTelefoneMed.TabIndex = 15;
             this.txtTelefoneMed.WordWrap = false;
             // 
             // lblCidadeMed
             // 
             this.lblCidadeMed.AutoSize = true;
-            this.lblCidadeMed.Location = new System.Drawing.Point(201, 139);
+            this.lblCidadeMed.Location = new System.Drawing.Point(167, 137);
             this.lblCidadeMed.Name = "lblCidadeMed";
             this.lblCidadeMed.Size = new System.Drawing.Size(40, 13);
             this.lblCidadeMed.TabIndex = 37;
@@ -1150,7 +1160,7 @@ namespace AgendaMedica {
             this.txtCepMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCepMed.Location = new System.Drawing.Point(535, 106);
             this.txtCepMed.Name = "txtCepMed";
-            this.txtCepMed.Size = new System.Drawing.Size(96, 22);
+            this.txtCepMed.Size = new System.Drawing.Size(92, 22);
             this.txtCepMed.TabIndex = 12;
             this.txtCepMed.WordWrap = false;
             // 
@@ -1158,7 +1168,7 @@ namespace AgendaMedica {
             // 
             this.cbxCidadeMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCidadeMed.FormattingEnabled = true;
-            this.cbxCidadeMed.Location = new System.Drawing.Point(204, 154);
+            this.cbxCidadeMed.Location = new System.Drawing.Point(170, 152);
             this.cbxCidadeMed.Name = "cbxCidadeMed";
             this.cbxCidadeMed.Size = new System.Drawing.Size(136, 24);
             this.cbxCidadeMed.TabIndex = 14;
@@ -1169,7 +1179,7 @@ namespace AgendaMedica {
             this.txtBairroMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBairroMed.Location = new System.Drawing.Point(24, 154);
             this.txtBairroMed.Name = "txtBairroMed";
-            this.txtBairroMed.Size = new System.Drawing.Size(161, 22);
+            this.txtBairroMed.Size = new System.Drawing.Size(140, 22);
             this.txtBairroMed.TabIndex = 12;
             this.txtBairroMed.WordWrap = false;
             // 
@@ -1219,16 +1229,6 @@ namespace AgendaMedica {
             this.lblEndMed.Size = new System.Drawing.Size(53, 13);
             this.lblEndMed.TabIndex = 26;
             this.lblEndMed.Text = "Endereço";
-            // 
-            // txtNascMed
-            // 
-            this.txtNascMed.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNascMed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNascMed.Location = new System.Drawing.Point(469, 23);
-            this.txtNascMed.Name = "txtNascMed";
-            this.txtNascMed.Size = new System.Drawing.Size(162, 22);
-            this.txtNascMed.TabIndex = 3;
-            this.txtNascMed.WordWrap = false;
             // 
             // lblNascMed
             // 
@@ -1367,7 +1367,7 @@ namespace AgendaMedica {
         public System.Windows.Forms.Label lblNomeMed;
         public System.Windows.Forms.TextBox txtNomeMed;
         public System.Windows.Forms.Label lblDataAgen;
-        public System.Windows.Forms.DateTimePicker dtpDataAgen;
+        public System.Windows.Forms.DateTimePicker dtpDataConsulta;
         public System.Windows.Forms.Label lblMedicoAgen;
         public System.Windows.Forms.Label lblEspecialidadeMed;
         public System.Windows.Forms.ComboBox cbxEspecialidadeMed;
@@ -1380,7 +1380,6 @@ namespace AgendaMedica {
         public System.Windows.Forms.ComboBox cbxPlanoMedAgen;
         public System.Windows.Forms.TextBox txtCelularMed;
         public System.Windows.Forms.TextBox txtTelefoneMed;
-        public System.Windows.Forms.TextBox txtNascMed;
         public System.Windows.Forms.TextBox txtSobrenomeMed;
         public System.Windows.Forms.Label lblComplementoMed;
         public System.Windows.Forms.TextBox txtComplementoMed;
@@ -1428,7 +1427,6 @@ namespace AgendaMedica {
         public System.Windows.Forms.Label lblConvenioPac;
         public System.Windows.Forms.ComboBox cbxConvenioPaciente;
         public System.Windows.Forms.Label lblNumCarteirinhaPaciente;
-        public System.Windows.Forms.TextBox txtNascPaciente;
         public System.Windows.Forms.Label lblNascPaciente;
         public System.Windows.Forms.Label lblNomePaciente;
         public System.Windows.Forms.TextBox txtEmailPaciente;
@@ -1447,6 +1445,8 @@ namespace AgendaMedica {
         public System.Windows.Forms.TextBox txtNomeConvenio;
         public agendaMedicaDataSet agendaMedicaDataSet;
         public System.Windows.Forms.BindingSource agendaMedicaDataSetBindingSource;
+        public System.Windows.Forms.DateTimePicker dtpDataNascPaciente;
+        public System.Windows.Forms.DateTimePicker dtpDataNascMedico;
     }
 }
 
