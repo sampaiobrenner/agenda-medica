@@ -9,7 +9,7 @@ namespace AgendaMedica.Entidades {
 
         public int Id { get; set; }
         public string Nome { get; set; }
-
+        //Definindo o relacionamento: 1 convênio pode ter N pacientes
         public virtual IList<Paciente> Pacientes { get; set; }        
     }
 }
